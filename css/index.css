@@ -1,0 +1,202 @@
+.border-home{
+	color:#3174BB;
+	border-bottom: 1px solid #3174BB;
+}
+.home-head-bg{
+	width:100%;
+	height:560px;
+	background: url(../images/66666_12.jpg);
+	 background-repeat: no-repeat;
+	  background-size: cover; 
+	 position: relative;
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:560px;
+   background-color:#000000;
+   opacity: 0.5;
+  
+}
+.head-title{
+	width:80%;
+	line-height: 50px;
+	margin-top:100px;
+	margin-left:20%;
+	font-size: 42px;
+	color:#FFFFFF;
+	 
+}
+.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}
+.head-btn{
+	width:133px;
+	height:36px;
+	margin-left:20%;
+	background: #3A8BF6;
+	font-size: 14px;
+	color:#FFFFFF;
+	text-align: center;
+	line-height:36px;
+	margin-top:50px;
+ 
+}
+.banner-one{
+	width:100%;
+	height:400px;
+	 
+}
+.banner-main-box{
+	width:80%;
+	height:350px;
+	margin:0 auto;
+	margin-top:80px;
+}
+.banner-main-box>img{
+	width:40%;
+	height:300px;
+	float:left;
+}
+.banner-main-right{
+	width:55%;
+	margin-left:5%;
+	float:left;
+}
+.banner-col-green{
+	width:100%;
+    color:#409074;
+    font-size: 50px;
+}
+.banner-col-black{
+	width:100%;
+	color:#444446;
+	font-size: 30px;
+}
+.banner-col-fot{
+	width:100%;
+	color:#7B7B7B;
+	font-size: 25px;
+	line-height: 40px;
+}
+.banner-btn{
+	width:151px;
+	height:50px;
+	background: #3A8BF6;
+	text-align: center;
+	line-height: 50px;
+	color:#FFFFFF;
+	font-size: 18px;
+}
+/*实拍案例*/
+.home-case-box{
+	width:100%;
+	
+}
+.case-title{
+	width:100%;
+	height:50px;
+	line-height: 56px;
+	text-align: center;
+	font-size: 40px;
+	color:#58A2FC;
+	margin-top:47px;
+	margin-bottom: 47px;
+}
+.case-left{
+	width:47.5%;
+	height: 660px;
+	float:left;
+	 
+}
+.case-right{
+	width:47.5%;
+	height: 660px;
+	float:right;
+}
+.case-left>p>img{
+	width:100%;
+	height:300px;
+}
+.case-right>p>img{
+	width:100%;
+	height:300px;
+}
+.case-name{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	color:#2E2E30;
+	font-size: 20px;
+	text-align: center;
+}
+.case-centent{
+	width:100%;
+	line-height:30px;
+	color:#444446;
+	font-size: 18px;
+}
+.case-btn{
+	width:151px;
+	height:50px;
+	margin:0 auto;
+	color: #3A8BF6;
+	font-size: 18px;
+	border:1px solid #3A8BF6;
+	line-height: 50px;
+	text-align:center;
+}
+/*我们合作的医院*/
+.home-doctor{
+	width:100%;
+	clear: both;
+	padding-top:50px;
+	
+}
+.home-doctor-title{
+	width:100%;
+	height:100px;
+	 
+}
+.title-col-blue{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 36px;
+	color:#58A2FC;
+}
+.title-col-english{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+	font-size: 16px;
+	color:#546497;
+}
+.home-doctor-logo{
+	width:100%;
+	 
+}
+.home-doctor-logo>img{
+	width:100%;
+	 
+}
+@media only screen and (max-width: 1200px) {
+     
+}
+@media only screen and (max-width: 980px) {
+    
+}
+@media only screen and (max-width: 640px) {
+    
+}
