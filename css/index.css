@@ -1,13 +1,10 @@
-.border-home{
-	color:#3174BB;
-	border-bottom: 1px solid #3174BB;
-}
+ 
 .home-head-bg{
 	width:100%;
 	height:560px;
-	background: url(../images/66666_12.jpg);
+	background: url(../images/slide/sy.png);
 	 background-repeat: no-repeat;
-	  background-size: cover; 
+	  background-size: 100% 100%; 
 	 position: relative;
 }
 .home-head-centent{
@@ -155,42 +152,7 @@
 	line-height: 50px;
 	text-align:center;
 }
-/*我们合作的医院*/
-.home-doctor{
-	width:100%;
-	clear: both;
-	padding-top:50px;
-	
-}
-.home-doctor-title{
-	width:100%;
-	height:100px;
-	 
-}
-.title-col-blue{
-	width:100%;
-	height:50px;
-	line-height: 50px;
-	text-align: center;
-	font-size: 36px;
-	color:#58A2FC;
-}
-.title-col-english{
-	width:100%;
-	height:50px;
-	line-height:50px;
-	text-align: center;
-	font-size: 16px;
-	color:#546497;
-}
-.home-doctor-logo{
-	width:100%;
-	 
-}
-.home-doctor-logo>img{
-	width:100%;
-	 
-}
+ 
 @media only screen and (max-width: 1200px) {
      
 }

@@ -29,10 +29,12 @@
     font-size: 20px;
     height: 30px;
     width: 100px;
-    background-color: green;
+    /*background-color: green;*/
     float: right;
     line-height: 30px;
     margin-top: 35px;
+    text-align: right;
+    padding-right:5%;
 }
 #head ul{
     width: 60%;
@@ -65,7 +67,10 @@
     margin: 10px auto;
     overflow: hidden;
 }
- 
+ .border-home{
+	color:#3174BB;
+	border-bottom: 1px solid #3174BB;
+}
  
 .logo{
 	 width:20%;
@@ -148,15 +153,57 @@
  	margin-top:20px;
  	margin-left:10%;
  }
+ /*我们合作的医院*/
+.home-doctor{
+	width:100%;
+	clear: both;
+	padding-top:50px;
+	
+}
+.home-doctor-title{
+	width:100%;
+	height:100px;
+	 
+}
+.title-col-blue{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 36px;
+	color:#58A2FC;
+}
+.title-col-english{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+	font-size: 16px;
+	color:#546497;
+}
+.home-doctor-logo{
+	width:100%;
+	 
+}
+.home-doctor-logo>img{
+	width:100%;
+	 
+}
 @media only screen and (max-width: 1200px) {
     #head,
     #foot,
     #main{
     width: 100%;
     }
-    
+    .icon-header{
+	 	display: none;
+	 }
 }
 @media only screen and (max-width: 980px) {
+	 .icon-header{
+	 	display: none;
+	 }
+	  
     
 }
 @media only screen and (max-width: 640px) {
@@ -169,11 +216,28 @@
     }
     .icon-header{
 	width:100%;
-	height:150px;
-	background: #008000;
-	 
-	position: absolute;
-	z-index: 9999;
-	display: none;
+	background:white;
+ 
 }
+
+.icon-header>ul{
+	width:100%;
+	list-style: none;
+	 
+}
+.icon-header>ul>li{
+	width:100%;
+	height:40px;
+	border-bottom: 1px solid #CCCCCC;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	 
+}
+}
+@media screen and ( min-width: 640px ) {
+	  .icon-header{
+	  	display: none;
+	  }
+	
 }
