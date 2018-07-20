@@ -1,7 +1,7 @@
  
 .home-head-bg{
 	width:100%;
-	height:560px;
+	height:500px;
 	background: url(../images/slide/sy.png);
 	 background-repeat: no-repeat;
 	  background-size: 100% 100%; 
@@ -14,7 +14,7 @@
     top: 0;
     bottom: 0;
     width:100%;
-	height:560px;
+	height:500px;
    background-color:#000000;
    opacity: 0.5;
   
@@ -152,7 +152,76 @@
 	line-height: 50px;
 	text-align:center;
 }
- 
+/*modal*/
+.modal-main-box{
+	width:100%;
+	height:500px;
+}
+.modal-main-box>img{
+	width:30%;
+	height:250px;
+	float:left;
+	margin-top:100px;
+	margin-left:5%;
+}
+.modal-main-right{
+	width:50%;
+	height:300px;
+	margin-top:100px;
+	float: left;
+	margin-left:5%;
+}
+.modal-register-title{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 40px;
+	color:RGBA(74, 74, 74, 1);
+	
+}
+.modal-register-centent{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 26px;
+	color:RGBA(74, 74, 74, 1);
+}
+ .modal-phone{
+ 	width:100%;
+ 	height:50px;
+ 	
+ }
+ .modal-sex{
+ 	width:100%;
+ 	height:50px;
+ 	
+ }
+ .modal-sex input{
+ 	width:75%;
+ 	float:left;
+ }
+ .modal-sex button{
+ 	width:20%;
+ 	margin-left:5%;
+ 	float:left;
+ }
+ .modal-checkbox{
+ 	width:100%;
+ 	height:40px;
+ 	font-size: 16px;
+ 	color:RGBA(74, 74, 74, 1);
+ }
+ .modal-btn{
+ 	width:234px;
+ 	height:61px;
+ 	line-height: 61px;
+ 	text-align: center;
+ 	background: RGBA(70, 189, 242, 1);
+ 	color:#FFFFFF;
+ 	font-size: 24px;
+ 	border-radius: 31px;
+ 	
+ }
 @media only screen and (max-width: 1200px) {
      
 }
