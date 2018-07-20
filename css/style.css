@@ -3,6 +3,57 @@
     padding: 0px;
     font-family: "微软雅黑";
 }
+.start-head-box{
+	width:95%;
+	margin:0 auto;
+	height:45px;
+	background: RGBA(70, 70, 70, 1);
+	color:RGBA(255, 255, 255, 1);
+	font-size: 13px;
+	padding-left:10%;
+}
+.start-head-box span{
+	display: inline-block;
+	float:left;
+}
+.start-01,.start-02,.start-04,.start-05{
+	 
+	width:16px;
+	height:16px;
+	margin-left:2%;
+	text-align: center;
+	line-height: 16px;
+	margin-top:15px;
+	border:1px solid RGBA(255, 255, 255, 1);
+}
+.start-03{
+	width:16px;
+	height:16px;
+	margin-left:2%;
+	text-align: center;
+	line-height: 16px;
+	margin-top:15px;
+	color:RGBA(249, 84, 84, 1);
+	border:1px solid RGBA(249, 84, 84, 1);
+}
+.start-06-copy,.start-07-copy{
+	width:16px;
+	height:16px;
+	text-align: center;
+	line-height: 16px;
+	margin-top:2px;
+	border:1px solid RGBA(255, 255, 255, 1);
+}
+.start-06,.start-07{
+ margin-top:15px;
+ height:18px;
+}
+.start-06{
+	margin-left:40%;
+}
+.start-07{
+	margin-left:2%;
+}
 #head{
     height: 80px;
     width: 95%;
@@ -12,10 +63,12 @@
     /*font-size: 48px;*/
     
     margin: 0 auto;
+     
 }
 #main{
 	 width: 95%;
 	 margin: 0 auto;
+	 
 }
 #foot{
 	width:95%;
@@ -51,10 +104,7 @@
     font-size: 16px;
     
 }
-#head ul li a:hover{
-	color:#3174BB;
-	border-bottom: 1px solid #3174BB;
-}
+ 
 #head ul li a{
 	color:#636B75;
 	height:80px;
@@ -64,12 +114,26 @@
 }
 #main{
     height: auto;
-    margin: 10px auto;
-    overflow: hidden;
+    margin-top:3px;
+   /* overflow: hidden;*/
+
 }
  .border-home{
+ 	width:24px;
+ 	height:3px;
+ 	display: none;
+ 	background: #3174BB;
+ 	margin:0 auto;
+}
+#head ul li:hover a{
 	color:#3174BB;
-	border-bottom: 1px solid #3174BB;
+/*	border-bottom: 1px solid #3174BB;*/
+  display: block;
+}
+#head ul li:hover .border-home{
+	/*color:#3174BB;*/
+/*	border-bottom: 1px solid #3174BB;*/
+  display: block;
 }
  
 .logo{
@@ -78,7 +142,7 @@
 	 text-align: center;
 }
 .logo img{
-	margin-top:30px;
+	margin-top:20px;
 	height:46px;
 }
  .foot-one-box{
@@ -216,12 +280,15 @@
     }
     .icon-header{
 	width:100%;
+	 
+	 
 	background:white;
  
 }
 
 .icon-header>ul{
 	width:100%;
+	 
 	list-style: none;
 	 
 }
@@ -237,6 +304,9 @@
 }
 @media screen and ( min-width: 640px ) {
 	  .icon-header{
+	  	display: none;
+	  }
+	  .icon-header>ul{
 	  	display: none;
 	  }
 	
