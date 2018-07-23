@@ -13,6 +13,11 @@
  	      console.log(_index)
  		$(".border-home").eq(_index).show()
  	})*/
+ 	$(".foot-img img").hide();
+ 	$(".foot-two img").hover(function(){
+ 	 
+ 		$(".foot-img img").toggle();
+ 	})
  	
  	
  	

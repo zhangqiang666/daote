@@ -59,6 +59,7 @@
 	height:350px;
 	margin:0 auto;
 	margin-top:80px;
+	 
 }
 .banner-main-box>img{
 	width:40%;
@@ -98,28 +99,35 @@
 /*实拍案例*/
 .home-case-box{
 	width:100%;
+	height:870px;
+	background: RGBA(248, 249, 251, 1);
 	
 }
 .case-title{
 	width:100%;
-	height:50px;
-	line-height: 56px;
+	height:100px;
+	line-height: 100px;
 	text-align: center;
 	font-size: 40px;
 	color:#58A2FC;
 	margin-top:47px;
+	 padding-top:20px;
 	margin-bottom: 47px;
 }
 .case-left{
-	width:47.5%;
-	height: 660px;
+	width:45.5%;
+	height: 680px;
 	float:left;
+	margin-left:3%;
+	background: white;
 	 
 }
 .case-right{
-	width:47.5%;
-	height: 660px;
+	width:45.5%;
+	height: 680px;
 	float:right;
+	margin-right:3%;
+	background: white;
 }
 .case-left>p>img{
 	width:100%;
@@ -142,6 +150,7 @@
 	line-height:30px;
 	color:#444446;
 	font-size: 18px;
+	padding:0 5%;
 }
 .case-btn{
 	width:151px;
