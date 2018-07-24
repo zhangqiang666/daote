@@ -4,13 +4,14 @@
     font-family: "微软雅黑";
 }
 .start-head-box{
-	width:95%;
+	width:1440px;
 	margin:0 auto;
 	height:45px;
 	background: RGBA(70, 70, 70, 1);
 	color:RGBA(255, 255, 255, 1);
 	font-size: 13px;
 	padding-left:10%;
+	overflow: hidden;
 }
 .start-head-box span{
 	display: inline-block;
@@ -44,34 +45,38 @@
 	margin-top:2px;
 	border:1px solid RGBA(255, 255, 255, 1);
 }
+.start-right{
+	width:50%;
+	height:45px;
+	 margin-right:6%;
+	 overflow: hidden;
+	float:right;
+	}
 .start-06,.start-07{
  margin-top:15px;
  height:18px;
+ overflow: hidden;
 }
+ 
 .start-06{
-	margin-left:50%;
+	margin-left:45%;
 }
 .start-07{
-	margin-left:2%;
+	margin-left:3%;
 }
 #head{
     height: 80px;
-    width: 95%;
-    /*width: 85%;*/
-    /*background-color: goldenrod;*/
-   
-    /*font-size: 48px;*/
-    
+    width: 1440px;
     margin: 0 auto;
      
 }
 #main{
-	 width: 95%;
+	 width: 1440px;
 	 margin: 0 auto;
 	 
 }
 #foot{
-	width:95%;
+	width:1440px;
 	height:401px;
 	background: #303030;
 	margin:0 auto;
@@ -90,9 +95,10 @@
     padding-right:5%;
 }
 #head ul{
-    width: 60%;
+    width: 45%;
     float:right;
     margin-right:10%;
+     
    
 }
 #head ul li{
@@ -114,9 +120,33 @@
 }
 #main{
     height: auto;
-    margin-top:3px;
-   /* overflow: hidden;*/
+   /* margin-top:10px;*/
+     
+    /*overflow: hidden;*/
 
+}
+/*main头部*/
+.home-head-bg{
+	width:100%;
+	height:460px;
+	background: url(../images/slide/sy.png);
+	 background-repeat: no-repeat;
+	  background-size:cover; 
+	 position: relative;
+	  margin-top:2px;
+	 
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:460px;
+   
+   background-color: rgba(0,0,0,0.45) ; 
+  
 }
  .border-home{
  	width:24px;
@@ -242,7 +272,7 @@
 .title-col-english{
 	width:100%;
 	height:50px;
-	line-height:50px;
+	line-height:22px;
 	text-align: center;
 	font-size: 16px;
 	color:#546497;
@@ -255,15 +285,81 @@
 	width:100%;
 	 
 }
+@media screen and ( min-width: 1440px ) {
+	 .start-head-box{
+	width:95%;
+	margin:0 auto;
+	height:45px;
+	background: RGBA(70, 70, 70, 1);
+	color:RGBA(255, 255, 255, 1);
+	font-size: 13px;
+	padding-left:10%;
+	overflow: hidden;
+}
+#head{
+    height: 80px;
+    width: 95%;
+    
+    margin: 0 auto;
+     
+}
+#main{
+	 width: 95%;
+	 margin: 0 auto;
+	 
+}
+#foot{
+	width:95%;
+	height:401px;
+	background: #303030;
+	margin:0 auto;
+	padding-top:50px;
+}
+
+
+	 
+}
+/*min1440px*/
+}
+@media screen and ( max-width: 1440px ) {
+	  .start-head-box{
+	width:1440px;
+	margin:0 auto;
+	height:45px;
+	background: RGBA(70, 70, 70, 1);
+	color:RGBA(255, 255, 255, 1);
+	font-size: 13px;
+	padding-left:10%;
+	overflow: hidden;
+}
+#head{
+    height: 80px;
+    width: 1440px;
+    
+    margin: 0 auto;
+     
+}
+#main{
+	 width: 1440px;
+	 margin: 0 auto;
+	 
+}
+#foot{
+	width:1440px;
+	height:401px;
+	background: #303030;
+	margin:0 auto;
+	padding-top:50px;
+}
+	
+}
+/*max1440px*/
 @media only screen and (max-width: 1200px) {
-    #head,
-    #foot,
-    #main{
-    width: 100%;
-    }
+    
     .icon-header{
 	 	display: none;
 	 }
+	 
 }
 @media only screen and (max-width: 980px) {
 	 .icon-header{
@@ -282,15 +378,12 @@
     }
     .icon-header{
 	width:100%;
-	 
-	 
 	background:white;
  
 }
 
 .icon-header>ul{
 	width:100%;
-	 
 	list-style: none;
 	 
 }
