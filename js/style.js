@@ -19,6 +19,5 @@
  		$(".foot-img img").toggle();
  	})
  	
- 	
- 	
+ 	 
  })

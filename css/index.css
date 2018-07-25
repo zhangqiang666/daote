@@ -140,7 +140,7 @@
 }
 .case-left>p{
 	 
-	text-align: center;
+	/*text-align: center;*/
 	 
 }
 .case-left>p>img{
@@ -151,7 +151,7 @@
 }
 .case-right>p{
 	 
-	text-align: center;
+	/*text-align: center;*/
 }
 .case-right>p>img{
 	width:100%;
@@ -173,7 +173,7 @@
 	color:#444446;
 	font-size: 18px;
 	padding:0 5%;
-	 
+	/* text-indent: 2em;*/
 	overflow: hidden;
 }
 .case-btn{

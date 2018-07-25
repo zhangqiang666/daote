@@ -207,6 +207,7 @@
  .foot-one-right-title{
  	width:80%;
  	height:50px;
+ 	line-height: 40px;
  	color:RGBA(251, 251, 251, 1);
  	text-align: right;
  	font-size: 18px;
@@ -396,6 +397,13 @@
 	font-size: 16px;
 	 
 }
+
+
+
+
+
+
+
 }
 @media screen and ( min-width: 640px ) {
 	  .icon-header{
