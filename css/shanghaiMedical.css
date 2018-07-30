@@ -1,0 +1,279 @@
+/*.home-head-bg{
+	width:100%;
+	height:460px;
+	background: url(../images/slide/shjy.png);
+	 background-repeat: no-repeat;
+	  background-size:cover; 
+	 position: relative;
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:460px;
+   
+  background-color: rgba(0,0,0,0.45) ; 
+  
+}*/
+.head-title{
+	width:100%;
+	line-height: 50px;
+	margin-top:180px;
+	text-align: center;
+	font-size: 55px;
+	color:#FFFFFF;
+	 
+}
+/*.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}*/
+.head-btn{
+	width:192px;
+	height:60px;
+	margin:0 auto;
+	background: #3A8BF6;
+	font-size: 20px;
+	color:#FFFFFF;
+	text-align: center;
+	line-height:60px;
+	margin-top:50px;
+ 
+}
+/*就医服务体验*/
+.bg-img{
+	width:100%;
+	/*background: RGBA(248, 249, 251, 1);*/
+	padding-top:50px;
+	padding-bottom: 100px;
+}
+.get-doctor-title-box{
+	width:100%;
+	height:100px;
+	margin-top:70px;
+	margin-bottom: 50px;
+}
+.get-doctor-title{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+	font-size: 36px;
+	color:RGBA(88, 162, 252, 1);
+	
+}
+.get-doctor-title-english{
+	width:100%;
+	height:48px;
+	line-height:22px;
+	text-align: center;
+	font-size: 16px;
+	color:RGBA(84, 100, 151, 1);
+}
+/*centent*/
+.get-doctor-centent-box{
+	width:100%;
+	height:128px;
+	/*background: RGBA(0, 0, 0, 0.04);*/
+}
+.get-doctor-centent-box-02{
+	width:100%;
+	height:128px;
+	/*background: RGBA(0, 0, 0, 0.04);*/
+}
+.get-doctor-list{
+	width:20%;
+	height:128px;
+	margin-left:2%;
+	float:left;
+	border-radius: 8px;
+	background: RGBA(255, 255, 255, 1);
+	box-shadow: 5px 10px 10px RGBA(0, 0, 0, 0.04);
+	/*border:1px solid RGBA(0, 0, 0, 0.04);*/
+	
+}
+
+.get-doctor-list-02{
+	width:20%;
+	height:128px;
+	margin-left:2%;
+	float:left;
+	border-radius: 8px;
+	background: RGBA(255, 255, 255, 1);
+	box-shadow: 5px 10px 10px RGBA(0, 0, 0, 0.04);
+	/*border:1px solid RGBA(0, 0, 0, 0.04);*/
+	
+}
+.get-doctor-list-name{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+}
+.get-doctor-list-name>span{
+	float:left;
+	padding-left:5%;
+	color:RGBA(0, 0, 0, 1);
+	font-size: 18px;
+}
+.get-doctor-list-name>img{
+	margin-right:5%;
+	margin-top:10px;
+	float:right;
+}
+.get-doctor-main{
+	 width:75%;
+	 line-height: 25px;
+	 height:50px;
+	 color:RGBA(84, 100, 151, 1);
+	 font-size: 14px;
+	 margin-left:5%;
+	 
+	 
+}
+/*中间分割线*/
+.doctor-fg-box{
+	width:76%;
+	height:50px;
+	border-bottom: 1px solid RGBA(208, 221, 245, 1);
+	margin-left:12%;
+}
+.fg-list{
+	width:30%;
+	height:50px;
+	border-left:1px solid RGBA(208, 221, 245, 1);
+	 float: left;
+}
+.fg-list-end{
+	width:30%;
+	height:50px;
+	border-left:1px solid RGBA(208, 221, 245, 1);
+	border-right:1px solid RGBA(208, 221, 245, 1);
+	 float: left;
+}
+/**/
+.doctor-fg-box-02{
+	width:76%;
+	height:50px;
+	margin-left:12%;
+}
+.fg-list-02{
+	width:30%;
+	height:50px;
+	border-left:1px solid RGBA(208, 221, 245, 1);
+	 float: left;
+	 margin-left:5%;
+}
+.fg-list-end-02{
+	width:30%;
+	height:50px;
+	border-left:1px solid RGBA(208, 221, 245, 1);
+	border-right:1px solid RGBA(208, 221, 245, 1);
+	float: left;
+}
+/*个人健康档案*/
+.personal-health-box{
+	width:100%;
+	height:400px;
+	padding:50px 0px 50px 5%;
+	background: RGBA(248, 249, 251, 1);
+}
+.health-left-list{
+	width:25%;
+	height:250px;
+	float:left;
+	margin-left:5%;
+	 
+}
+.health-col-01{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 18px;
+	color:RGBA(133, 145, 176, 1);
+}
+.health-col-02{
+	width:100%;
+	line-height: 41px;
+	font-size: 30px;
+	color:RGBA(50, 60, 90, 1);
+}
+.health-input{
+	width:100%;
+	height:50px;
+	margin-top:50px;
+	background:white;
+	border-radius: 50px;
+	 
+	
+}
+.health-input input{
+	width:68%;
+	height:50px;
+	float:left;
+	 margin-left:2%;
+	border-radius: 50px;
+	outline:none; 
+	 
+}
+.health-input span{
+	width:28%;
+	height:33px;
+	line-height: 33px;
+    float:left;
+    text-align: center;
+     
+	display: inline-block;
+	background: RGBA(37, 170, 255, 1);
+	color:white;
+	border-radius:30px;
+	margin-top:10px;
+	margin-right:2%;
+}
+.health-right-list-box{
+	width:60%;
+	height:250px;
+	float:right;
+	margin-right:2%;
+	 
+	 
+}
+.health-right-list{
+	width:179px;
+	height:227px;
+	background: white;
+	float:left;
+	margin-left:45px;
+	text-align: center;
+	line-height: 250px;
+	 border-radius: 8px;
+	 
+	box-shadow: 0px 5px 5px  #CCCCCC;
+}
+.left-01{
+	width:15px;
+	height:210px;
+	background:white;
+	border-radius: 8px;
+	float:left;
+	position:absolute;
+	margin-left:26px;
+	margin-top:10px;
+}
+
+.left-02{
+	width:15px;
+	height:190px;
+	background:white;
+	border-radius: 8px;
+	float:left;
+	position:absolute;
+	margin-left:7px;
+	margin-top:20px;
+}

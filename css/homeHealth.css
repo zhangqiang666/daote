@@ -1,0 +1,92 @@
+/*.home-head-bg{
+	width:100%;
+	height:460px;
+	background: url(../images/slide/jujia.png);
+	 background-repeat: no-repeat;
+	  background-size:cover; 
+	 position: relative;
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:460px;
+ 
+  background-color: rgba(0,0,0,0.45) ; 
+  
+}*/
+.head-title{
+	width:347px;
+	height:149px;
+	line-height: 50px;
+	margin-top:150px;
+	margin-left:10%;
+	padding-top:50px;
+	font-size: 42px;
+	color:#FFFFFF;
+	border:1px solid #FFFFFF;
+	 
+}
+.head-title p{
+	 line-height:30px;
+	padding-left:5%;
+}
+.fon-english{
+	font-size: 16px;
+}
+/*.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}*/
+/*.head-btn{
+	width:133px;
+	height:36px;
+	margin-left:20%;
+	background: #3A8BF6;
+	font-size: 14px;
+	color:#FFFFFF;
+	text-align: center;
+	line-height:36px;
+	margin-top:50px;
+ 
+}*/
+ 
+/*个人健康档案*/
+.personal-health-box{
+	width:100%;
+	height:530px;
+     margin-top:70px;
+	margin-bottom: 30px;
+}
+.health-left-img{
+	width:30%;
+	height:480px;
+	float:left;
+	margin-left:5%;
+}
+.health-right-box{
+	width:60%;
+	height:480px;
+	float:left;
+	margin-left:5%;
+	
+}
+.health-right-title{
+	width:100%;
+	height:110px;
+	margin-top:10px;
+	line-height: 110px;
+	font-size: 35px;
+    padding-left:5%;
+    overflow: hidden;
+	background: RGBA(248, 249, 251, 1);
+	color:RGBA(80, 80, 80, 1);
+}
+

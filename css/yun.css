@@ -1,0 +1,130 @@
+body{
+	background: RGBA(248, 249, 251, 1);
+}
+.head-title{
+	width:100%;
+	line-height: 50px;
+	margin-top:200px;
+	/*margin-left:20%;*/
+	font-size: 55px;
+	text-align: center;
+	color:#FFFFFF;
+	 
+}
+/*.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}*/
+.head-btn{
+	width:100%;
+	height:50px;
+	 margin:0 auto;
+	 
+	font-size: 20px;
+	color:#FFFFFF;
+	text-align: center;
+	line-height:50px;
+	margin-top:20px;
+ 
+}
+/*分类*/
+.category-box{
+	width:100%;
+	 display: inline-block;
+	background:RGBA(248, 249, 251, 1);
+	padding-top:40px;
+	padding-bottom: 70px;
+}
+.category-head-list{
+	width:100%;
+	margin-top:0px;
+	display: inline-block;
+}
+.category-head-list-left{
+	width:20%;
+	display: inline-block;
+	line-height:40px;
+	float:left;
+	text-align: center;
+	color:RGBA(153, 153, 153, 1);
+	font-size: 18px;
+	 
+}
+.category-head-list-right{
+	width:80%;
+	display: inline-block;
+	line-height:25px;
+	float:left;
+	list-style: none;
+	color:RGBA(51, 51, 51, 1);
+}
+.category-head-list-right>li{
+	width:11%;
+	line-height: 40px;
+	float:left;
+ 
+	font-size: 18px;
+}
+.category-head-list-right02{
+	width:80%;
+	display: inline-block;
+	line-height:25px;
+	float:left;
+	list-style: none;
+	color:RGBA(51, 51, 51, 1);
+}
+.category-head-list-right02>li{
+	width:11%;
+	line-height: 40px;
+	float:left;
+ 
+	font-size: 18px;
+}
+.col{
+	color:RGBA(49, 116, 187, 1);
+}
+/*list*/
+.category-list-box{
+	width:87%;
+	display: inline-block;
+	list-style: none;
+	margin-left:9%;
+	
+}
+.category-list-box>li{
+	width:23%;
+	float:left;
+	margin-right:2%;
+	background: white;
+}
+.category-list-box>li img{
+	width:100%;
+}
+.book-name{
+	color:RGBA(51, 51, 51, 1);
+	width:100%;
+	line-height: 50px;
+	font-size: 16px;
+	padding-left:2%;
+}
+.book-centent{
+	width:100%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.money-red{
+	float:left;
+	color:RGBA(239, 12, 12, 1);
+	font-size: 14px;
+	margin-left:2%;
+}
+.doctor-man{
+	float:right;
+	color:RGBA(99, 107, 117, 1);
+	font-size: 14px;
+	margin-right:3%;
+}
