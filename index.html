@@ -7,6 +7,7 @@
         <meta name="format-detection" content="telephone=no,email=no"/>
          
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        
          <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
          <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
@@ -20,15 +21,14 @@
     <body>
         <div>
         	<div class="start-head-box">
-        		<span class="start-01">?</span>
-        		<span class="start-02">?</span>
-        		<span class="start-03">?</span>
-        		<span class="start-04">?</span>
-        		<span class="start-05">?</span>
-        		<div class="start-right"> 
-        		<span class="start-06"><span class="start-06-copy">?</span>&nbsp;+86&nbsp;13671903315</span>
-        		<span class="start-07"><span class="start-07-copy">?</span>&nbsp;doctor95@126.com</span>
-        		</div>
+        		 <ul class="start-head-list">
+        		 	<li>企业合作</li>
+        		    <li class="can-weixin-erwei">
+        		    	<div>关注微信小程序&nbsp;<i class="iconfont icon-down-trangle" style="position: absolute;margin-top:1px;"></i></div>
+        		    	<div class="can-weixin"><img src="images/slide/erweima.jpg"></div>
+        		    </li>
+        		    <li><a href="login.html" class="active-a">登录</a> </li>
+        		 </ul>
         	</div>
             <header id="head">
             	<div class="logo">
@@ -50,6 +50,12 @@
                     	<p class="border-home"></p>
                     </li>
                     <li><a href="homeHealth.html">居家健康监护</a>
+                    	<p class="border-home"></p>
+                    </li>
+                      <li><a href="yun.html">云课堂</a>
+                    	<p class="border-home"></p>
+                    </li>
+                       <li><a href="doctor.html">医生个人工作室</a>
                     	<p class="border-home"></p>
                     </li>
                 </ul>
@@ -212,7 +218,17 @@
                 		<p class="modal-register-title">注册成为点医台会员</p>
                 		<p class="modal-register-centent">为你的健康保驾护航</p>
                 		<p class="modal-phone"> <input type="text" class="form-control" id="name" placeholder="手机号"></p>
-                		<p class="modal-sex"> <input type="text" class="form-control" id="name" placeholder="短信验证码"> <button type="button" class="btn btn-default">发送</button></p>
+                		<p class="modal-sex"> <input type="text" class="form-control" id="name" placeholder="短信验证码"> 
+                			<!--<button type="button" class="btn btn-default">
+                				 
+                			</button>-->
+                			<!--<input value="发送" onclick="settime(this)"style="width:100px;float:left;margin-left:10px;height:35px;border:1px solid RGBA(234, 234, 234, 1);border-radius:5px;line-height: 35px;text-align: center;box-shadow: 0;" /> -->
+                			 
+                			 <!--<form action="" method="post" name="myform">-->
+	                    <input type="button" class="button" id="phone" value="发送"  name="phone" onclick="showtime(60)"style="width:100px;float:left;margin-left:10px;background:white;height:35px;border:1px solid RGBA(234, 234, 234, 1);border-radius:5px;line-height: 35px;text-align: center;box-shadow: 0;">
+                        <!-- </form>-->
+                         
+                		</p>
                 		<p class="modal-checkbox"><input type="checkbox" value="">&nbsp;同意并遵守《点医台开放平台协议》</p>
                 		<p class="modal-btn">注册</p>
                 	</div>
@@ -281,6 +297,30 @@
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script>
+function showtime(t){
+	//document.myform.phone.disabled=true;
+	document.getElementById("phone").disabled=true;
+	for(i=1;i<=t;i++) {
+		window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+	}
+
+}
+
+function update_p(num,t) {
+	if(num == t) {
+		//document.myform.phone.value =" 重新发送 ";
+		//document.myform.phone.disabled=false;
+		document.getElementById("phone").value="重新发送";
+		document.getElementById("phone").disabled=false;
+	}
+	else {
+		printnr = t-num;
+		//document.myform.phone.value = " (" + printnr +")秒后重新发送";
+		document.getElementById("phone").value = " " + printnr +"s";
+	}
+}
+</script>
     </body>
     
 </html>
