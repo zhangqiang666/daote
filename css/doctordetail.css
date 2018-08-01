@@ -1,0 +1,278 @@
+.doctor-detail-bg{
+	width:100%;
+	display: inline-block;
+	 
+	background: RGBA(248,249,251);
+    margin-top:-8px;
+}
+.doctor-detail-main{
+	width:90%;
+	display: inline-block;
+	margin-left:5%;
+	
+}
+.doctor-detail-title{
+	width:100%;
+	height:90px;
+	line-height: 90px;
+}
+.doctor-detail-card-box{
+	width:100%;
+	 
+	background: white;
+	display: inline-block;
+}
+.card-head-box{
+	width:100%;
+	height:100px;
+	padding:40px 2% 20px 2%;
+	
+}
+.card-head-box img{
+	width:70px;
+	height:70px;
+	border-radius: 50px;
+	float:left;
+	 
+}
+.card-head-main{
+	width:70%;
+	height:70px;
+	float:left;
+	margin-left:2%;
+	color:RGBA(57, 57, 57, 1);
+	font-size: 14px;
+	padding-top:10px;
+}
+.card-head-main p{
+	width:100%;
+	 line-height: 20px;
+	 
+	 
+}
+.card-head-btn{
+	width:131px;
+	height:50px;
+	background: RGBA(0, 155, 255, 1);
+	line-height: 50px;
+	text-align: center;
+	color:RGBA(255, 255, 255, 1);
+	font-size:16px;
+	float:right;
+}
+.card-head-centent{
+	width:96%;
+	 
+	margin-left:2%;
+	margin-top:20px;
+	display: inline-block;
+	background: RGBA(237, 244, 252, 0.35);
+	margin-bottom: 30px;
+	line-height: 35px;
+	padding:20px;
+	font-size: 16px;
+	color:RGBA(106, 106, 106, 1);
+}
+/*选项卡*/
+.tab-bg-box{
+	width:100%;
+	 
+	display: inline-block;
+	background: white;
+	margin-top:30px;
+}
+ .nav-tabs>li>a {
+    margin-right: 2px;
+    width:150px;
+    text-align: center;
+    line-height: 2.1;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+a {
+    color:RGBA(57, 57, 57, 1);
+    text-decoration: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: RGBA(33, 184, 255, 1);
+    cursor: default;
+    background-color: #fff;
+     border: 0px solid red; 
+      border-bottom:1px solid RGBA(33, 184, 255, 1);
+    /*border-bottom-color: transparent;*/
+    border-radius: 0px;
+}
+.tab-home-list-box{
+	width:100%;
+	display: inline-block;
+	list-style: none;
+	margin-top:30px;
+	
+}
+.tab-home-list-box>li{
+	width:22.5%;
+	display: inline-block;
+	float:left;
+	margin-left:2%;
+}
+.tab-home-list-video{
+	width:100%;
+	height:230px;
+	background:RGBA(225, 225, 225, 1);
+}
+.home-video-name{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	font-size: 16px;
+	color:RGBA(51, 51, 51, 1);
+}
+.home-video-doctor{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	
+}
+.col-red{
+	color:RGBA(239, 12, 12, 1);
+	font-size: 14px;
+}
+.fot-doctor{
+	color:RGBA(99, 107, 117, 1);
+	font-size: 14px;
+	float:right;
+}
+.col-green{
+	font-size: 14px;
+	color:RGBA(112, 212, 69, 1);
+}
+.page-next{
+ width:96%;
+ height:46px;
+ line-height:46px;
+ text-align: center;
+ font-size: 14px;
+ color:RGBA(57, 57, 57, 1);
+ background: RGBA(244, 244, 244, 1);
+ margin:0 auto;
+ margin-top:0px;
+}
+#pageSize{
+	width:103px;
+	height:35px;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    margin:0 auto;
+}
+.container-copy{
+	width:100%;
+   text-align: center;
+   margin-top:50px;
+   margin-bottom: 100px;
+   
+}
+ /*tab医学文章*/
+.yxwz-main-list{
+	width:96%;
+	height:130px;
+	margin:0 auto;
+	padding:30px 0;
+	border-bottom: 1px solid RGBA(243, 243, 243, 1);
+	
+}
+.yxwz-list-btn{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	font-size: 14px;
+	color:white;
+	text-align: center;
+	float:left;
+	background:RGBA(68, 168, 242, 1) ;
+}
+.yxwz-list-right{
+	width:80%;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	margin-left:30px;
+}
+.yxwz-list-right>li{
+	width:100%;
+	line-height: 30px;
+	color:RGBA(57, 57, 57, 1);
+	font-size: 18px;
+}
+.yxwz-list-right>li img{
+	width:23px;
+	height:17px;
+	margin-left:10px;
+	
+}
+.new-red{
+	color:RGBA(255, 127, 127, 1);
+	font-size: 16px;
+}
+.yxwz-time span{
+	color:RGBA(189, 189, 189, 1);
+	font-size: 16px;
+	margin-right:30px;
+}
+.xypj-list-box{
+	width:96%;
+	height:130px;
+	margin:0 auto;
+	padding:30px 0;
+	border-top: 1px solid RGBA(243, 243, 243, 1);
+	list-style: none;
+	
+}
+ 
+.xypj-list-box>li{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+}
+.xypj-list-gray{
+	width:40px;
+	height:40px;
+	border-radius: 50px;
+	float:left;
+	background: RGBA(216, 216, 216, 1);
+}
+.xypj-list-name{
+	margin-left:20px;
+	font-size: 16px;
+	color:RGBA(0, 0, 0, 1);
+	
+}
+.xypj-list-time{
+	font-size: 16px;
+	color:RGBA(189, 189, 189, 1);
+	margin-left:20px;
+}
+.xypj-list-right-i{
+	float:right;
+	font-size: 16px;
+	color:RGBA(189, 189, 189, 1);
+	margin-right:20px;
+}
+.xypj-list-centent{
+	width:80%;
+	margin-left:60px;
+	color:RGBA(0, 0, 0, 1);
+}
+.xypj-bg01{
+	width:100%;
+	height:50px;
+ 
+}
+.xypj-bg{
+	width:100%;
+	height:500px;
+	background: RGBA(248,249,251);
+}

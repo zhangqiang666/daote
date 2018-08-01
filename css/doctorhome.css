@@ -1,0 +1,120 @@
+.head-title{
+	width:100%;
+	line-height: 50px;
+	margin-top:180px;
+	text-align: center;
+	font-size: 55px;
+	color:#FFFFFF;
+	 
+}
+/*.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}*/
+.head-btn{
+	width:100%;
+	height:60px;
+	margin:0 auto;
+	/*background: #3A8BF6;*/
+	font-size: 20px;
+	color:#FFFFFF;
+	text-align: center;
+	line-height:60px;
+	margin-top:10px;
+ 
+}
+/*推荐医生*/
+.tj-doctor-box{
+	width:100%;
+	 
+	background: RGBA(248,249,251);
+	display: inline-block;
+	padding-bottom:30px;
+}
+.tj-doctor-main-box{
+	width:90%;
+	 
+	display: inline-block;
+	margin-left:5%;
+}
+.tj-doctor-title{
+	width:100%;
+	height:90px;
+	line-height: 90px;
+	 
+	
+}
+.title-left{
+	color:RGBA(58, 58, 59, 1);
+	font-size: 26px;
+	float:left;
+}
+.title-right{
+	width:50%;
+	 
+	height:90px;
+	float:right;
+	 text-align: right;
+	 position: relative;
+}
+.title-right input{
+	width:257px;
+	height:41px;
+	padding-left:10px;
+	border:0px;
+}
+.icon-btn{
+	position: absolute;
+	right:20px;
+}
+.tj-doctor-list-box{
+	width:100%;
+	display: inline-block;
+}
+.tj-doctor-list{
+	width:100%;
+	 
+	 list-style: none;
+	  display:flex;
+	 flex-direction: row;  /* 子元素横向排列 */
+     justify-content:  space-between; /* 相对父元素水平居中 */
+    /* align-items: center;*/ /*  子元素相对父元素垂直居中 */
+   margin-bottom: 30px;
+      
+	 
+}
+.tj-doctor-list>li{
+	background:white;
+	width:220px; 
+	overflow: hidden;
+	 display: inline-block;
+}
+.tj-doctor-list>li:hover{
+	 box-shadow:1px 10px 10px 10px #CCCCCC;
+}
+.tj-doctor-list>li>a>img{
+	 width:100%;
+}
+ a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
+}
+.list-card-name{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color:RGBA(58, 58, 59, 1);
+}
+.list-card-adress{
+	width:100%;
+	height:50px;
+	line-height: 22px;
+	text-align: center;
+	font-size: 14px;
+	color:RGBA(147, 147, 147, 1);
+}
