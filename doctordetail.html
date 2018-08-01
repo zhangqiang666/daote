@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台</title>
+        <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+         
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+         <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
+         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="css/doctordetail.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+        <div>
+        	<div class="start-head-box">
+        	 <ul class="start-head-list">
+        		 	<li>企业合作</li>
+        		    <li class="can-weixin-erwei">
+        		    	<div>关注微信小程序&nbsp;<i class="iconfont icon-down-trangle" style="position: absolute;margin-top:1px;"></i></div>
+        		    	<div class="can-weixin"><img src="images/slide/erweima.jpg"></div>
+        		    </li>
+        		    <li><a href="login.html" class="active-a">登录</a> </li>
+        		 </ul>
+        		</div>
+        	</div>
+            <header id="head">
+            	<div class="logo">
+            		<a href="index.html" style="display: inline-block;"> 
+            		<img src="images/1_03.jpg" />
+            		</a>
+            	</div>
+                <ul>
+                    <li><a href="index.html">首页</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="videoexpert.html">视频专家门诊</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="shanghaiMedical.html">上海就医代办</a>
+                    		<p class="border-home"></p>
+                    </li>
+                    <li><a href="expertAssignment.html">专家外派手术</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="homeHealth.html">居家健康监护</a>
+                    	<p class="border-home"></p>
+                    </li>
+                      <li><a href="yun.html">云课堂</a>
+                    	<p class="border-home"></p>
+                    </li>
+                       <li><a href="doctor.html">医学教育</a>
+                    	<p class="border-home"></p>
+                    </li>
+                     <li><a href="doctorhome.html" style="color:#3174BB;">医生工作室</a>
+                    	<p class="border-home" style="display: block;"></p>
+                    </li>
+                </ul>
+                <div class="head-div"><i class="iconfont icon-santiaogang"></i></div>
+                
+            </header>
+            <!--icon-header-->
+            <div class="icon-header">
+            	<ul>
+            		<li><a href="#">首页</a></li>
+            		<li><a href="#">视频专家门诊</a></li>
+            		<li><a href="#">上海就医代办</a></li>
+            		<li><a href="#">专家外派手术</a></li>
+            		<li><a href="#">居家健康监护</a></li>
+            	</ul>
+            </div>
+            <!--icon-header-->
+            <section id="main">
+            	 <!--bg-->
+               <div class="doctor-detail-bg"> 
+               <!--main-->
+               <div class="doctor-detail-main">
+               	<!--title-->
+               	<div class="doctor-detail-title">
+               		<span><a href="doctorhome.html">工作室列表</a></span>
+               		<span>></span>
+               		<span><a href="doctordetail.html">工作室详情</a></span>
+               	</div>
+               	<!--card-img-->
+               	<div class="doctor-detail-card-box">
+               		<div class="card-head-box">
+               			<img src="images/slide/doctor-home.png">
+               			<div class="card-head-main">
+               				<p><strong> 医生：单某某主任</strong></p>
+               				<p>我是点医台XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+               			</div>
+               			<div class="card-head-btn">
+               				关注该医生
+               			</div>
+               		</div>
+               		<div class="card-head-centent">
+               			讲师简介：此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处
+               			为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内
+               			容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此
+               			处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为
+               			内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为
+               			内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内
+               			容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容此处为内容。
+               		</div>
+               		
+               		
+               		
+               		
+               	</div>
+               	<!--选项卡-->
+               	<div class="tab-bg-box">
+               		<ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+      <a href="#home" data-toggle="tab">
+         课程视频
+      </a>
+   </li>
+   <li><a href="#yxwz" data-toggle="tab">医学文章</a></li>
+   <li><a href="#hztw" data-toggle="tab">患者提问</a></li>
+   <li><a href="#xypj" data-toggle="tab">学院评价</a></li>
+  <!-- <li class="dropdown">
+      <a href="#" id="myTabDrop1" class="dropdown-toggle" 
+         data-toggle="dropdown">Java 
+         <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+         <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+         <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+      </ul>
+   </li>-->
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home">
+      <ul class="tab-home-list-box">
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-green">公开课</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      </ul>
+      <!---->
+       <ul class="tab-home-list-box">
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-green">公开课</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      </ul>
+      <!---->
+       <ul class="tab-home-list-box">
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-green">公开课</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      </ul>
+      <!---->
+       <ul class="tab-home-list-box">
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-green">公开课</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      	<li>
+      		<div class="tab-home-list-video"></div>
+      		<div class="home-video-name">课程名XXXXXX</div>
+      		<div class="home-video-doctor"><span class="col-red">￥200.00</span> <span class="fot-doctor">授课：王强主治医师</span></div>
+      	</li>
+      </ul>
+      <!--bgg-->
+      <div style="width:100%;height:50px;"></div>
+      <!---->
+      <div class="page-next">
+      	下一页&nbsp;》
+      </div>
+      <!--/分页-->
+            <div class="container-copy">  
+        <div class="">  
+            <div class="">  
+              <ul class="pagination col-center-block" >
+              	<li><a href="#">«</a></li>
+			    <li class="active"><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">»</a></li>
+              	<li><label>
+				   <select id="pageSize" onchange="research()"
+				   aria-controls="DataTables_Table_0" size="1" name="DataTables_Table_0_length" class="g-pages">
+				   <option selected="selected" value="5">1/20页</option>
+				   <option value="10">5/20页</option>
+				   <option value="20">10/20页</option>
+				   <option value="30">20/20页</option>
+				   </select>
+				  </label>
+				</li>  
+				<!--<li>跳至<input type="text" class="g-input">页<input type="button" onclick="" value="GO"></input></li>-->
+            </ul>
+            </div>  
+        </div>  
+      </div>  
+      <!--/分页-->
+
+      
+      
+      
+      
+      
+   </div>
+   <div class="tab-pane fade" id="yxwz">
+      <div class="yxwz-main-list">
+      	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>老年糖尿病患者的心血管死亡因素分析</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+      <div class="yxwz-main-list">
+      		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>老年糖尿病患者的心血管死亡因素分析</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+      <div class="yxwz-main-list">
+      		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>手术治疗对精索静脉曲张性不育患者精液质量影响的临床观察</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+       <div class="yxwz-main-list">
+       		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>波立维与阿司匹林联合治疗进展型脑梗死的疗效观察</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+        <div class="yxwz-main-list">
+        		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>老年糖尿病患者的心血管死亡因素分析</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+       <div class="yxwz-main-list">
+       		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>波立维与阿司匹林联合治疗进展型脑梗死的疗效观察</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+        <div class="yxwz-main-list">
+         	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>老年糖尿病患者的心血管死亡因素分析</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+       <!---->
+      <div class="page-next">
+      	下一页&nbsp;》
+      </div>
+      <!--/分页-->
+            <div class="container-copy">  
+        <div class="">  
+            <div class="">  
+              <ul class="pagination col-center-block" >
+              	<li><a href="#">«</a></li>
+			    <li class="active"><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">»</a></li>
+              	<li><label>
+				   <select id="pageSize" onchange="research()"
+				   aria-controls="DataTables_Table_0" size="1" name="DataTables_Table_0_length" class="g-pages">
+				   <option selected="selected" value="5">1/20页</option>
+				   <option value="10">5/20页</option>
+				   <option value="20">10/20页</option>
+				   <option value="30">20/20页</option>
+				   </select>
+				  </label>
+				</li>  
+				<!--<li>跳至<input type="text" class="g-input">页<input type="button" onclick="" value="GO"></input></li>-->
+            </ul>
+            </div>  
+        </div>  
+      </div>  
+      <!--/分页-->
+
+      
+     
+      
+      
+      
+      
+   </div>
+    <div class="tab-pane fade" id="hztw">
+    	
+      <div class="yxwz-main-list">
+      	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+      <div class="yxwz-main-list">
+      		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+      <div class="yxwz-main-list">
+      	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      	 </ul>
+      </div>
+      <!--list-->
+       <div class="yxwz-main-list">
+      		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      	 </ul>
+      </div>
+      <!--list-->
+        <div class="yxwz-main-list">
+      		<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+       <div class="yxwz-main-list">
+      	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+        <div class="yxwz-main-list">
+      	<a href="bookdetail.html"> 
+      	 <p class="yxwz-list-btn">学术类</p>
+      	 <ul class="yxwz-list-right">
+      	 	<li>
+      	 		<div>
+      	 			<strong>术后有一年多了该如何去调理身体机能</strong>
+      	 			<img src="images/slide/new.png">
+      	 			<span class="new-red">New</span>
+      	 		</div>
+      	 	</li>
+      	 	<li class="yxwz-time">
+      	 		 <span>发表于 07-29 17:10</span>
+      	 		 <span>300人查看</span>
+      	 		 <span>70条评论</span>
+      	 	</li>
+      	 </ul>
+      	 </a>
+      </div>
+      <!--list-->
+       <!---->
+      <div class="page-next">
+      	下一页&nbsp;》
+      </div>
+      <!--/分页-->
+            <div class="container-copy">  
+        <div class="">  
+            <div class="">  
+              <ul class="pagination col-center-block" >
+              	<li><a href="#">«</a></li>
+			    <li class="active"><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">»</a></li>
+              	<li><label>
+				   <select id="pageSize" onchange="research()"
+				   aria-controls="DataTables_Table_0" size="1" name="DataTables_Table_0_length" class="g-pages">
+				   <option selected="selected" value="5">1/20页</option>
+				   <option value="10">5/20页</option>
+				   <option value="20">10/20页</option>
+				   <option value="30">20/20页</option>
+				   </select>
+				  </label>
+				</li>  
+				<!--<li>跳至<input type="text" class="g-input">页<input type="button" onclick="" value="GO"></input></li>-->
+            </ul>
+            </div>  
+        </div>  
+      </div>  
+      <!--/分页-->
+
+      
+      
+      
+      
+   </div>
+    <div class="tab-pane fade" id="xypj">
+      <ul class="xypj-list-box">
+      	<li>
+      		<div class="xypj-list-gray"></div>
+      		<strong class="xypj-list-name">用户名XXX</strong>
+      		<span class="xypj-list-time">07-29 17:10</span>
+      		<span class="xypj-list-right-i">4#</span>
+      	</li>
+      	<li>
+      		 <div class="xypj-list-centent">评论内容评论内容评论内容评论内容评论内容评论内容</div>
+      	</li>
+      </ul>
+      <!--xypj-list-->
+       <ul class="xypj-list-box">
+      	<li>
+      		<div class="xypj-list-gray"></div>
+      		<strong class="xypj-list-name">用户名XXX</strong>
+      		<span class="xypj-list-time">07-29 17:10</span>
+      		<span class="xypj-list-right-i">3#</span>
+      	</li>
+      	<li>
+      		 <div class="xypj-list-centent">评论内容评论内容评论内容评论内容评论内容评论内容</div>
+      	</li>
+      </ul>
+       <ul class="xypj-list-box">
+      	<li>
+      		<div class="xypj-list-gray"></div>
+      		<strong class="xypj-list-name">用户名XXX</strong>
+      		<span class="xypj-list-time">07-29 17:10</span>
+      		<span class="xypj-list-right-i">2#</span>
+      	</li>
+      	<li>
+      		 <div class="xypj-list-centent">评论内容评论内容评论内容评论内容评论内容评论内容</div>
+      	</li>
+      </ul>
+      <!--xypj-list-->
+       <ul class="xypj-list-box">
+      	<li>
+      		<div class="xypj-list-gray"></div>
+      		<strong class="xypj-list-name">用户名XXX</strong>
+      		<span class="xypj-list-time">07-29 17:10</span>
+      		<span class="xypj-list-right-i">1#</span>
+      	</li>
+      	<li>
+      		 <div class="xypj-list-centent">评论内容评论内容评论内容评论内容评论内容评论内容</div>
+      	</li>
+      </ul>
+      <!--xypj-list-->
+      <!--xypj-bg-->
+       <div class="xypj-bg01"></div>
+      <div class="xypj-bg"></div>
+      
+      
+      
+      
+   </div>
+  <!-- <div class="tab-pane fade" id="jmeter">
+      <p>jMeter is an Open Source testing software. It is 100% pure 
+      Java application for load and performance testing.</p>
+   </div>
+   <div class="tab-pane fade" id="ejb">
+      <p>Enterprise Java Beans (EJB) is a development architecture 
+         for building highly scalable and robust enterprise level    
+         applications to be deployed on J2EE compliant 
+         Application Server such as JBOSS, Web Logic etc.
+      </p>
+   </div>-->
+</div>
+               		
+               		
+               		
+               		
+               		
+               		
+               		
+               		
+               		
+               		 
+               		
+               	</div>
+               	
+               	  
+               	<!--选项卡-->
+               	
+               	
+               
+               	 <!--main-->
+               </div>
+                
+               
+               
+               
+               
+               
+               
+               <!--bg-->
+               </div>
+            </section>
+            <!--footer-->
+            <footer id="foot">
+                <div class="foot-one-box">
+                	<div class="foot-one-left">
+                		<ul class="foot-one-list">
+                			<li>联系我们</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                			<ul class="foot-one-list">
+                			<li>新闻公告</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                			<ul class="foot-one-list">
+                			<li>就医指南</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                	</div>
+                	<div class="foot-one-right">
+                		<div class="foot-one-right-title"><strong class="foot-title-one">订阅我们</strong></div>
+                		<div class="foot-one-right-title"><span class="foot-title-two">第一时间获得我们点医台的最新动态</span></div>
+                		<div class="foot-one-right-title">
+                	    <div class="input-group" style="width:277px;float:right;">
+			            <input type="text" class="form-control input-bg"style="background: RGBA(48, 48, 48, 1);-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;" placeholder="请输入您的邮件地址">
+			            <span class="input-group-addon"style="background: RGBA(48, 48, 48, 1);color:RGBA(187, 187, 187, 1);-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">></span>
+		                    </div>
+                		</div>
+                	</div>
+                </div>
+                <!--one-->
+                <!--img-->
+                <div class="foot-img">
+                	<span>jjjjj</span>
+                	<img src="images/slide/erweima.jpg">
+                </div>
+                <!--img-->
+                <!--foot-two-->
+                <div class="foot-two">
+                	<img src="images/weixin.png">
+                	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
+                </div>
+                  <!--foot-two-->
+            </footer>
+        </div>
+        
+         
+         <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/doctordetail.js"></script>
+        <script>
+   $(function () {
+      $('#myTab li:eq(0) a').tab('show');
+   });
+</script>
+    </body>
+    
+</html>
