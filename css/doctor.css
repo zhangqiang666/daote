@@ -175,7 +175,7 @@
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    color: #555;
+    color: RGBA(33, 184, 255, 1);
     cursor: default;
     background-color: #fff;
      border: 0px solid red; 
@@ -183,4 +183,7 @@
     border-bottom-color: transparent;
     border-radius: 0px;
 }
- 
+ a {
+     color: RGBA(51, 51, 51, 1); 
+    text-decoration: none;
+}

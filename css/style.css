@@ -274,7 +274,7 @@
 	margin:0 auto;
 	 
 }
-@media screen and ( min-width: 1440px ) {
+@media screen and ( min-width: 1024px ) {
 	 .start-head-box{
    width:100%;
 	margin:0 auto;
@@ -312,7 +312,7 @@
 }
 @media screen and ( max-width: 1024px ) {
 	  .start-head-box{
-	width:1440px;
+	width:100%;
 	margin:0 auto;
 	height:45px;
 	background: RGBA(70, 70, 70, 1);
@@ -323,18 +323,18 @@
 }
 #head{
     height: 80px;
-    width: 1440px;
+    width: 100%;
     
     margin: 0 auto;
      
 }
 #main{
-	 width: 1440px;
+	 width:100%;
 	 margin: 0 auto;
 	 
 }
 #foot{
-	width:1440px;
+	width:100%;
 	height:401px;
 	background: #303030;
 	margin:0 auto;
