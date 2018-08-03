@@ -6,6 +6,10 @@
         //模态框
         //shujujiaohu
        
+         
+                    
+                    
+                    
          $.ajax({
         url:"http://www.dianyitai.cn/api/homes",
         type:"post",
@@ -24,7 +28,7 @@
                     $.each(data.data, function(key, list){
                          
                         
-                        html +=' ';
+                        html +='';
                       
 
                     });

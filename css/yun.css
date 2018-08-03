@@ -93,6 +93,7 @@ body{
 	display: inline-block;
 	list-style: none;
 	margin-left:9%;
+ 
 	
 }
 .category-list-box>li{
@@ -100,9 +101,11 @@ body{
 	float:left;
 	margin-right:2%;
 	background: white;
+	margin-bottom:20px;
 }
 .category-list-box>li img{
 	width:100%;
+	height:200px;
 }
 .book-name{
 	color:RGBA(51, 51, 51, 1);
@@ -127,4 +130,7 @@ body{
 	color:RGBA(99, 107, 117, 1);
 	font-size: 14px;
 	margin-right:3%;
+}
+a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
 }

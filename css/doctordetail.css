@@ -276,3 +276,26 @@ a {
 	height:500px;
 	background: RGBA(248,249,251);
 }
+.pagination>li {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: RGBA(57, 57, 57, 1);
+    cursor: default;
+    background-color:white;
+    border-color: #337ab7;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: RGBA(57, 57, 57, 1);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
