@@ -48,13 +48,10 @@
 				$('.foot-add').click(function(){
 					$('.foot-add').removeClass("span_plus")
 					  $('.foot-add').addClass("span_minus")
+					   $(this).toggleClass("span_plus");
 					 $(this).toggleClass("span_minus");
-					  $(this).toggleClass("span_plus");
-					  $(this).addClass("span_minus");
 					  
-					    
-					   
-					 
+					  $(this).addClass("span_minus");
 				
 				})
 				 
