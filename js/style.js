@@ -1,10 +1,9 @@
  $(document).ready(function(){
- 	$(".icon-header").hide();
+ 	/*$(".icon-header").hide();
  	$(".head-div").click(function(){
  		$(".icon-header").toggle();
- 		//$(".icon-header>ul").toggle();
- 		//$(".icon-header>ul>li").toggle();
- 	})
+ 		 
+ 	})*/
  	 
  	/*$("#head ul li").hover(function(){
  		$(".border-home").hide()
@@ -20,9 +19,9 @@
  	})
  	
  	 
- })
+  
 //轮播图触摸事件
-	$(document).ready(function(){
+	 
 				var startX,endX;//声明触摸的两个变量
 				var offset = 30;//声明触摸距离的变量
 				$('.carousel-inner').on('touchstart',function (e) {
@@ -44,4 +43,23 @@
 					        	
 					}
 				});	
+				//底部手风琴选项卡
+				 
+				$('.foot-add').click(function(){
+					$('.foot-add').removeClass("span_plus")
+					  $('.foot-add').addClass("span_minus")
+					 $(this).toggleClass("span_minus");
+					  $(this).toggleClass("span_plus");
+					  $(this).addClass("span_minus");
+					  
+					    
+					   
+					 
+				
+				})
+				 
+				
+				
+				
+				
 			});

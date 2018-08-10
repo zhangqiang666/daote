@@ -1,8 +1,14 @@
   $(function(){
   	//模态框
+  	  var w = document.documentElement.clientWidth || document.body.clientWidth;
+  	console.log(w)
+  	if(w>=640){ 
          $("#myModal").modal({
             keyboard: true
         });
+       }else{
+       	
+       }
         //模态框
         //shujujiaohu
        

@@ -1,6 +1,26 @@
 body{
 	background: RGBA(248, 249, 251, 1);
 }
+.home-head-bg{
+	width:100%;
+	height:460px;
+	background: url(../images/slide/shjy.png);
+	 background-repeat: no-repeat;
+	  background-size:cover; 
+	 position: relative;
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:460px;
+   
+  background-color: rgba(0,0,0,0.45) ; 
+  
+}
 .head-title{
 	width:100%;
 	line-height: 50px;
