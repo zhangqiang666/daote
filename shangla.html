@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<div class="new" style="width:100%;height:1000px;background: #008000;">
+			
+		</div>-->
+		<img alt="验证码" src="/ImageServlet">
+		
+		<script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			 $(function(){
+			 	BufferedImage im = new BufferedImage(60,20,BufferedImage.TYPE_INT_RGB);
+			 	ImageIO.write(im, "JPG",response.getOutputStream());
+			 	Graphics g = im.getGraphics();
+			 	Random rm = new Random();
+               Color c = new Color(rm.nextInt(255),rm.nextInt(255),rm.nextInt(255));
+               g.setColor(c);
+               //填充整个图片的颜色
+                g.fillRect(0, 0, 60, 20);
+                g.setColor(new Color(rm.nextInt(255),rm.nextInt(255),rm.nextInt(255)));
+               g.setFont(new Font("华文隶书",Font.BOLD|Font.ITALIC,28));
+                 g.drawString("8", 1, 18);
+			  
+		/*window.onscroll = function() { 
+			var page=1;
+   var scrollTop = document.body.scrollTop; 
+   var offsetHeight = document.body.offsetHeight; 
+   var scrollHeight = document.body.scrollHeight; 
+   console.log(scrollTop)
+   console.log(offsetHeight)  
+   console.log(scrollHeight)
+   if (scrollTop == scrollHeight - offsetHeight) { 
+    page++; 
+    loadList(page); 
+   } 
+  }; 
+  
+ 
+function loadList(page) { 
+   page = page || 1; 
+  console.log(page)
+   if (isLoad) { 
+    getJSON('/forum.php?mod=hot&page=' + page).then(function(data) { 
+     if (data.code == 200) { 
+      data = data.data; 
+      if (data && Object.keys(data).length > 0) { 
+       for (var k in data) { 
+        var v = data[k]; 
+        detailTemplate = detailTemplate.cloneNode(true); 
+        var userInfoObj = detailTemplate.getElementsByClassName('user-info')[0]; 
+        userInfoObj.getElementsByClassName('name')[0].innerText = v.author; 
+        userInfoObj.getElementsByClassName('avatar')[0].src = v.avatar; 
+        userInfoObj.getElementsByClassName('post-time')[0].innerHTML = v.lastpost; 
+        detailTemplate.getElementsByClassName('title')[0].innerText = v.subject; 
+        detailTemplate.getElementsByClassName('desc')[0].innerText = v.subject; 
+        var extInfoObj = detailTemplate.getElementsByClassName('ext-info')[0]; 
+        extInfoObj.getElementsByClassName('from')[0].innerText = v.fname; 
+        extInfoObj.getElementsByClassName('view-time')[0].innerText = v.views; 
+        postListObj.appendChild(detailTemplate); 
+       } 
+      } else { 
+       isLoad = false; 
+      } 
+     } else { 
+      isLoad = false; 
+     } 
+    }, function(status) { 
+     console.log('Something went wrong, status is ' + status); 
+    }); 
+   } 
+  }*/
+  
+   })
+		</script>
+	</body>
+</html>
