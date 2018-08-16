@@ -46,10 +46,10 @@
 				//底部手风琴选项卡
 				 
 				$('.foot-add').click(function(){
-					$('.foot-add').removeClass("span_plus")
+					  $('.foot-add').removeClass("span_plus")
 					  $('.foot-add').addClass("span_minus")
 					   $(this).toggleClass("span_plus");
-					 $(this).toggleClass("span_minus");
+					   //$(this).toggleClass("span_minus");
 					  
 					  $(this).addClass("span_minus");
 				
