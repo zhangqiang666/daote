@@ -13,6 +13,10 @@
 	font-size:12px;
 	color:RGBA(80, 80, 80, 1);
 }
+.login-title-gohome i{
+	font-size: 10px;
+	color:RGBA(131, 131, 131, 1);
+	 }
 .attention-title{
 	width:95%;
 	height:50px;

@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
     <head>
         <meta charset="UTF-8">
         <title>点医台</title>
+        
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
          
@@ -12,9 +14,26 @@
          <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
         <link rel="stylesheet" type="text/css" href="css/member.css"/>
-        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+       <!-- <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/rem.js"></script>
+        <script type="text/javascript" src="js/rem.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/lib/css/main.css" />
+		<style type="text/css">
+			.demo{width:80%; margin:20px auto}
+			.demo h3{height:32px; line-height:32px}
+			.demo p{line-height:24px}
+			pre{margin-top:10px; padding:6px; background:#f7f7f7}
+		</style>
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="lib/jquery.cityselect.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#city").citySelect({
+					nodata:"none",
+					required:false
+				}); 
+			});
+		</script>
         <style>
          
         </style>
@@ -83,7 +102,7 @@
             <!--icon-header-->
             <!--头部返回-->
              <div class="login-title-gohome">
-             	<a href="javascript:window.history.back();">返回</a> 
+             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
              </div>
             <!--头部返回-->
             <!--list-->
@@ -93,30 +112,31 @@
             <!---->
              <div class="member-list">
                  <p><span>手机号</span><sup>*</sup></p>
-                 <p><input placeholder="18330246685" class="member-phone"></p>
+                 <p><input placeholder="18330246685" class="member-phone" id="phone" value="18394596534"></p>
              </div>
              <!--list-->
                <div class="member-list">
                  <p><span>电子邮箱</span></p>
-                 <p><input placeholder="yeqirui@foxmail.com" class="member-email"></p>
+                 <p><input placeholder="yeqirui@foxmail.com" type="email" class="member-email" id="email"></p>
              </div>
              <!--list-->
               <div class="member-list">
                  <p><span>姓名</span><sup>*</sup></p>
-                 <p><input placeholder="" class="member-email"></p>
+                 <p><input placeholder="" class="member-email" id="name"></p>
              </div>
              <!--list-->
               <div class="member-list">
                  <p><span>性别</span></p>
-                 <p><select class="member-email">
-                 	<option>男</option>
-                 	<option>女</option>
+                 <p><select class="member-email" id="sex">
+                 	<option value="1">男</option>
+                 	<option value="0">女</option>
                  </select></p>
              </div>
              <!--list-->
+              <div id="city"> 
              <div class="member-list">
                  <p><span>省份</span><sup>*</sup></p>
-                 <p><select class="member-email">
+                 <p><select class="member-email prov" id="province">
                  	<option>上海</option>
                  	<option>北京</option>
                  </select></p>
@@ -124,7 +144,7 @@
              <!--list-->
              <div class="member-list">
                  <p><span>城市</span><sup>*</sup></p>
-                 <p><select class="member-email">
+                 <p><select class="member-email city">
                  	<option>上海市</option>
                  	<option>北京市</option>
                  </select></p>
@@ -132,28 +152,29 @@
              <!--list-->
              <div class="member-list">
                  <p><span>地区</span><sup>*</sup></p>
-                 <p><select class="member-email">
+                 <p><select class="member-email dist" id="region">
                  	<option>徐汇区</option>
                  	<option>静安区</option>
                  </select></p>
              </div>
+             </div>
              <!--list-->
              <div class="member-list">
-                 <p><span>城市</span><sup>*</sup></p>
-                 <p><input placeholder="" class="member-email"></p>
+                 <p><span>详细地址</span><sup>*</sup></p>
+                 <p><input placeholder="" class="member-email" id="detailed"></p>
              </div>
              <!--list-->  <div class="member-list">
                  <p><span>邮编</span></p>
-                 <p><input placeholder="" class="member-email"></p>
+                 <p><input placeholder="" class="member-email" id="youbian"></p>
              </div>
              <!--list-->
              
              <!---->
              <div class="member-checkbox">
-             	<input type="checkbox" />&nbsp;<a href="#">我已阅读并接受个人信息收集声明</a>
+             	<input type="checkbox" name="test" />&nbsp;<a href="#">我已阅读并接受个人信息收集声明</a>
              </div>
              <div class="member-btn">
-             	<button>保存</button>
+             	<button id="vip-btn">保存</button>
              </div>
              
              
@@ -165,8 +186,8 @@
         </div>
         
          
-         <script type="text/javascript" src="js/style.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/style.js"></script>-->
+        <script type="text/javascript" src="js/member.js"></script>
         <script type="text/javascript">
         	 
         </script>

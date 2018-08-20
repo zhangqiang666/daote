@@ -96,8 +96,8 @@ var imgurl='http://www.dianyitai.cn'
             	  	if(data[i].kmfl==id||data[i].money==money){
             	  		 $('.category-list-box').empty();   //清空resText里面的所有内容
                     var html = '';
-                    $.each(data, function(key, list){
-                    	 
+                    $.each(data , function(key, list){
+                    	 //json.parse();
                         //console.log('hahah:'+list.money);
                         //console.log(list.kmfl)
                          if(list.kmfl==id||list.money==money){ 

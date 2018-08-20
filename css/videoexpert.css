@@ -307,8 +307,17 @@ body{
 	width:60%;
 	 
 }
+.mobile-head-bg{
+	display: none;
+}
 /*mobile手机端布局样式*/
 @media only screen and (max-width: 640px) {
+	.pc-head-bg{
+		display: none;
+	}
+	.mobile-head-bg{
+		display: block;
+	}
 	.home-head-bg{
 	width:100%;
 	height:150px;

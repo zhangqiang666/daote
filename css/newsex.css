@@ -1,3 +1,18 @@
+.login-title-gohome{
+	width:95%;
+	height:50px;
+	margin:0 auto;
+	line-height: 50px;
+	font-size:12px;
+	color:RGBA(80, 80, 80, 1);
+	 border-bottom: 1px solid RGBA(235, 235, 235, 1);
+	 
+	 
+}
+.login-title-gohome a{
+	font-size:12px;
+	color:RGBA(80, 80, 80, 1);
+}
 .attention-title{
 	width:95%;
 	height:50px;

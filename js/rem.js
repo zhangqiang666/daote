@@ -1,4 +1,4 @@
-;(function(designWidth, maxWidth) {
+(function(designWidth, maxWidth) {
 	var doc = document,
 		win = window;
 	var docEl = doc.documentElement;

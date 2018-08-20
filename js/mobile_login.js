@@ -31,7 +31,7 @@ $(function(){
 	
 	
 	 })//发送短信
-	  /*function fun(){
+	  function fun(){
     obj = document.getElementsByName("test");
     check_val = [];
     for(k in obj){
@@ -41,7 +41,7 @@ $(function(){
     obj[0].checked=true;
     console.log(obj[0].checked);
 }
-	 fun();*/
+	 fun();
 	//复选框默认选择
 	 //登录
 	 $('.mobile-login-btn').click(function(){

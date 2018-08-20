@@ -17,8 +17,22 @@
  	 
  		$(".foot-img img").toggle();
  	})
- 	
- 	 
+ 	            //登录后显示用户名
+ 	 	        var phonelogin=localStorage.getItem("phone")
+ 	 	        console.log(phonelogin)
+ 	 	        if(phonelogin==null){ 
+  	            $('.active-a').empty();
+	 	        var html="";
+	 	         
+	 	        html+='<span>登录</span>'
+	 	        $('.active-a').html(html);
+	 	        }else{
+	 	        	 $('.active-a').empty();
+	 	        var html="";
+	 	         
+	 	        html+='<span>'+phonelogin+'</span>'
+	 	        $('.active-a').html(html);
+	 	        }
   
 //轮播图触摸事件
 	 
@@ -54,7 +68,55 @@
 					  $(this).addClass("span_minus");
 				
 				})
-				 
+				//pc端底部邮箱
+				 $('.input-group span').click(function(){
+				 	var email=$('.input-group input').val();
+				 	console.log(email);
+				 	$.ajax({
+				 		url:"http://www.dianyitai.cn/home/sendsms/sendmail",
+				 		type:"post",
+				 		data:{
+				 			email:email
+				 		},
+				 		dataType:"json",
+				 		success:function(data){
+				 			console.log(data)
+				 		}
+				 	})
+				 	 });
+				 	
+				 //移动端底部邮箱
+				 $('.email-input span').click(function(){
+				 	var email=$('.email-input input').val();
+				 	console.log(email);
+				 	$.ajax({
+				 		url:"http://www.dianyitai.cn/home/sendsms/sendmail",
+				 		type:"post",
+				 		data:{
+				 			email:email
+				 		},
+				 		dataType:"json",
+				 		success:function(data){
+				 			console.log(data)
+				 		}
+				 	})
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+				 })
+				
+				
+				
+				
 				
 				
 				

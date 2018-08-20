@@ -15,16 +15,24 @@
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
-      <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?38fa346bc3a6f078f7436d139c0b0a70";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+      
+<style>
+	/*body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height:0.9;
+    color: #333;
+    background-color: #fff;
+}*/
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+     -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+     box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+}
+</style>
 
          
     </head>
@@ -184,7 +192,7 @@ var _hmt = _hmt || [];
                 <div class="modal-header" style="border-bottom: 0px;">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <!--<h4 class="modal-title" id="myModalLabel">
-                        标题
+                                                                               标题
                     </h4>-->
                 </div>
                 <div class="modal-main-box">
@@ -193,7 +201,7 @@ var _hmt = _hmt || [];
                 		<p class="modal-register-title">注册成为点医台会员</p>
                 		<p class="modal-register-centent">为你的健康保驾护航</p>
                 		<p class="modal-phone"> <input type="text" class="form-control" id="name" placeholder="手机号"></p>
-                		<p class="modal-sex"> <input type="text" class="form-control" id="name" placeholder="短信验证码"> 
+                		<p class="modal-sex"> <input type="text" class="form-control" id="code" placeholder="短信验证码"> 
                 			<!--<button type="button" class="btn btn-default">
                 				 
                 			</button>-->
@@ -204,7 +212,7 @@ var _hmt = _hmt || [];
                         <!-- </form>-->
                          
                 		</p>
-                		<p class="modal-checkbox"><input type="checkbox" value="">&nbsp;同意并遵守《点医台开放平台协议》</p>
+                		<p class="modal-checkbox"><input type="checkbox" value="" name="test">&nbsp;同意并遵守《点医台开放平台协议》</p>
                 		<p class="modal-btn">注册</p>
                 	</div>
                 </div>
@@ -273,7 +281,7 @@ var _hmt = _hmt || [];
                   	</div>
                   	<!--手风琴选项卡-->
                   	  <div class="panel-group" id="accordion">
-	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;">
+	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;border-bottom:1px solid RGBA(42, 42, 42, 1);">
 		<div class="panel-heading" style="background:#303030;border-radius: 0px;margin:0px;">
 			<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseOne" class="mobile-a-col">
@@ -290,8 +298,7 @@ var _hmt = _hmt || [];
 				</a>
 				 
 			</h4>
-			  
-			 <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>
+			<!-- <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>-->
 		</div>
 		<div id="collapseOne" class="collapse" style="background: RGBA(36, 36, 36, 1);">
 			<div class="panel-body">
@@ -303,7 +310,7 @@ var _hmt = _hmt || [];
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;">
+	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;border-bottom:1px solid RGBA(42, 42, 42, 1);">
 		<div class="panel-heading" style="background:#303030;border-radius: 0px;border-top:0px;">
 			<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseTwo" class="mobile-a-col">
@@ -319,7 +326,7 @@ var _hmt = _hmt || [];
 					 联系我们
 				</a>
 			</h4>
-			 <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>
+			 <!--<p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>-->
 		</div>
 		<div id="collapseTwo" class="collapse" style="background: RGBA(36, 36, 36, 1);">
 			<div class="panel-body">
@@ -347,7 +354,7 @@ var _hmt = _hmt || [];
 					 就医指南
 				</a>
 			</h4>
-			 <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>
+			 <!--<p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>-->
 		</div>
 		<div id="collapseThree" class="collapse" style="background: RGBA(36, 36, 36, 1);">
 			<div class="panel-body">
@@ -359,7 +366,7 @@ var _hmt = _hmt || [];
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;">
+	<div class="panel panel-default" style="border:0px; width:100%;margin:0 auto;border-bottom:1px solid RGBA(42, 42, 42, 1);">
 		<div class="panel-heading" style="background:#303030;border-radius: 0px;border-top:0px;">
 			<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapsefive" class="mobile-a-col">
@@ -375,14 +382,14 @@ var _hmt = _hmt || [];
 					 订阅我们
 				</a>
 			</h4>
-			 <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>
+			<!-- <p style="width:93%;height:1px;background: RGBA(255, 255, 255, 0.5);position:absolute;margin-top:9px;"></p>-->
 			
 		</div>
 		<div id="collapsefive" class="collapse in" style="background: RGBA(36, 36, 36, 1);">
 			<div class="panel-body">
 				 <div class="new-foot-one"><span>第一时间获得点医台的最新动态</span></div>
 				  <div class="email-input">
-				  	<input placeholder="请输入你的邮箱地址"><span>&nbsp;>&nbsp;</span>
+				  	<input placeholder="请输入你的邮箱地址" class="foot-email"><span class="email-btn">&nbsp;>&nbsp;</span>
 				  </div>
 			</div>
 		</div>

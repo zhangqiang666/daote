@@ -99,25 +99,29 @@
 	width:100%;
 	 
 	 list-style: none;
-	  display:flex;
-	 flex-direction: row;  /* 子元素横向排列 */
-     justify-content:  space-between; /* 相对父元素水平居中 */
+	  /*display:flex;*/
+	 /*flex-direction: row; */ /* 子元素横向排列 */
+     /*justify-content:  space-between;*/ /* 相对父元素水平居中 */
     /* align-items: center;*/ /*  子元素相对父元素垂直居中 */
-   margin-bottom: 30px;
+    margin-bottom:10px;
       
 	 
 }
 .tj-doctor-list>li{
 	background:white;
-	width:220px; 
+	width:15%;
+	float:left;
+	margin-right:5%; 
 	overflow: hidden;
 	 display: inline-block;
+	 margin-bottom: 30px;
 }
 .tj-doctor-list>li:hover{
 	 box-shadow:1px 10px 10px 10px #CCCCCC;
 }
 .tj-doctor-list>li>a>img{
 	 width:100%;
+	  
 }
  a:link,a:visited{
  text-decoration:none;  /*超链接无下划线*/
@@ -138,3 +142,146 @@
 	font-size: 14px;
 	color:RGBA(147, 147, 147, 1);
 }
+.mobile-head-bg{
+	display: none;
+}
+/*mobile*/
+@media only screen and (max-width: 640px) {
+    .mobile-head-bg{
+	display:block;
+   }
+	 
+	.home-head-bg{
+	width:100%;
+	height:200px;
+	 background:none;
+	 
+	 position: relative;
+}
+.home-head-centent{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+	height:200px;
+  background-color:none ; 
+  
+}
+.home-head-centent img{
+	width:100%;
+	height:100%;
+}
+.head-title{
+	 
+	display: none; 
+}
+/*.head-title-english{
+	width:80%;
+	line-height:25px;
+	margin-left:20%;
+	font-size: 18px;
+	color:#FFFFFF;
+	 
+}*/
+.head-btn{
+	 display: none;
+ 
+}
+/*推荐医生*/
+.tj-doctor-box{
+	width:100%;
+	 border-top:10px solid RGBA(248,249,251);
+	background: white;
+	display: inline-block;
+	padding-bottom:10px;
+}
+.tj-doctor-main-box{
+	width:90%;
+	 
+	display: inline-block;
+	margin-left:5%;
+}
+.tj-doctor-title{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	 
+	
+}
+.title-left{
+	color:RGBA(58, 58, 59, 1);
+	font-size:12px;
+	float:left;
+}
+.title-right{
+	 display: none;
+}
+ 
+ 
+.tj-doctor-list-box{
+	width:100%;
+	display: inline-block;
+}
+.tj-doctor-list{
+	width:100%;
+	 
+	 list-style: none;
+	 /* display:flex;*/
+	/* flex-direction: row;  *//* 子元素横向排列 */
+     /*justify-content:  space-between; *//* 相对父元素水平居中 */
+    /* align-items: center;*/ /*  子元素相对父元素垂直居中 */
+   margin-bottom: 30px;
+      
+	 
+}
+.tj-doctor-list>li{
+	background:white;
+	width:30%; 
+	margin-right:3.3%;
+	overflow: hidden;
+	 display: inline-block;
+	 float: left;
+	 border:1px solid RGBA(231, 231, 231, 1);
+	 margin-bottom: 10px;
+}
+.tj-doctor-list>li:hover{
+	 box-shadow:1px 10px 10px 10px #CCCCCC;
+}
+.tj-doctor-list>li>a>img{
+	 width:100%;
+}
+ a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
+}
+.list-card-name{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	font-size: 10px;
+	color:RGBA(58, 58, 59, 1);
+}
+.list-card-adress{
+	width:100%;
+	height:30px;
+	line-height: 15px;
+	text-align: center;
+	font-size: 8px;
+	color:RGBA(147, 147, 147, 1);
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    }
