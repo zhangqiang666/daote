@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台</title>
+        <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+         
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        
+         <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
+         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="css/video_detail.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/rem.js"></script>
+      
+     <style>
+	/*body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height:0.9;
+    color: #333;
+    background-color: #fff;
+}*/
+  
+     
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+     -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+     box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+}
+</style>
+
+         
+    </head>
+    <body>
+        <div>
+        	<div class="start-head-box">
+        		 <ul class="start-head-list">
+        		 	<li>&nbsp;</li>
+        		    <li class="can-weixin-erwei">
+        		    	<div>关注微信小程序&nbsp;<i class="iconfont icon-down-trangle" style="position: absolute;margin-top:1px;"></i></div>
+        		    	<div class="can-weixin"><img src="images/slide/erweima.jpg"></div>
+        		    </li>
+        		    <li><a href="index.html" class="active-a">登录</a> </li>
+        		 </ul>
+        	</div>
+            <header id="head">
+            	<div class="logo">
+            		<a href="index.html" style="display: inline-block;"> 
+            		<img src="images/1_03.jpg" />
+            		</a>
+            	</div>
+                <ul>
+                    <li><!--<a href="index.html" style="color:#3174BB;">首页</a>
+                    		<p class="border-home" style="display: block;"></p>-->
+                    </li>
+                    <li><a href="videoexpert.html">远程视频门诊</a>
+                    		<p class="border-home"></p>
+                    </li>
+                    <li><a href="shanghaiMedical.html">病人来上海</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="expertAssignment.html">医生去外地</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="homeHealth.html">随身医生</a>
+                    	<p class="border-home"></p>
+                    </li>
+                      <li><a href="yun.html">医学教育</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <!--   <li><a href="doctor.html">医学教育</a>
+                    	<p class="border-home"></p>
+                    </li>-->
+                     <li><a href="doctorhome.html">医生工作室</a>
+                    	<p class="border-home"></p>
+                    </li>
+                </ul>
+                <div class="head-div"><a href="menu.html"> <i class="iconfont icon-santiaogang"></i></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> 点医台</a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo"></i></a></div>
+                
+            </header>
+            <!--icon-header-->
+           
+            <!---->
+            <div class="icon-header">
+            	<ul>
+            		<li><a href="#">首页</a></li>
+            		<li><a href="#">视频专家门诊</a></li>
+            		<li><a href="#">上海就医代办</a></li>
+            		<li><a href="#">专家外派手术</a></li>
+            		<li><a href="#">居家健康监护</a></li>
+            	</ul>
+            </div>
+            <!--icon-header-->
+            <section id="main">
+            	   <!--头部返回-->
+             <div class="login-title-gohome">
+             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
+             </div>
+            <!--头部返回-->
+            <!--面包屑-->
+            <div class="video-detail-menu">
+            	<a href="#"><span> 面部课程&nbsp;></span></a>
+            	<a href="#"><span> 心脏课程&nbsp;></span></a>
+            	<a href="#"><span> 临床基因组学的应用</span></a>
+            </div>
+            <!--视频播放卡片-->
+            <div class="video-card-box">
+            	<img src="images/bag/videodetail.png">
+            	<div class="video-card-foot-01">
+            		<span class="col-green">【公开课】</span>
+            		<span>临床基因组学的应用</span>
+            	</div>
+            	<div class="video-card-foot-02">
+            		<span>最近在学2245人</span>
+            		<span class="border-auto">累计报名3万人</span>
+            		<span>好评度99%</span>
+            	</div>
+            </div>
+               <!--选项卡-->
+              <ul id="myTab" class="nav nav-tabs" style="width:95%;margin:0 auto;background: white;">
+   <li class="active" style="margin-left:2.5%;">
+   	<a href="#home" data-toggle="tab">讲师介绍</a>
+   </li>
+   <li style="margin-left:2.5%;"><a href="#ios" data-toggle="tab">课程介绍</a></li>
+   <li style="margin-left:2.5%;"><a href="#xueyuan" data-toggle="tab">学员评价（20）</a></li>
+   
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
+   	<!---->
+      <div class="home-man-img">
+      	<img src="images/slide/doctor-home.png"><br> 
+      	<span>单某某主任</span>
+      </div>
+      <div class="home-content">
+      	真格基金联合创始人，新东方联合创始人。美国纽约州立大学计算机科学硕士，著名英语教学专家、美语思维学习法创始人，
+      	中央人民广播电台英语频道高级顾问、特邀主持人，
+      	知名的古书爱好者与收藏家，牛津大学哈里斯·曼彻斯特学院授予学院基石院士(终身荣衔)
+      	 &#911] 。曾任新东方教育科技集团教育发展研究院院长，美国“贝尔传讯研究所”软件工程师。
+      </div>
+      <!---->
+   </div>
+   <div class="tab-pane fade" id="ios" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
+      <div class="ios-content">
+      	测序是生物信息学的基础和主要数据来源，可以是人类数据也可以是其他的数据。序列比对的基本问题是比较两个或两个以上符号序列的相似性或不相似性.从生物学的初衷来看,
+      	这一问题包含了以下几个意义:从相互重叠的序列片断中重构DNA的完整序列.在各种试验条件下从探测数据(probe data)中决定物理和基因图存贮,
+      	遍历和比较数据库中的DNA序列比较两个或多个序列的相似性在数据库中搜索相关序列和子序列寻找核苷酸(nucleotides)的连续产生模式找出蛋白
+      	质和DNA序列中的信息成分序列比对考虑了DNA序列的生物学特性,如序列局部发生的插入,删除(前两种简称为indel)和替代,序列的目标函数获得序列
+      	之间突变集最小距离加权和或最大相似性和,对齐的方法包括全局对齐,局部对齐,代沟惩罚等.两个序列比对常采用动态规划算法,这种算法在序列长度较小
+      	时适用,然而对于海量基因序列(如人的DNA序列高达109bp),这一方法就不太适用,甚至采用算法复杂性为线性的也难以奏效.因此,启发式方法的引入
+      	势在必然,著名的BALST和FASTA算法及相应的改进方法均是从此前提出发的. 基因识别的基本问题是给定基因组序列后,
+      	正确识别基因的范围和在基因组序列中的精确位置.非编码区由内含子组成(introns),一般在形成蛋白质后被丢弃,但从实验中,如果去
+      	除非编码区,又不能完成基因的复制.显然,DNA序列作为一种遗传语言,既包含在编码区。
+      </div>
+   </div>
+   <div class="tab-pane fade" id="xueyuan" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
+        <ul class="xueyuan-content-list-box">
+        	<li>
+        		<div class="xueyuan-list-head">
+        			<div class="list-head-i"></div>
+        			<div class="list-head-auto">
+        				<p class="list-head-phone">用户158****66</p>
+        				<p class="list-head-day">昨天11:40</p>
+        			</div>
+        			<span class="list-head-right">20#</span>
+        		</div>
+        		<div class="xueyuan-list-content">
+        			内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内
+        		</div>
+           </li>
+           <!--list-->
+           <li>
+        		<div class="xueyuan-list-head">
+        			<div class="list-head-i"></div>
+        			<div class="list-head-auto">
+        				<p class="list-head-phone">用户158****66</p>
+        				<p class="list-head-day">昨天11:40</p>
+        			</div>
+        			<span class="list-head-right">20#</span>
+        		</div>
+        		<div class="xueyuan-list-content">
+        			内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内
+        		</div>
+           </li>
+           <!--list-->
+           <li>
+        		<div class="xueyuan-list-head">
+        			<div class="list-head-i"></div>
+        			<div class="list-head-auto">
+        				<p class="list-head-phone">用户158****66</p>
+        				<p class="list-head-day">昨天11:40</p>
+        			</div>
+        			<span class="list-head-right">20#</span>
+        		</div>
+        		<div class="xueyuan-list-content">
+        			内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内
+        		</div>
+           </li>
+           <!--list-->
+        </ul>
+   </div>
+    
+</div>
+<!--底部静态部分-->
+<div class="video-detail-foot">
+	<button class="video-detail-foot-left">立即报名</button>
+	<button class="video-detail-foot-auto">在线咨询</button>
+	<img src="images/bag/sc666.png">
+</div>
+                 
+                
+                
+                
+            </section>
+            <!--footer-->
+            <footer id="foot">
+                <div class="foot-one-box">
+                	<div class="foot-one-left">
+                		<ul class="foot-one-list">
+                			<li>联系我们</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                			<ul class="foot-one-list">
+                			<li>新闻公告</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                			<ul class="foot-one-list">
+                			<li>就医指南</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                			<li>XXX</li>
+                		</ul>
+                	</div>
+                	<div class="foot-one-right">
+                		<div class="foot-one-right-title"><strong class="foot-title-one">订阅我们</strong></div>
+                		<div class="foot-one-right-title"><span class="foot-title-two">第一时间获得我们点医台的最新动态</span></div>
+                		<div class="foot-one-right-title">
+                	    <div class="input-group" style="width:277px;float:right;">
+			            <input type="text" class="form-control input-bg"style="background: RGBA(48, 48, 48, 1);-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;" placeholder="请输入您的邮件地址">
+			            <span class="input-group-addon"style="background: RGBA(48, 48, 48, 1);color:RGBA(187, 187, 187, 1);-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">></span>
+		                    </div>
+                		</div>
+                	</div>
+                </div>
+                <!--one-->
+                <!--img-->
+                <div class="foot-img">
+                	<!--<span>jjjjj</span>-->
+                	<img src="images/slide/erweima.jpg">
+                </div>
+                <!--img-->
+                <!--foot-two-->
+                <div class="foot-two">
+                	<img src="images/weixin.png">
+                	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
+                </div>
+                  <!--foot-two-->
+                  <!--mobile-->
+                  <div class="mobile-foot-box">
+                  	<div class="mobile-foot-head">
+                  		<a href="#head" style="text-decoration: none;color:RGBA(255, 255, 255, 0.5)"> <i class="iconfont icon-fanhuidingbu"></i>&nbsp;返回顶部</a>
+                  	</div>
+                  	<!--手风琴选项卡-->
+                  	 <div class="box">
+    <div class="Collapsing">官网公告 </div>
+    <div class="coll_body">
+        <a href="#">官网公告1</a>
+        <a href="#">官网公告2</a>
+        <a href="#">官网公告3</a>
+        
+    </div>
+    <div class="Collapsing">联系我们 </div>
+        <div class="coll_body">
+            <a href="#">联系我们1</a>
+            <a href="#">联系我们2</a>
+            <a href="#">联系我们3</a>
+            
+        </div>
+    <div class="Collapsing">就医指南 </div>
+    <div class="coll_body">
+        <a href="#">就医指南1</a>
+        <a href="#">就医指南2</a>
+        <a href="#">就医指南3</a>
+        
+    </div>
+     <div class="Collapsing current">订阅我们 </div>
+    <div class="coll_body">
+         <div class="new-foot-one"><span>第一时间获得点医台的最新动态</span></div>
+				  <div class="email-input">
+				  	 
+				  	<input placeholder="请输入你的邮箱地址" type="email" name="email"><span>&nbsp;>&nbsp;</span>
+				   
+				    
+				  </div>
+    </div>
+    
+</div>
+                  	<!--手风琴选项卡-->
+                  	<!--erweima-->
+                  	<div class="mobile-foot-title-one">
+                  		<span>All Rights Reserved.沪ICP备16030929号-3</span> <br />
+                  		<span>Copyright&#1691998-2017</span>
+                  	</div>
+                  	<div class="mobile-erweima-img">
+                  		<img src="images/slide/erweima.jpg"> 
+                  	</div>
+                  	<!--erweima-->
+                  </div>
+                   <!--mobile-->
+            </footer>
+        </div>
+        
+         
+         <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/video_detail.js"></script>
+        
+<!--初始化 Foundation JS -->
+<!--选项卡-->
+<script>
+   $(function () {
+      $('#myTab li:eq(0) a').tab('show');
+   });
+</script>
+
+    </body>
+    
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery手风琴效果</title>
+    <link href="css/jquery选项手风琴效果bg-svg.css" type="text/css" rel="stylesheet">
+    <link href="css/iconfont.css" type="text/html" rel="stylesheet">
+    <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="js/jquery选项手风琴效果.js"></script>
+    <style>
+    	body ul li{
+    list-style: none;
+}
+.toggle-test{
+    margin:0px;
+    padding: 0px;
+    margin-top:50px;
+    box-sizing: border-box;
+    font-family: '微软雅黑', Arial;
+    letter-spacing:1px;
+}
+.toggle-left{
+    width:250px;
+    margin:0px auto;
+    background-color:#3a3633;
+    color: #bbbab8;
+    padding-left:0px;
+}
+.toggle-left li div{
+    height:45px;
+    line-height:40px;
+    position:relative;
+}
+.toggle-left li div span{
+    margin-left:10px;
+    margin-right:10px;
+}
+.toggle-left li div em{
+    font-weight: normal;
+    display:inline-block;
+    position:absolute;
+    right:20px;
+    top:2px;
+}
+.toggle-left li div:hover{
+    color: #ffffff;
+}
+.toggle-menu{
+    background-color: #403f3d;
+    padding-top:8px;
+    padding-bottom:8px;
+    position:relative;
+    display: none;
+}
+.toggle-menu:before{
+    content: '';
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:25px;
+    border-left:1px solid #7c7b79;
+}
+.toggle-menu li{
+    padding-top:8px;
+    padding-bottom:8px;
+    position:relative;
+}
+.toggle-menu li:before{
+    content: '';
+    width:11px;
+    height:1px;
+    background: #7c7b79;
+    position:absolute;
+    left:-13px;
+    top:20px;
+}
+.toggle-menu li span{
+    margin-right:5px;
+}
+.toggle-menu li:hover{
+    color: #ffffff;
+    background-color:#353431 ;
+}
+/*svg相关*/
+.iconfont20p{
+    font-size:22px!important;
+}
+    </style>
+</head>
+<body>
+<div class="toggle-test">
+<ul class="toggle-left">
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe600;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu ">
+        <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+        <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+        <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+        <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+        <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+        <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+      </ul>
+    </li>
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe601;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu">
+            <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+            <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+            <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+            <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+            <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+            <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+        </ul>
+    </li>
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe602;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu">
+            <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+            <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+            <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+            <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+            <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+            <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+        </ul>
+    </li>
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe603;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu">
+            <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+            <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+            <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+            <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+            <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+            <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+        </ul>
+    </li>
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe604;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu">
+            <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+            <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+            <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+            <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+            <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+            <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+        </ul>
+    </li>
+    <li class="toggle-choice">
+        <div class=""><span class="iconfont iconfont20p">&#xe605;</span><strong>管理系统</strong><em class="iconfont">&#xe607;</em></div>
+        <ul class="toggle-menu">
+            <li><span class="iconfont">&#xe600;</span><a>权限管理</a></li>
+            <li><span class="iconfont">&#xe601;</span><a>柜员管理</a></li>
+            <li><span class="iconfont">&#xe602;</span><a>车辆管理</a></li>
+            <li><span class="iconfont">&#xe603;</span><a>车行管理</a></li>
+            <li><span class="iconfont">&#xe604;</span><a>师傅管理</a></li>
+            <li><span class="iconfont">&#xe605;</span><a>保险公司管理</a></li>
+        </ul>
+    </li>
+
+</ul>
+</div>
+<script type="text/javascript">
+	/**
+ * Created by Lenvovo on 2016/3/3.
+ */
+$(document).ready(function(){
+    targetLayer = $(".toggle-choice div em");
+    targetLayer.click(function(){
+      if($(this).parent().next().is(":hidden")){
+          $(this).html('&#xe606;');
+      }
+      else{
+          $(this).html('&#xe607;');
+      }
+        $(this).parent().next().slideToggle();
+        targetLayer.not(this).html('&#xe607;');
+        targetLayer.not(this).parent().next().slideUp();
+
+  });
+});
+</script>
+</body>
+</html>

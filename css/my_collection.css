@@ -1,0 +1,169 @@
+ .login-title-gohome{
+	width:100%;
+	height:50px;
+	padding:0 2.5%;
+	margin:0 auto;
+	line-height: 50px;
+	font-size:12px;
+	color:RGBA(80, 80, 80, 1);
+	background: white;
+	 
+	 
+	 
+}
+.login-title-gohome a{
+	font-size:12px;
+	color:RGBA(80, 80, 80, 1);
+}
+.login-title-gohome i{
+	font-size: 10px;
+	color:RGBA(131, 131, 131, 1);
+	 }
+.page-title{
+	width:95%;
+	height:50px;
+	line-height: 50px;
+	font-size: 14px;
+	color:#000000;
+	text-align: center;
+	border-bottom: 1px solid #EBEBEB;
+	border-top: 1px solid #EBEBEB;
+	margin:0 auto;
+}
+  .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 2.62857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #009BFF;
+    cursor: default;
+    
+    background-color: white;
+     border: 0px solid #ddd; 
+     border-bottom-color: transparent;
+     font-size: 12px; 
+     border-bottom: 1px solid #009BFF;
+}
+a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 12px;
+}
+a:link,a:visited{
+	text-decoration: none;
+}
+/*选项卡*/
+ 
+/*视频内容列表*/
+.video-content-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	margin-top:20px;
+	
+}
+.video-content-list-box li{
+	width:45%;
+	float:left;
+	margin-left:1%;
+	margin-right:3%;
+	 display: inline-block;
+	 margin-bottom: 20px;
+	 
+}
+.video-img{
+	width:100%;
+	height:99px;
+	background: #E1E1E1;
+}
+.video-title{
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	color:#333333;
+	font-size: 12px;
+}
+.video-man-name{
+	width:100%;
+	height:25px;
+	line-height: 25px;
+	color:#636B75;
+	font-size:10px;
+}
+.video-no-money{
+	width:100%;
+	height:25px;
+	line-height:25px;
+	color:#70D445;
+	font-size: 12px;
+}
+.video-yes-money{
+	width:100%;
+	height:25px;
+	line-height:25px;
+	color:#EF0C0C;
+	font-size: 12px;
+}
+/*医学文章列表*/
+.doctor-article-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	list-style: none;
+}
+.doctor-article-list-box li{
+	width:100%;
+	display: inline-block;
+	border-bottom: 1px solid #D8D8D8;
+	margin-top:20px;
+}
+.article-list-title{
+	width:100%;
+	line-height: 18px;
+	color:#393939;
+	font-size: 12px;
+	display: inline-block;
+}
+.col-red{
+	color:#FF7F7F;
+}
+.article-foot{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+}
+.article-foot-i{
+	width:14px;
+	height:14px;
+	border-radius:50px;
+	background: #D8D8D8;
+	display: inline-block;
+	float:left;
+	margin-top:13px;
+}
+.col-blue{
+	color:#009BFF;
+	font-size: 12px;
+	margin-left:2%;
+}
+.col-gray{
+	color:#999999;
+	font-size: 10px;
+	margin-left:2%;
+	
+}
+.col-right-argument{
+	float:right;
+	color:#999999;
+	font-size: 10px;
+	
+	
+}
+.col-right-can{
+	float:right;
+	color:#999999;
+	font-size: 10px;
+	margin-right:2%;
+}
