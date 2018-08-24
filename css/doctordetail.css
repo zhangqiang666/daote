@@ -299,3 +299,474 @@ a {
     background-color: #fff;
     border: 1px solid #ddd;
 }
+.login-title-gohome{
+	display: none;
+}
+
+/*手机端布局样式*/
+@media only screen and (max-width: 640px) {
+	.login-title-gohome{
+		display:block;
+	width:100%;
+	height:50px;
+	margin:0 auto;
+	line-height:45px;
+	font-size:12px;
+	background: white;
+	color:RGBA(80, 80, 80, 1);
+	 padding:0 0 0 5%;
+	 
+	 
+}
+.icon-fanhui{
+	font-size: 12px;
+}
+.login-title-gohome a{
+	font-size:12px;
+	color:RGBA(80, 80, 80, 1);
+}
+	.doctor-detail-bg{
+	width:100%;
+	display: inline-block;
+	 
+	background: RGBA(248,249,251);
+    margin-top:-8px;
+}
+.doctor-detail-main{
+	width:90%;
+	display: inline-block;
+	margin-left:5%;
+	
+}
+.doctor-detail-title{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 10px;
+}
+.doctor-detail-card-box{
+	width:100%;
+	 
+	background: white;
+	display: inline-block;
+}
+.card-head-box{
+	width:100%;
+	height:100px;
+	padding:20px 2% 20px 2%;
+	
+}
+.card-head-box img{
+	width:40px;
+	height:40px;
+	border-radius: 50px;
+	float:left;
+	 
+}
+.card-head-main{
+	width:50%;
+	height:40px;
+	float:left;
+	margin-left:2%;
+	color:RGBA(57, 57, 57, 1);
+	font-size: 10px;
+	padding-top:5px;
+}
+.card-head-main p{
+	width:100%;
+	 line-height:10px;
+	 
+	 
+}
+.card-head-btn{
+	width:30%;
+	height:32px;
+	background: RGBA(0, 155, 255, 1);
+	line-height: 32px;
+	text-align: center;
+	color:RGBA(255, 255, 255, 1);
+	font-size:10px;
+	float:right;
+}
+.card-head-centent{
+	width:96%;
+	 
+	margin-left:2%;
+	margin-top:10px;
+	display: inline-block;
+	background: RGBA(237, 244, 252, 0.35);
+	margin-bottom: 30px;
+	line-height:20px;
+	padding:10px;
+	font-size:10px;
+	color:RGBA(106, 106, 106, 1);
+}
+/*选项卡*/
+.tab-bg-box{
+	width:100%;
+	 
+	display: inline-block;
+	background: white;
+	margin-top:20px;
+}
+ .nav-tabs>li>a {
+    margin-right: 2px;
+    width:90px;
+    text-align: center;
+    line-height: 2.1;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 12px;
+}
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    width:25%;
+}
+a {
+    color:RGBA(57, 57, 57, 1);
+    text-decoration: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: RGBA(33, 184, 255, 1);
+    cursor: default;
+    background-color: #fff;
+     border: 0px solid red; 
+      border-bottom:1px solid RGBA(33, 184, 255, 1);
+    /*border-bottom-color: transparent;*/
+    border-radius: 0px;
+}
+.tab-home-list-box{
+	width:100%;
+	display: inline-block;
+	list-style: none;
+	margin-top:0px;
+	
+}
+.tab-home-list-box>li{
+	width:45%;
+	display: inline-block;
+	float:left;
+	margin-left:3%;
+	margin-right:1%;
+	margin-top:20px;
+}
+.tab-home-list-video{
+	width:100%;
+	height:90px;
+	background:RGBA(225, 225, 225, 1);
+}
+.home-video-name{
+	width:100%;
+	height:25px;
+	line-height: 25px;
+	font-size: 12px;
+	color:RGBA(51, 51, 51, 1);
+}
+.home-video-doctor{
+	width:100%;
+	height:50px;
+	line-height:20px;
+	
+}
+.col-red{
+	color:RGBA(239, 12, 12, 1);
+	font-size: 10px;
+	width:100%;
+	display: inline-block;
+
+}
+.fot-doctor{
+	color:RGBA(99, 107, 117, 1);
+	font-size: 10px;
+	float:left;
+	display: inline-block;
+}
+.col-green{
+	width:100%;
+	display: inline-block;
+	font-size: 10px;
+	color:RGBA(112, 212, 69, 1);
+}
+.mobile-pc{
+	display: none;
+}
+.page-next{
+  display: none;
+}
+#pageSize{
+	 display: none;
+}
+.pagination {
+    display: none;
+     
+}
+.container-copy{
+	 display: none;
+   
+}
+ /*tab医学文章*/
+.yxwz-main-list{
+	width:96%;
+	height:110px;
+	margin:0 auto;
+	padding:20px 0;
+	border-bottom: 1px solid RGBA(243, 243, 243, 1);
+	
+}
+.yxwz-list-btn{
+	width:15%;
+	height:30px;
+	line-height: 30px;
+	font-size:10px;
+	color:white;
+	text-align: center;
+	float:left;
+	background:RGBA(68, 168, 242, 1) ;
+}
+.yxwz-list-right{
+	width:83%;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	margin-left:2%;
+}
+.yxwz-list-right>li{
+	width:100%;
+	line-height: 30px;
+	color:RGBA(57, 57, 57, 1);
+	font-size:12px;
+}
+.yxwz-list-right>li img{
+	width:13px;
+	height:10px;
+	margin-left:10px;
+	
+}
+.new-red{
+	color:RGBA(255, 127, 127, 1);
+	font-size: 14px;
+}
+.yxwz-time{
+	 
+	 
+}
+.yxwz-time>span{
+	 color:RGBA(189, 189, 189, 1);
+	font-size:10px;
+	margin-right:1%;
+}
+.yxwz-img{
+	width:14px;
+	height:14px;
+	background: #D8D8D8;
+	border-radius: 50px;
+	display: inline-block;
+}
+ 
+.xypj-list-box{
+	width:96%;
+	height:100px;
+	margin:0 auto;
+	padding:10px 0;
+	border-top: 1px solid RGBA(243, 243, 243, 1);
+	list-style: none;
+	
+}
+ 
+.xypj-list-box>li{
+	width:100%;
+	height:40px;
+	line-height:20px;
+}
+.xypj-list-gray{
+	width:30px;
+	height:30px;
+	border-radius: 50px;
+	float:left;
+	background: RGBA(216, 216, 216, 1);
+}
+.xypj-list-name{
+	margin-left:20px;
+	font-size: 12px;
+	color:RGBA(0, 0, 0, 1);
+	
+}
+.xypj-list-time{
+	font-size: 12px;
+	color:RGBA(189, 189, 189, 1);
+	margin-left:20px;
+}
+.xypj-list-right-i{
+	float:right;
+	font-size: 12px;
+	color:RGBA(189, 189, 189, 1);
+	margin-right:2%;
+}
+.xypj-list-centent{
+	width:80%;
+	margin-left:12.5%;
+	color:RGBA(0, 0, 0, 1);
+}
+.xypj-bg01{
+	width:100%;
+	height:20px;
+ 
+}
+.xypj-bg{
+	width:100%;
+	height:10px;
+	background: RGBA(248,249,251);
+}
+.pagination>li {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: RGBA(57, 57, 57, 1);
+    cursor: default;
+    background-color:white;
+    border-color: #337ab7;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: RGBA(57, 57, 57, 1);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+	.xueyuan-content-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	 
+	list-style: none;
+}
+.xueyuan-content-list-box li{
+	width:100%;
+	display: inline-block;
+	margin-top:20px;
+	border-bottom: 1px solid #D8D8D8;
+}
+.xueyuan-list-head{
+	width:100%;
+	height:40px;
+	
+}
+.list-head-i{
+	width:22px;
+	height:22px;
+	border-radius: 50px;
+	float:left;
+	background: #D8D8D8;
+}
+.list-head-auto{
+	width:50%;
+	height:22px;
+	line-height:8px;
+	float:left;
+	margin-left:10px;
+ 
+}
+.list-head-phone{
+	font-size: 10px;
+	color:#393939;
+}
+.list-head-day{
+	font-size: 8px;
+	color:#999999;
+	
+}
+.list-head-right{
+	float:right;
+	font-size: 12px;
+	color:#686868;
+}
+.xueyuan-list-content{
+	width:100%;
+	display: inline-block;
+	padding:0 0 0 32px;
+	font-size: 12px;
+	color:#393939;
+	line-height: 20px;
+	margin-bottom: 25px;
+}
+	
+	/*医学文章列表*/
+.doctor-article-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	list-style: none;
+}
+.doctor-article-list-box li{
+	width:100%;
+	display: inline-block;
+	border-bottom: 1px solid #D8D8D8;
+	margin-top:20px;
+}
+.article-list-title{
+	width:100%;
+	line-height: 18px;
+	color:#393939;
+	font-size: 12px;
+	display: inline-block;
+}
+.col-red{
+	color:#FF7F7F;
+}
+.article-foot{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+}
+.article-foot-i{
+	width:14px;
+	height:14px;
+	border-radius:50px;
+	background: #D8D8D8;
+	display: inline-block;
+	float:left;
+	margin-top:13px;
+}
+.col-blue{
+	color:#009BFF;
+	font-size: 12px;
+	margin-left:2%;
+}
+.col-gray{
+	color:#999999;
+	font-size: 10px;
+	margin-left:2%;
+	
+}
+.col-right-argument{
+	float:right;
+	color:#999999;
+	font-size: 10px;
+	
+	
+}
+.col-right-can{
+	float:right;
+	color:#999999;
+	font-size: 10px;
+	margin-right:2%;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  }

@@ -112,22 +112,22 @@
             <!---->
              <div class="member-list">
                  <p><span>手机号</span><sup>*</sup></p>
-                 <p><input placeholder="18330246685" class="member-phone" id="phone" value="18394596534"></p>
+                 <p><input placeholder="请输入手机号" type="text" class="member-email phone66" id="phone" value="" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
              <!--list-->
                <div class="member-list">
                  <p><span>电子邮箱</span></p>
-                 <p><input placeholder="yeqirui@foxmail.com" type="email" class="member-email" id="email"></p>
+                 <p><input placeholder="请输入邮箱号" type="email" class="member-email email66" id="email" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
              <!--list-->
               <div class="member-list">
                  <p><span>姓名</span><sup>*</sup></p>
-                 <p><input placeholder="" class="member-email" id="name"></p>
+                 <p><input placeholder="" type="text" class="member-email" id="name" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
              <!--list-->
               <div class="member-list">
                  <p><span>性别</span></p>
-                 <p><select class="member-email" id="sex">
+                 <p><select class="member-email" id="sex" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option value="1">男</option>
                  	<option value="0">女</option>
                  </select></p>
@@ -136,7 +136,7 @@
               <div id="city"> 
              <div class="member-list">
                  <p><span>省份</span><sup>*</sup></p>
-                 <p><select class="member-email prov" id="province">
+                 <p><select class="member-email prov" id="province" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option>上海</option>
                  	<option>北京</option>
                  </select></p>
@@ -144,7 +144,7 @@
              <!--list-->
              <div class="member-list">
                  <p><span>城市</span><sup>*</sup></p>
-                 <p><select class="member-email city">
+                 <p><select class="member-email city" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option>上海市</option>
                  	<option>北京市</option>
                  </select></p>
@@ -152,7 +152,7 @@
              <!--list-->
              <div class="member-list">
                  <p><span>地区</span><sup>*</sup></p>
-                 <p><select class="member-email dist" id="region">
+                 <p class="diqu-bg"><select class="member-email dist" id="region" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option>徐汇区</option>
                  	<option>静安区</option>
                  </select></p>
@@ -161,11 +161,11 @@
              <!--list-->
              <div class="member-list">
                  <p><span>详细地址</span><sup>*</sup></p>
-                 <p><input placeholder="" class="member-email" id="detailed"></p>
+                 <p><input placeholder="" type="text" class="member-email" id="detailed" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
              <!--list-->  <div class="member-list">
                  <p><span>邮编</span></p>
-                 <p><input placeholder="" class="member-email" id="youbian"></p>
+                 <p><input placeholder="" type="text" class="member-email" id="youbian" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
              <!--list-->
              
@@ -189,7 +189,13 @@
         <!-- <script type="text/javascript" src="js/style.js"></script>-->
         <script type="text/javascript" src="js/member.js"></script>
         <script type="text/javascript">
-        	 
+        	 //input输入框点击变色
+	       function myFunction(x){
+	       x.style.background="RGBA(193, 238, 231, 1)";
+          }
+	       function myEnd(x){
+	       	 x.style.background="RGBA(236, 236, 236, 1)";
+	       }
         </script>
     </body>
     

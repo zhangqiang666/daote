@@ -5,4 +5,35 @@ $(function(){
        if(mylist){ 
        $('.mylist').attr("href","mylist.html")
        }
+       //内容渲染
+       var imgurl='http://www.dianyitai.cn';
+       $.ajax({
+       	type:"post",
+       	url:"http://www.dianyitai.cn/home/Videoexpert/videoexpert",
+       	async:true,
+       	data:"",
+       	dataType:"json",
+       	success:function(data){
+       		console.log(data);
+       	}
+       });
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 })

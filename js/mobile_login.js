@@ -61,6 +61,10 @@ $(function(){
 	 	  	dataType:"json",
 	 	  	success:function(data){
 	 	  		console.log(data)
+	 	  		if(data.stu==1){
+	 	  				window.location.href="index.html"
+	 	  		}
+	 	  	 
 	 	  	/*	 if(iphone==''){
 	 	  	var html='';
 	 	  	html+='<div style="width:95%;height:50px;color:red;font-size:10px;margin:0 auto;">手机号不能为空</div>'

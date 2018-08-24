@@ -1,4 +1,10 @@
  $(document).ready(function(){
+ 	 //登录后跳转个人信息列表
+       var mylist=localStorage.getItem("temp")
+       
+       if(mylist){ 
+       $('.mylist').attr("href","mylist.html")
+       }
  	/*$(".icon-header").hide();
  	$(".head-div").click(function(){
  		$(".icon-header").toggle();
@@ -58,16 +64,23 @@
 					}
 				});	
 				//底部手风琴选项卡
+				$(function(){
+    $(".coll_body").eq(3).show();
+    $(".Collapsing").click(function(){
+        $(this).toggleClass("current").siblings('.Collapsing').removeClass("current");//切换图标
+        $(this).next(".coll_body").slideToggle(5).siblings(".coll_body").slideUp(5);
+    });
+});
 				 
-				$('.foot-add').click(function(){
+				/*$('.foot-add').click(function(){
 					  $('.foot-add').removeClass("span_plus")
 					  $('.foot-add').addClass("span_minus")
 					   $(this).toggleClass("span_plus");
-					   //$(this).toggleClass("span_minus");
+					    
 					  
 					  $(this).addClass("span_minus");
 				
-				})
+				})*/
 				//pc端底部邮箱
 				 $('.input-group span').click(function(){
 				 	var email=$('.input-group input').val();
@@ -89,6 +102,7 @@
 				 $('.email-input span').click(function(){
 				 	var email=$('.email-input input').val();
 				 	console.log(email);
+				 	localStorage.setItem("email",email);
 				 	$.ajax({
 				 		url:"http://www.dianyitai.cn/home/sendsms/sendmail",
 				 		type:"post",

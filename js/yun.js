@@ -1,5 +1,11 @@
 $(document).ready(function(){
-	 
+	  var w = document.documentElement.clientWidth || document.body.clientWidth;
+  	console.log(w)
+  	var modal=localStorage.getItem("modal")
+  	console.log(modal);
+  	if(w<=640){ 
+        window.location.href="mobile_yun.html" 
+      }
 	var arrdata= [
 { "name":"小儿课程" , "url":"www.runoob.com","id":"2"  }, 
 { "name":"google" , "url":"www.google.com","id":"2" }, 
@@ -32,7 +38,7 @@ var imgurl='http://www.dianyitai.cn'
                    if(id==0){ 
                     $('.category-list-box').empty();   //清空resText里面的所有内容
                     var html = '';
-                    $.each(data, function(key, list){
+                    $.each(JSON.parse(data), function(key, list){
                          
                         
                         html +='<li><a href="doctor.html">'+
@@ -91,12 +97,12 @@ var imgurl='http://www.dianyitai.cn'
             function branch(id,money){
             	 console.log(id);
             	 console.log(money);
-            	  for( var i=0; i<data.length; i++){
+            	  for( var i=0; i<JSON.parse(data).length; i++){
             	  	//console.log(data[i].kmfl);
             	  	if(data[i].kmfl==id||data[i].money==money){
             	  		 $('.category-list-box').empty();   //清空resText里面的所有内容
                     var html = '';
-                    $.each(data , function(key, list){
+                    $.each(JSON.parse(data) , function(key, list){
                     	 //json.parse();
                         //console.log('hahah:'+list.money);
                         //console.log(list.kmfl)
