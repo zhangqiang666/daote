@@ -89,3 +89,11 @@
 	border:0px;
 	color:RGBA(97, 97, 97, 1);
 }
+.phone-red,.name-red,.sf-red,.cs-red,.address-red{
+	 padding-left:2.5%;
+	display: inline-block;
+	color:red;
+	font-size: 8px;
+	display: none;
+}
+ 

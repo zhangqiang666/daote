@@ -1,4 +1,6 @@
 $(function(){
+	var url=localStorage.getItem("url");
+	var imgurl=localStorage.getItem("imgurl")
 	//复选框默认选择
 	function fun(){
     obj = document.getElementsByName("test");
@@ -30,16 +32,56 @@ $(function(){
 		var address=$('#detailed').val();
 		var postcode=$('#youbian').val();
 		console.log(city)
+		if(phone==''){
+			$('.phone-red').css("display","block");
+		 
+		}
+		if(phone!=''){
+			$('.phone-red').css("display","none");
+		}
+		if(username==''){
+			$('.name-red').css("display","block");
+		 
+		}
+		if(username!=''){
+			$('.name-red').css("display","none");
+		 
+		}
+		if(province==''){
+			$('.sf-red').css("display","block");
+	 
+		}
+		if(province!=''){
+			$('.sf-red').css("display","none");
+	 
+		}
+		if(city==''){
+			$('.cs-red').css("display","block");
+		 
+		}
+		if(city!=''){
+			$('.cs-red').css("display","none");
+		 
+		}
+		if(address==''){
+			$('.address-red').css("display","block");
+		 
+		}
+		if(address!=''){
+			$('.address-red').css("display","none");
+		 
+		}
+		if(phone!=''&&username!=''&&province!=''&&city!=''&&address!=''){
 		$.ajax({
-			url:"http://www.dianyitai.cn/home/index/usersinfo",
+			url:url+"getuserinfo",
 			type:"post",
 			data:{
 				phone:phone,
-				username:username,
+				name:username,
 				sex:sex,
 				province:province,
 				city:city,
-				district:district,
+				areas:district,
 				address:address,
 				postcode:postcode,
 				email:email
@@ -48,13 +90,17 @@ $(function(){
 			dataType:"json",
 			success:function(data){
 				console.log(data)
-				if(data.stu=='1'){
+				if(data.success){
+					$('<div>').appendTo('body').addClass('alert alert-success').html('信息提交成功').show().delay(1500).fadeOut();
 					window.location.href="mylist.html"
 				}
 				
 			}
 		})
 		
+		}//判断全填正确
+		
+	 
 		
 		
 		

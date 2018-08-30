@@ -388,6 +388,17 @@ a {
 	font-size:10px;
 	float:right;
 }
+.card-head-btn66{
+	width:30%;
+	height:32px;
+	background:#05C8AA;
+	line-height: 32px;
+	text-align: center;
+	color:RGBA(255, 255, 255, 1);
+	font-size:10px;
+	float:right;
+	display: none;
+}
 .card-head-centent{
 	width:96%;
 	 
@@ -473,8 +484,8 @@ a {
 	color:RGBA(239, 12, 12, 1);
 	font-size: 10px;
 	width:100%;
-	display: inline-block;
-
+	/*display: inline-block;
+*/
 }
 .fot-doctor{
 	color:RGBA(99, 107, 117, 1);
@@ -719,7 +730,11 @@ a {
 	display: inline-block;
 }
 .col-red{
-	color:#FF7F7F;
+	color:#05C8AA;
+}
+
+	.col-red66{
+		color:RGBA(239, 12, 12, 1);
 }
 .article-foot{
 	width:100%;
@@ -746,6 +761,12 @@ a {
 	margin-left:2%;
 	
 }
+.col-money{
+	color:#FF7F7F;
+	font-size: 10px;
+	margin-left:2%;
+	
+}
 .col-right-argument{
 	float:right;
 	color:#999999;
@@ -759,7 +780,30 @@ a {
 	font-size: 10px;
 	margin-right:2%;
 }
-
+/* 找他就医 */
+.can-doctor-list{
+	width:80%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 12px;
+	color:white;
+	background: #05C8AA;
+	margin:0 auto;
+	margin-top:20px;
+}
+.can-doctor-list a{
+	font-size: 12px;
+	color:white;
+}
+.can-doctor-list a:link,.can-doctor-list a:visited{
+	text-decoration: none;
+	font-size: 12px;
+	color:white;
+}
+.list-end{
+	margin-bottom: 50px;
+}
 	
 	
 	

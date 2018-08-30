@@ -277,3 +277,44 @@
 	margin-left:7px;
 	margin-top:20px;
 }
+.mobile-img-box{
+		display: none;
+		 
+	}
+/*移动端布局页面*/
+@media only screen and (max-width: 640px) {
+	.home-head-bg{
+		display: none;
+	}
+	.bg-img{
+		display: none;
+	}
+	.doctor-fg-box{
+		display: none;
+	}
+	.get-doctor-centent-box-02{
+		display: none;
+	}
+	.personal-health-box{
+		display: none;
+	}
+	.mobile-img-box{
+		display: block;
+		width:100%;
+		display: inline-block;
+	}
+	.mobile-img-box img{
+		width:100%;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,5 +1,5 @@
 $(function(){
-	  
+	  var url=localStorage.getItem("url")
 //发送短信
 	   $('#iphone-btn').click(function(){
 	   	var iphone=$('#iphone').val();
@@ -8,7 +8,7 @@ $(function(){
 	   	//console.log(iphone_code);
 	
 	$.ajax({
-        url:"http://www.dianyitai.cn/home/index/sendSms",
+        url:url+"getsendsms",
         type:"post",
         /*xhrFieds:{
         	widthCredentials:true
@@ -52,19 +52,29 @@ $(function(){
 	 	  localStorage.setItem("temp",iphone); //存入 参数： 1.调用的值 2.所要存入的数据 
 	 	  console.log(localStorage.getItem("temp"));//输出
 	 	  $.ajax({
-	 	  	url:"http://www.dianyitai.cn/home/index/login",
+	 	  	url:url+"login",
 	 	  	type:"post",
 	 	  	data:{
 	 	  		phone:iphone,
-	 	  		code:code
+	 	  		regcode:code
 	 	  	},
+	 	  	 // headers : {'Authorization':'Basic bmVvd2F5Oe4lb3dheQ=='},
+
+//    beforeSend: function(xhr) {
+//
+//        xhr.setRequestHeader("Authorization", "Basic bmVvd2F5Oe4lb3dheQ==");
+//
+//    },
 	 	  	dataType:"json",
 	 	  	success:function(data){
 	 	  		console.log(data)
-	 	  		if(data.stu==1){
+	 	  		localStorage.setItem("token",data.success.token)
+	 	  		 
+	 	  		if(data.success){
+	 	  			$('<div>').appendTo('body').addClass('alert alert-success').html('登录成功').show().delay(1500).fadeOut();
 	 	  				window.location.href="index.html"
 	 	  		}
-	 	  	 
+//	 	  	 
 	 	  	/*	 if(iphone==''){
 	 	  	var html='';
 	 	  	html+='<div style="width:95%;height:50px;color:red;font-size:10px;margin:0 auto;">手机号不能为空</div>'
@@ -94,7 +104,43 @@ $(function(){
 	 	  		
 	 	  		
 	 	  		
-	 	  	}
+	 	  },
+	 	  error: function (data) {
+　　 
+        console.log(data.responseJSON)
+        console.log(data.responseJSON.error)
+         if(data.responseJSON.status_code==500){
+         	$('.code-red').css("display","block")
+         	$('.code-red').empty();
+        	var code=""
+        	code+='验证码不正确';
+        	$('.code-red').html(code);
+         }
+        if(data.responseJSON.error.phone){
+        	$('.phone-red').css("display","block")
+        	$('.phone-red').empty();
+        	var phone=""
+        	phone+=data.responseJSON.error.phone[0];
+        	$('.phone-red').html(phone);
+        }
+        if(!data.responseJSON.error.phone){
+        		$('.phone-red').css("display","none")
+        }
+        if(data.responseJSON.error.regcode){
+        	$('.code-red').css("display","block")
+        	$('.code-red').empty();
+        	var code=""
+        	code+=data.responseJSON.error.regcode[0];
+        	$('.code-red').html(code);
+        }
+         if(!data.responseJSON.error.regcode){
+        		$('.code-red').css("display","none")
+        }
+         
+        
+        
+ 　　  }     
+	 	  
 	 	  });
 	 	  
 	 	 

@@ -1,4 +1,12 @@
  $(document).ready(function(){
+ 	//公共地址
+   	var url="http://172.16.30.231/ucenter/public/api/"
+   	var imgurl="http://172.16.30.231/ucenter/public/uploads/"
+// 	var url="http://www.dianyitai.cn/api/"
+// 	var imgurl="http://www.dianyitai.cn/uploads/"
+ 	localStorage.setItem("url",url)
+ 	localStorage.setItem("imgurl",imgurl)
+ 	console.log(localStorage.getItem("url"));
  	 //登录后跳转个人信息列表
        var mylist=localStorage.getItem("temp")
        
@@ -104,7 +112,7 @@
 				 	console.log(email);
 				 	localStorage.setItem("email",email);
 				 	$.ajax({
-				 		url:"http://www.dianyitai.cn/home/sendsms/sendmail",
+				 		url:url+"sendmail",
 				 		type:"post",
 				 		data:{
 				 			email:email
@@ -112,6 +120,7 @@
 				 		dataType:"json",
 				 		success:function(data){
 				 			console.log(data)
+				 			$('<div>').appendTo('body').addClass('alert alert-success').html('发送成功').show().delay(1500).fadeOut();
 				 		}
 				 	})
 				 	

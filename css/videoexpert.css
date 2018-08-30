@@ -310,18 +310,21 @@ body{
 .mobile-head-bg{
 	display: none;
 }
+.mobile-img-box{
+		display:none;
+		 
+	}
 /*mobile手机端布局样式*/
 @media only screen and (max-width: 640px) {
 	.pc-head-bg{
 		display: none;
 	}
-	.mobile-head-bg{
-		display: block;
-	}
+	 
 	.home-head-bg{
+		display: none;
 	width:100%;
 	height:150px;
-	/*background: url(../images/bag/banner007.png);*/
+	 
 	 background-repeat: no-repeat;
 	  background-size:100% 460px; 
 	 position: relative;
@@ -336,7 +339,7 @@ body{
     width:100%;
 	height:150px;
     text-align: center;
- /* background-color: rgba(0,0,0,0.45) ; */
+  
    background: white;
    padding-top:12.5px;
   
@@ -351,6 +354,7 @@ body{
 	background:RGBA(248, 249, 251, 1) ;
 }
 .head-title{
+	display: none;
 	width:100%;
 	line-height: 50px;
 	margin-top:230px;
@@ -371,6 +375,7 @@ body{
  }
 /*远程视频的优势*/
 .vs {
+	display: none;
 	width:100%;
 	height:310px;
 	margin:0 auto;
@@ -457,6 +462,7 @@ body{
 }
 /*远程视频门诊流程*/
 .bg-box{
+	display: none;
 	display: inline-block;
 	width:100%;
 	background: RGBA(248, 249, 251, 1);
@@ -603,23 +609,28 @@ body{
 }
 /*远程视频流程图片*/
 .video-copy-img{
-	width:100%;
-	  
-	background:white;
-	display: inline-block;
-	text-align: center;
-	padding-bottom: 20px;
-	padding-top:20px;
+	 display: none;
+	 
+	 
 }
 .video-copy-img img{
+	display: none;
 	width:90%;
 	 height:277px;
 }
 	
-	
-	
+/*手机端内页图切片*/	
+	.mobile-img-box{
+		display: block;
+		width:100%;
+		display: inline-block;
+	}
+	.mobile-img-box img{
+		width:100%;
+	}
 	
 	
 	
 	
 }
+ 

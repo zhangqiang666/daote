@@ -413,7 +413,7 @@
 #foot{
 	width:100%;
 	height:500px;
-	background: #303030;
+	background: RGBA(42, 42, 42, 1);
 	margin:0 auto;
 	 padding-top:0px;
 	margin-top:10px;
@@ -658,15 +658,14 @@
             border-bottom: 0.5px solid RGBA(255, 255, 255, 0.5);
              line-height: 50px;
              cursor: pointer; 
-           
-          
             background-repeat: no-repeat; 
             /*background-position: center right no-repeat; */
-            background-image: url(../images/bag/jiahao.png); 
-            background-color:RGBA(42, 42, 42, 0.5);
+            background-image: url(../images/ssimg/jiahao.png); 
+            background-color:RGBA(42, 42, 42, 1);
              color:RGBA(255, 255, 255, 0.5);
             background-position:right 20px;
             font-size: 10px;
+            background-size:10px;
              }
         .coll_body{
         	display: none; 
@@ -685,7 +684,8 @@
         	 
         }
         .current{
-        	background-image:url(../images/bag/jianhao.png);
+        	background-image:url(../images/ssimg/jianhao.png);
+        	 
         	}
 	
 

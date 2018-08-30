@@ -92,8 +92,14 @@
             </div>
             <!--list-->
                <div class="mylist-list-title">
+               	<div> 
             	 <p class="mylist-name">叶奇锐先生</p>
-            	 <p id="signout">退出登录</p>
+            	 <p id="signout"><a href="#" style="color:RGBA(120, 120, 120, 1);border-bottom: 1px solid RGBA(120, 120, 120, 1);"> 退出登录</a></p>
+            	 </div>
+            	  
+            	 <input type="file" name="file" onchange="showPreview(this)" class="man-input"/>
+            	  <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img"/>
+            	<!-- <img src="images/slide/manlogo.png" class="man-img">-->
                 </div>
              <!--list-->
              <div class="mylist-list">
@@ -133,7 +139,7 @@
              <!--footer-->
              <!--email-->
              <div class="mylist-email">
-             	<input type="text" placeholder="输入你的电子邮箱"/><button>确定</button>
+             	<input type="text" placeholder="输入你的电子邮箱"/><button class="email-btn">确定</button>
              </div>
              <!--email-->
             <!--return-->
@@ -149,7 +155,36 @@
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/mylist.js"></script>
-        
+        <script type="text/javascript">
+
+    function showPreview(source) {
+
+      var file = source.files[0];
+
+      if(window.FileReader) {
+
+          var fr = new FileReader();
+
+          console.log(fr);
+
+          var portrait = document.getElementById('portrait');
+
+          fr.onloadend = function(e) {
+
+            portrait.src = e.target.result;
+
+          };
+
+          fr.readAsDataURL(file);
+
+          portrait.style.display = 'block';
+
+      }
+
+    }
+
+</script>
+
     </body>
     
 </html>

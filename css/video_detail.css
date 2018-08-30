@@ -190,7 +190,7 @@ a {
 	line-height: 20px;
 	margin-bottom: 25px;
 }
-.video-detail-foot{
+/*.video-detail-foot{
 	width:100%;
 	height:50px;
 	position: fixed;
@@ -226,5 +226,32 @@ a {
 	height:21px;
 	 
 	margin-left:3%;
+}*/
+ .video-detail-foot{
+	width:100%;
+	height:50px;
+	position: fixed;
+	bottom: 0px;
+	background: #F5F5F5;
 }
- 
+.video-detail-foot-auto{
+	width:80%;
+	height:40px;
+	background: white;
+	font-size: 14px;
+	color:#999999;
+	border:0px;
+	margin-top:5px;
+	text-align: left;
+	padding-left:2%;
+	margin-left:2.5%;
+	 
+	
+	
+}
+.video-detail-foot img{
+	width:22px;
+	height:21px;
+	 
+	margin-left:3%;
+}

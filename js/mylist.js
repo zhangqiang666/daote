@@ -1,5 +1,5 @@
 $(function(){
-	 
+	 var url=localStorage.getItem("url")
 	 //登录后跳转个人信息列表
        var mylist=localStorage.getItem("temp")
        
@@ -27,9 +27,27 @@ $(function(){
 	
 	
 	
+	//移动端底部邮箱
+				 $('.email-btn').click(function(){
+				 	var email=$('.mylist-email input').val();
+				 	console.log(email);
+				 	localStorage.setItem("email",email);
+				 	$.ajax({
+				 		url:url+"sendmail",
+				 		type:"post",
+				 		data:{
+				 			email:email
+				 		},
+				 		dataType:"json",
+				 		success:function(data){
+				 			console.log(data)
+				 			//var email=$('.mylist-email input').attr("value",'555')
+				 			$('<div>').appendTo('body').addClass('alert alert-success').html('发送成功').show().delay(1500).fadeOut();
+				 		}
+				 	})
+				 		})
 	
-	
-	
+	 
 	
 	
 	

@@ -98,7 +98,18 @@
        if(mylist){ 
        $('.mylist').attr("href","mylist.html")
        }
-        
+        //首页列表
+        $.ajax({
+        	type:"get",
+        	url:"http://172.16.30.231/ucenter/public/api/homelist",
+        	async:true,
+        	data:"",
+        	dataType:"json",
+        	success:function(data){
+        		console.log(data)
+        		
+        	}
+        });
         
         
         
