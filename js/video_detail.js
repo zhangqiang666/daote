@@ -28,8 +28,17 @@ var url = location.search;//获取url中"?"符后的字串
    // console.log(theRequest.author);
     var author=theRequest.author;
     var v_id=theRequest.v_id;
+    localStorage.setItem("v_id",v_id)
     console.log(v_id)
     console.log(author)
+    //底部跳转评论传参
+    $('.argument-href').empty();
+    var argument="";
+        argument+='<a href="input.html?classify=视频&comment='+v_id+'"class="argument-href">'+ 
+	'<button class="video-detail-foot-auto">发表评论</button>'+
+	'</a>'
+        $('.argument-href').html(argument);
+      
 	$.ajax({
 		type:"post",
 		url:url66+"videolist",
@@ -37,6 +46,7 @@ var url = location.search;//获取url中"?"符后的字串
 		data:{
 			 author:author,
 			 v_id:v_id,
+			 type:'0'
 		},
 		dataType:"json",
 		success:function(data){
@@ -47,7 +57,7 @@ var url = location.search;//获取url中"?"符后的字串
 			$.each(data.success, function(key,list) {
 				if(list.is_fee==1){ 
 				 html+='<video width="100%" height="126" controls>'+
-                  '<source src='+imgurl+list.video+'  type="video/mp4">'+
+                  '<source src='+imgurl+list.video+' controls="true" controlslist="nodownload" type="video/mp4">'+
                 '</video>'+
             	'<div class="video-card-foot-01">'+
             		'<span class="col-green" style="color:red;">￥'+list.price+'&nbsp;</span>'+
@@ -55,7 +65,7 @@ var url = location.search;//获取url中"?"符后的字串
             	'</div>'+
             	'<div class="video-card-foot-02">'+
             		'<span>最近在学2245人</span>'+
-            		'<span class="border-auto">累计报名3万人</span>'+
+            		'<span class="border-auto"></span>'+
             		'<span>好评度99%</span>'+
             	'</div>'
             }else{
@@ -68,7 +78,7 @@ var url = location.search;//获取url中"?"符后的字串
             	'</div>'+
             	'<div class="video-card-foot-02">'+
             		'<span>最近在学2245人</span>'+
-            		'<span class="border-auto">累计报名3万人</span>'+
+            		'<span class="border-auto"> </span>'+
             		'<span>好评度99%</span>'+
             	'</div>'
             }
@@ -88,7 +98,9 @@ var url = location.search;//获取url中"?"符后的字串
 		type:"post",
 		url:url66+"doctorlist",
 		async:true,
-		data:"",
+		data:{
+			d_id:localStorage.getItem("d_id")
+		},
 		dataType:"json",
 		success:function(data){
 			console.log(data);
@@ -112,8 +124,8 @@ var url = location.search;//获取url中"?"符后的字串
 		url:url66+"commentlist",
 		async:true,
 		data:{
-			classify:"医生",
-			comment:localStorage.getItem("d_id")
+			classify:"视频",
+			comment:v_id
 			 
 		},
 		dataType:"json",
@@ -121,7 +133,9 @@ var url = location.search;//获取url中"?"符后的字串
 			console.log(data)
 			$('.xueyuan-content-list-box').empty();
 			var pinlun="";
+			//for(var i=0; i<data.success.length;i++){ 
 			$.each(data.success, function(key,list) {
+				localStorage.setItem("yhname",list.name)
 				pinlun+='<li>'+
         		'<div class="xueyuan-list-head">'+
         			'<div class="list-head-i"><img src='+imgurl+list.photo+' style="width:100%;height:100%;border-radius:50px;"></div>'+
@@ -129,7 +143,7 @@ var url = location.search;//获取url中"?"符后的字串
         				'<p class="list-head-phone">'+list.name+'</p>'+
         				'<p class="list-head-day">'+list.created_at+'</p>'+
         			'</div>'+
-        			'<span class="list-head-right">'+key+'#</span>'+
+        			'<span class="list-head-right">'+(key+1)+'#</span>'+
         		'</div>'+
         		'<div class="xueyuan-list-content">'+list.content+'</div>'+
            '</li>'
@@ -138,7 +152,15 @@ var url = location.search;//获取url中"?"符后的字串
 				
 				$('.xueyuan-content-list-box').html(pinlun);
 			});
+			//};
+			 $('.video-detail-number').empty();
 			 
+			 localStorage.setItem("argumentnumber",data.success.length)
+			 var number="";
+			// $.each(data.success, function(key,list) {
+			 number+=data.success.length;
+			 $('.video-detail-number').html(number);
+			//});
 			
 			
 		},
@@ -147,12 +169,93 @@ var url = location.search;//获取url中"?"符后的字串
 		}
 		
 	});
-	
-	
-	
-	
-	
-	
+	//判断是否收藏视屏
+	$.ajax({
+		type:"post",
+		url:url66+"getcom",
+		async:true,
+		data:{
+			classify:'2',
+			f_type:'3',
+			focus:v_id,
+			id:localStorage.getItem("id")
+			
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success==1){
+				 $('.collection-erroy').hide();
+				 $('.collection-success').show();
+				 
+			}else{
+				$('.collection-success').hide();
+		        $('.collection-erroy').show();
+			}
+		}
+	});
+	//是否收藏
+	$('.collection-success').hide();
+	$('.collection-erroy').click(function(){
+//		$('.collection-erroy').hide();
+//		$('.collection-success').show();
+//		$('<div>').appendTo('body').addClass('alert alert-success').html('收藏成功').show().delay(1500).fadeOut();
+//收藏视屏
+	$.ajax({
+		type:"post",
+		url:url66+"getcollect",
+		async:true,
+		data:{
+			classify:'2',
+			f_type:'3',
+			focus:v_id,
+			id:localStorage.getItem("id")
+			
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success){
+				 $('.collection-erroy').hide();
+				 $('.collection-success').show();
+				 $('<div>').appendTo('body').addClass('alert alert-success').html('收藏成功').show().delay(1500).fadeOut();
+			}
+		}
+	});
+		 
+	})
+	$('.collection-success').click(function(){
+//		$('.collection-success').hide();
+//		$('.collection-erroy').show();
+//		$('<div>').appendTo('body').addClass('alert alert-success').html('取消收藏成功').show().delay(1500).fadeOut();
+//取消收藏视屏
+	$.ajax({
+		type:"post",
+		url:url66+"losecollect",
+		async:true,
+		data:{
+			classify:'2',
+			f_type:'3',
+			focus:v_id,
+			id:localStorage.getItem("id")
+			
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success){
+				$('.collection-success').hide();
+				$('.collection-erroy').show();
+				$('<div>').appendTo('body').addClass('alert alert-success').html('取消收藏成功').show().delay(1500).fadeOut();
+			}
+		}
+	});
+
+
+
+
+	})
+ 
 	
 	
 	

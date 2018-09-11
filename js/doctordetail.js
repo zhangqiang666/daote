@@ -19,10 +19,22 @@ $(function(){
 
     console.log(theRequest.id);
     var id = theRequest.id;
+      var d_id= theRequest.d_id;
     console.log(id)
     var url66=localStorage.getItem("url");
     var imgurl=localStorage.getItem("imgurl");
+     
     //var imgurl='http://www.dianyitai.cn'
+    
+    
+     //底部跳转评论传参
+    $('.argument-href').empty();
+    var argument="";
+        argument+='<a href="input.html?classify=医生&comment='+d_id+'"class="argument-href">'+ 
+	'<button class="video-detail-foot-auto">发表评论</button>'+
+	'</a>'
+        $('.argument-href').html(argument);
+      
 	$.ajax({
 		type:"post",
 		url:url66+"doctorlist",
@@ -56,33 +68,121 @@ $(function(){
 			});
 			$('.doctor-detail-card-box').html(html);
 			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			  //判断是否关注该医生
+	$.ajax({
+		type:"post",
+		url:url66+"getcom",
+		async:true,
+		data:{
+			classify:'1',
+			f_type:'1',
+			focus:d_id,
+			id:localStorage.getItem("id")
 			
-			//关注按钮的切换
-			$('.card-head-btn').click(function(){
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success==1){
 				$('.card-head-btn').hide();
 				$('.card-head-btn66').css("display","block");
-			})
-			$('.card-head-btn66').click(function(){
+				 
+			}else{
 				$('.card-head-btn66').hide();
 				$('.card-head-btn').css("display","block");
-			})
-			//关注收藏
-//	$.ajax({
-//		type:"post",
-//		url:url66+"getcollect",
-//		async:true,
-//		data:{
-//			classify:'1',
-//			f_type:'1',
-//			focus:id
-//			
-//		},
-//		dataType:"json",
-//		success:function(data){
-//			console.log(data);
-//		}
-//	});
+			}
+		}
+	});
+			 
+			 
+			//关注按钮的切换
+			$('.card-head-btn').click(function(){
+//				$('.card-head-btn').hide();
+//				$('.card-head-btn66').css("display","block");
+//		$('<div>').appendTo('body').addClass('alert alert-success').html('关注成功').show().delay(1500).fadeOut();
+if(localStorage.getItem("temp")){
+	//关注医生
+	$.ajax({
+		type:"post",
+		url:url66+"getcollect",
+		async:true,
+		data:{
+			classify:'1',
+			f_type:'1',
+			focus:d_id,
+			id:localStorage.getItem("id")
 			
+			
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success){
+				$('.card-head-btn').hide();
+				$('.card-head-btn66').css("display","block");
+				$('<div>').appendTo('body').addClass('alert alert-success').html('关注成功').show().delay(1500).fadeOut();
+			}
+		}
+	});
+	
+}else{
+	$('<div>').appendTo('body').addClass('alert alert-success').html('请先登录再进行关注该用户').show().delay(1500).fadeOut();
+}
+ 
+			
+			})
+			$('.card-head-btn66').click(function(){
+//				$('.card-head-btn66').hide();
+//				$('.card-head-btn').css("display","block");
+//				$('<div>').appendTo('body').addClass('alert alert-success').html('取消成功').show().delay(1500).fadeOut();
+//取消关注医生
+	$.ajax({
+		type:"post",
+		url:url66+"losecollect",
+		async:true,
+		data:{
+			classify:'1',
+			f_type:'1',
+			focus:d_id,
+			id:localStorage.getItem("id")
+			
+			
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			if(data.success){
+				$('.card-head-btn66').hide();
+				$('.card-head-btn').css("display","block");
+				$('<div>').appendTo('body').addClass('alert alert-success').html('取消成功').show().delay(1500).fadeOut();
+			}
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+			})
+			 
 			
 			
 			
@@ -104,7 +204,8 @@ $(function(){
 		url:url66+"videolist",
 		async:true,
 		data:{
-			author:localStorage.getItem("d_id")
+			author:d_id,
+			type:'0'
 		},
 		dataType:"json",
 		success:function(data){
@@ -135,34 +236,55 @@ $(function(){
       	    }
 			});
 			$('.tab-home-list-box').html(shipin);
+			 
+			//});
+			
+			
+			
+			
+		}
+	});
+	//文章列表
+	$.ajax({
+		type:"post",
+		url:url66+"articlelist",
+		async:true,
+		data:{
+			author:d_id,
+			type:'0'
+		},
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			 
 			//文章列表
 			$('.doctor-article-list-box').empty();
 			var wenzhang="";
 			$.each(data.success, function(key,list) {
 				if(list.is_fee==1){ 
 				wenzhang+='<li>'+
-      		'<a href="article_detail.html"> '+
+      		'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
       		'<div class="article-list-title"> '+list.title+'<span class="col-red">&nbsp;&nbsp;New</span></div>'+
       		'<div class="article-foot">'+
       			'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      			'<span class="col-money">付费课程</span>'+
-      		    '<span class="col-right-argument">70条评论</span>'+
-      		    '<span class="col-right-can">300人查看</span>'+
+      			'<span class="col-money">付费阅读'+list.price+'元</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-pinglun"></i>'+localStorage.getItem("number")+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>'+
       		'</div>'+
       		'</a>'+
       	'</li>'
       }else{
       	wenzhang+='<li>'+
-      		'<a href="article_detail.html"> '+
+      		'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
       		'<div class="article-list-title">'+list.title+'<span class="col-red">&nbsp;&nbsp;New</span></div>'+
       		'<div class="article-foot">'+
       			'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      		    '<span class="col-right-argument">70条评论</span>'+
-      		    '<span class="col-right-can">300人查看</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-pinglun"></i>'+localStorage.getItem("number")+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>'+
       		'</div>'+
       		'</a>'+
       	'</li>'
@@ -175,6 +297,12 @@ $(function(){
 			
 		}
 	});
+	
+	
+	
+	
+	
+	
 	}
 	 videodetail();
 	 //评论列表
@@ -184,7 +312,8 @@ $(function(){
 		async:true,
 		data:{
 			classify:"医生",
-			comment:localStorage.getItem("d_id")
+			comment:d_id
+			 
 			 
 		},
 		dataType:"json",
@@ -200,7 +329,7 @@ $(function(){
         				'<p class="list-head-phone">'+list.name+'</p>'+
         				'<p class="list-head-day">'+list.created_at+'</p>'+
         			'</div>'+
-        			'<span class="list-head-right">'+key+'#</span>'+
+        			'<span class="list-head-right">'+(key+1)+'#</span>'+
         		'</div>'+
         		'<div class="xueyuan-list-content">'+list.content+'</div>'+
            '</li>'
@@ -209,6 +338,10 @@ $(function(){
 				
 				$('.xueyuan-content-list-box').html(pinlun);
 			});
+//			$('.argument-head-number').empty()
+//			var hznumber=""
+//			hznumber+='<span>患者评价(<span>'+data.success.length+'</span>)</span>';
+//			$('.argument-head-number').html(hznumber)
 			 
 			
 			

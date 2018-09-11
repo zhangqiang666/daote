@@ -25,7 +25,7 @@
 			pre{margin-top:10px; padding:6px; background:#f7f7f7}
 		</style>
 		<script type="text/javascript" src="lib/jquery.js"></script>
-		<script type="text/javascript" src="lib/jquery.cityselect.js"></script>
+		 
 		<script type="text/javascript">
 			$(function(){
 				$("#city").citySelect({
@@ -40,65 +40,17 @@
     </head>
     <body>
         <div>
-        	<div class="start-head-box">
-        		 <ul class="start-head-list">
-        		 	<li>&nbsp;</li>
-        		    <li class="can-weixin-erwei">
-        		    	<div>关注微信小程序&nbsp;<i class="iconfont icon-down-trangle" style="position: absolute;margin-top:1px;"></i></div>
-        		    	<div class="can-weixin"><img src="images/slide/erweima.jpg"></div>
-        		    </li>
-        		    <li><a href="index.html" class="active-a">登录</a> </li>
-        		 </ul>
-        	</div>
+        	 
             <header id="head">
-            	<div class="logo">
-            		<a href="index.html" style="display: inline-block;"> 
-            		<img src="images/1_03.jpg" />
-            		</a>
-            	</div>
-                <ul>
-                    <li><!--<a href="index.html" style="color:#3174BB;">首页</a>
-                    		<p class="border-home" style="display: block;"></p>-->
-                    </li>
-                    <li><a href="videoexpert.html">远程视频门诊</a>
-                    		<p class="border-home"></p>
-                    </li>
-                    <li><a href="shanghaiMedical.html">病人来上海</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <li><a href="expertAssignment.html">医生去外地</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <li><a href="homeHealth.html">随身医生</a>
-                    	<p class="border-home"></p>
-                    </li>
-                      <li><a href="yun.html">医学教育</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <!--   <li><a href="doctor.html">医学教育</a>
-                    	<p class="border-home"></p>
-                    </li>-->
-                     <li><a href="doctorhome.html">医生工作室</a>
-                    	<p class="border-home"></p>
-                    </li>
-                </ul>
-                <div class="head-div"><a href="menu.html"> <i class="iconfont icon-santiaogang"></i></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> 点医台</a></div>
-               <div class="mobile-head-right"><a href="mobile-login.html"> <i class="iconfont icon-wo"></i></a></div>
-                
+            	 
+                 <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
            
             <!---->
-            <div class="icon-header">
-            	<ul>
-            		<li><a href="#">首页</a></li>
-            		<li><a href="#">视频专家门诊</a></li>
-            		<li><a href="#">上海就医代办</a></li>
-            		<li><a href="#">专家外派手术</a></li>
-            		<li><a href="#">居家健康监护</a></li>
-            	</ul>
-            </div>
+             
             <!--icon-header-->
             <!--头部返回-->
              <div class="login-title-gohome">
@@ -132,35 +84,44 @@
                  <p><span>性别</span></p>
                  <p><select class="member-email" id="sex" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option value="1">男</option>
-                 	<option value="0">女</option>
+                 	<option value="2">女</option>
                  </select></p>
              </div>
              <!--list-->
               <div id="city"> 
              <div class="member-list">
                  <p><span>省份</span><sup>*</sup></p>
-                 <p><select class="member-email prov" id="province" onfocus="myFunction(this)" onblur="myEnd(this)">
+                 <p>
+                 	<select class="member-email prov" id="province" onfocus="myFunction(this)" onblur="myEnd(this)">
+                 	 
                  	<option>上海</option>
                  	<option>北京</option>
-                 </select></p>
+                 </select>
+                 </p>
              </div>
                 <div class="sf-red">省份不能为空</div>
              <!--list-->
              <div class="member-list">
                  <p><span>城市</span><sup>*</sup></p>
-                 <p><select class="member-email city" onfocus="myFunction(this)" onblur="myEnd(this)">
+                 <p  class="diqu-bg citys-box">
+                 
+                 <select class="member-email city" onfocus="myFunction(this)" onblur="myEnd(this)">
                  	<option>上海市</option>
                  	<option>北京市</option>
-                 </select></p>
+                 </select>
+                 </p>
              </div>
                 <div class="cs-red">城市不能为空</div>
              <!--list-->
              <div class="member-list">
                  <p><span>地区</span><sup>*</sup></p>
-                 <p class="diqu-bg"><select class="member-email dist" id="region" onfocus="myFunction(this)" onblur="myEnd(this)">
-                 	<option>徐汇区</option>
+                 <p class="diqu-bg">
+                 	 
+                 	<select class="member-email dist" id="region" onfocus="myFunction(this)" onblur="myEnd(this)">
+                 	<option>县</option>
                  	<option>静安区</option>
-                 </select></p>
+                 </select>
+                 </p>
              </div>
              </div>
              <!--list-->
@@ -193,7 +154,9 @@
         
          
         <!-- <script type="text/javascript" src="js/style.js"></script>-->
+         <script type="text/javascript" src="lib/jquery.cityselect.js"></script>
         <script type="text/javascript" src="js/member.js"></script>
+        
         <script type="text/javascript">
         	 //input输入框点击变色
 	       function myFunction(x){
@@ -202,6 +165,67 @@
 	       function myEnd(x){
 	       	 x.style.background="RGBA(236, 236, 236, 1)";
 	       }
+	       
+	       //地区选择
+//	       function change(obj){ 
+//		 
+//				var optionid=$('.province').val()
+//				console.log(optionid)
+//		$.ajax({
+//			type:"post",
+//			url:localStorage.getItem("url")+"getcity",
+//			async:true,
+//			data:{
+//				id:optionid
+//			},
+//			dataType:"json",
+//			success:function(data){
+//				console.log(data);
+//				$('.citys').empty();
+//				var option="";
+//				$.each(data.success.msg, function(key,list) {
+//					//console.log(list.id)
+//					option+='<option value='+list.id+'>'+list.name+'</option>'
+//				});
+//				$('.citys').html(option)
+//				 
+//			}
+//			
+//		});
+//		
+//		
+//		 
+//		}
+//	         //县级选择
+//	       function xj_change(obj){ 
+//		 
+//				var optionid=$('.citys').val()
+//				console.log(optionid)
+//		$.ajax({
+//			type:"post",
+//			url:localStorage.getItem("url")+"getcity",
+//			async:true,
+//			data:{
+//				id:optionid
+//			},
+//			dataType:"json",
+//			success:function(data){
+//				console.log(data);
+//				$('.region').empty();
+//				var option="";
+//				$.each(data.success.msg, function(key,list) {
+//					//console.log(list.id)
+//					option+='<option value='+list.id+'>'+list.name+'</option>'
+//				});
+//				$('.region').html(option)
+//				 
+//			}
+//			
+//		});
+//		
+//		
+//		 
+//		}
         </script>
     </body>
     

@@ -13,7 +13,32 @@ $(function(){
     console.log(obj[0].checked);
 }
 	 fun();
-	  
+	 
+	 	  //地区联动选择框
+//		$.ajax({
+//			type:"post",
+//			url:url+"getcity",
+//			async:true,
+//			data:{
+//				
+//			},
+//			dataType:"json",
+//			success:function(data){
+//				console.log(data);
+//				$('.province').empty();
+//				var option="";
+//				$.each(data.success.msg, function(key,list) {
+//					//console.log(list.id)
+//					option+='<option value='+list.id+'>'+list.name+'</option>'
+//				});
+//				$('.province').html(option)
+//			 
+//			}
+//			
+//		});
+//		   
+		 
+		 
 	 //给数据赋值
 	var phone66=localStorage.getItem("temp")
 	console.log(phone66);
@@ -31,7 +56,21 @@ $(function(){
 		var district=$('#region').val();
 		var address=$('#detailed').val();
 		var postcode=$('#youbian').val();
+		localStorage.setItem("dianhua",phone);
+		localStorage.setItem("youxiang",email);
+		localStorage.setItem("username",username);
+		localStorage.setItem("sex",sex)
+		localStorage.setItem("province",province)
+			localStorage.setItem("city",city)
+				localStorage.setItem("district",district)
+				localStorage.setItem("address",address)
+				localStorage.setItem("postcode",postcode)
+				
+		
 		console.log(city)
+		 
+		
+		
 		if(phone==''){
 			$('.phone-red').css("display","block");
 		 
@@ -89,11 +128,19 @@ $(function(){
 			},
 			dataType:"json",
 			success:function(data){
+				
 				console.log(data)
 				if(data.success){
 					$('<div>').appendTo('body').addClass('alert alert-success').html('信息提交成功').show().delay(1500).fadeOut();
 					window.location.href="mylist.html"
 				}
+				 
+				 
+				
+				
+				
+				
+				
 				
 			}
 		})
@@ -106,10 +153,32 @@ $(function(){
 		
 		
 	})
+	 //用户信息
+				 $.ajax({
+				 	type:"post",
+				 	url:localStorage.getItem("url")+"userinfos",
+				 	async:true,
+				 	data:{
+				 		id:localStorage.getItem("id")
+				 	},
+				 	dataType:"json",
+				 	success:function(data){
+				 		console.log(data)
+				 		  $('#phone').attr("value",data.success.phone);
+		        $('#email').attr("value",data.success.email);
+		        $('#name').attr("value",data.success.name);
+	            $('#sex').attr("value",localStorage.getItem("sex"));
+	            $('#province').attr("value",data.success.province);
+		        $('.city').attr("value",data.success.city);
+	            $('#region').attr("district",data.success.areas);
+		        $('#detailed').attr("value",data.success.province+data.success.city+data.success.areas+data.success.address);
+		        $('#youbian').attr("value",data.success.postcode);
+				 		 
+				 	}
+				 });
 	
 	
-	
-	
+	           
 	
 	
 	

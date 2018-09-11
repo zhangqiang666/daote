@@ -6,7 +6,7 @@
 	font-size:12px;
 	color:RGBA(80, 80, 80, 1);
 	 border-bottom: 1px solid RGBA(235, 235, 235, 1);
-	 
+	 margin-top:60px;
 	 
 }
 .login-title-gohome a{
@@ -70,6 +70,7 @@
 	text-align: center;
 	color:RGBA(58, 58, 59, 1);
 	font-size: 14px;
+	overflow: hidden;
 }
  
 .list-doctor,.list-newson{
@@ -79,4 +80,23 @@
 	text-align: center;
 	font-size: 10px;
 	color:RGBA(147, 147, 147, 1);
+}
+.zanwu-box{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+	margin-top:50px;
+}
+.zanwu-img{
+	width:50px;
+	height:50px;
+	 
+   margin:0 auto;
+}
+.zanwu-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
 }

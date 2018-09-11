@@ -6,7 +6,7 @@
 	font-size:12px;
 	color:RGBA(80, 80, 80, 1);
 	 border-bottom: 1px solid RGBA(235, 235, 235, 1);
-	 
+	 margin-top:60px;
 	 
 }
 .login-title-gohome a{
@@ -55,6 +55,7 @@
 	color:RGBA(97, 97, 97, 1);
 }
 .member-checkbox{
+	display: none;
 	width:95%;
 	height:40px;
 	line-height:40px;

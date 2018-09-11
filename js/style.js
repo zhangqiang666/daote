@@ -1,9 +1,10 @@
  $(document).ready(function(){
+ 	
  	//公共地址
-   	var url="http://172.16.30.231/ucenter/public/api/"
-   	var imgurl="http://172.16.30.231/ucenter/public/uploads/"
-// 	var url="http://www.dianyitai.cn/api/"
-// 	var imgurl="http://www.dianyitai.cn/uploads/"
+// 	var url="http://172.16.30.231/ucenter/public/api/"
+// 	var imgurl="http://172.16.30.231/ucenter/public/uploads/"
+   	var url="http://www.dianyitai.cn/api/"
+   	var imgurl="http://www.dianyitai.cn/uploads/"
  	localStorage.setItem("url",url)
  	localStorage.setItem("imgurl",imgurl)
  	console.log(localStorage.getItem("url"));
@@ -137,9 +138,31 @@
 				 	
 				 })
 				
-				
-				
-				
+				//底部二维码
+//				$('.mobile-erweima-img').empty();
+//				var footerweima="";
+//				footerweima+='<img src="images/bag/footerweima04.png">';
+//				$('.mobile-erweima-img').html(footerweima)
+				//neirong
+				 $('#foot').empty();
+				 var  footmain="";
+				    footmain+='<div class="mobile-erweima-img">'+
+                  		'<img src="images/bag/footerweima04.png">'+
+                  	'</div>'+
+                  	'<div class="wx-erweima"><strong>微信支付二维码</strong></div>'+
+                  	'<div class="mobile-foot-title-one">'+
+                  		'<span>All Rights Reserved.沪ICP备16030929号-3</span> <br/>'+
+                  		'<span>Copyright©1691998-2017</span>'+
+                  	'</div>'
+				    
+				$('#foot').html(footmain)
+				 //头部修改个人中心文字
+				 $('.mylist span').empty();
+				 var html="";
+				 html+='个人中心'
+				 $('.mylist span').html(html)
+				 //头部修改个人中心图标样式
+				$('.mylist i').css("margin-right","14px")
 				
 				
 				

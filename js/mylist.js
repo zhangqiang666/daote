@@ -13,10 +13,7 @@ $(function(){
 	var namephone=localStorage.getItem("temp")
 	console.log(namephone);
 	
-	 $('.mylist-name').empty();
-	 var html='';
-	 html+=namephone;
-	 $('.mylist-name').html(html);
+	  
 	 
 	
 	
@@ -46,7 +43,29 @@ $(function(){
 				 		}
 				 	})
 				 		})
-	
+				 
+				 //用户信息
+				 $.ajax({
+				 	type:"post",
+				 	url:localStorage.getItem("url")+"userinfos",
+				 	async:true,
+				 	data:{
+				 		id:localStorage.getItem("id")
+				 	},
+				 	dataType:"json",
+				 	success:function(data){
+				 		console.log(data)
+				 		$('.mylist-name').empty();
+	 var html='';
+	 if(data.success.name){
+	 	 html+=data.success.name;
+	 }else{ 
+	 html+=namephone;
+	 }
+	 $('.mylist-name').html(html);
+				 	}
+				 });
+	 
 	 
 	
 	

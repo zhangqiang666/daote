@@ -1,422 +1,36 @@
-	*{
-    margin: 0px;
-    padding: 0px;
-    font-family: "微软雅黑";
-}
  
- 
-.icon-header{
-	 	display: none;
-	 	 
-	 }
-.start-head-box{
-	width:1124px;
-	margin:0 auto;
-	height:45px;
-	background: RGBA(251, 250, 250, 1);
-	color:RGBA(76, 76, 76, 1);
-	font-size: 12px;
-	padding-left:10%;
-	overflow: hidden;
-}
-.start-head-list{
-	width:300px;
-	list-style: none;
-	 float:right;
-	 line-height: 45px;
-	 margin-right:13.5%;
-	}
-.start-head-list>li{
-	width:100px;
-	float:left;
-	text-align: center;
-	
-	}
-.can-weixin img{
-	position: absolute;
-	z-index: 999;
-	width: 77px;
-	height:77px;
-	 display: none;
-}
-.can-weixin-erwei:hover .can-weixin img{
-	position: absolute;
-	z-index: 999;
-	width: 77px;
-	height:77px;
-	display: block;
-}
-.active-a{
-	color:RGBA(76, 76, 76, 1);
-	text-decoration: none;
-	}
-.active-a:hover{
-		color:RGBA(76, 76, 76, 1);
-	text-decoration: none;
-	}
- 
-#head{
-    height: 80px;
-    width: 1124px;
-	background:white ;
-    margin: 0 auto;
-     
-}
-#main{
-	 width: 1124px;
-	/*overflow:hidden;*/
-	/* display: inline-block;*/
-	 margin: 0 auto;
 	 
-}
-#foot{
-	width:1124px;
-	height:301px;
-	background: #303030;
-	margin:0 auto;
-	display: inline-block;
-	padding-top:50px;
-}
-.head-div{
-    display: none;
-    font-size: 20px;
-    height: 30px;
-    width: 100px;
-    /*background-color: green;*/
-    float: right;
-    line-height: 30px;
-    margin-top: 35px;
-    text-align: right;
-    padding-right:5%;
-}
-  
-#head ul{
-    width: 65%;
-    float:right;
-    margin-right:4%;
-     background: white;
-   
-}
-#head ul li{
-     width: 12.5%;
-     height:80px;
-    float:left;
-    text-align: center;
-    list-style: none;
-    font-size: 16px;
-    
-}
- 
-#head ul li a{
-	color:#636B75;
-	height:80px;
-	line-height: 80px;
-	display:inline-block;
-	text-decoration: none;
-}
- 
-/*main头部*/
-/*.home-head-bg{
-	width:100%;
-	height:460px;
-	background: url(../images/slide/sy.png);
-	 background-repeat: no-repeat;
-	  background-size:cover; 
-	 position: relative;
-	 
-	 
-}
-.home-head-centent{
-	 position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width:100%;
-	height:460px;
-   
-   background-color: rgba(0,0,0,0.45) ; 
-  
-}*/
- .border-home{
- 	width:24px;
- 	height:3px;
- 	display: none;
- 	background: #3174BB;
- 	margin:0 auto;
- 	margin-top:-3px;
-}
-#head ul li:hover a{
-	color:#3174BB;
-/*	border-bottom: 1px solid #3174BB;*/
-  display: block;
-}
-#head ul li:hover .border-home{
-	/*color:#3174BB;*/
-/*	border-bottom: 1px solid #3174BB;*/
-  display: block;
-}
- 
-.logo{
-	 width:20%;
-	 float: left;
-	 text-align: center;
-}
-.logo img{
-	margin-top:20px;
-	height:46px;
-}
- .foot-one-box{
- 	width:100%;
- 	height:100px;
- 	 
- }
- .foot-one-left{
- 	width:70%;
- 	height:100px;
- 	float:left;
- 	padding-left:10%;
- }
- .foot-one-right{
- 	width:30%;
- 	height:100px;
- 	float:left;
- }
- .foot-one-list{
- 	width:20%;
- 	list-style: none;
- 	float:left;
-  
- }
- .foot-one-list li {
- 	width:100%;
- 	height:32px;
- 	line-height: 32px;
- 	color:#FFFFFF;
- 	font-size: 13px;
- }
- .foot-one-right-title{
- 	width:80%;
- 	height:50px;
- 	line-height: 40px;
- 	color:RGBA(251, 251, 251, 1);
- 	text-align: right;
- 	font-size: 18px;
- 	margin-right:20%;
- }
- .foot-title-one{
- 	color:RGBA(251, 251, 251, 1);
- }
- .foot-title-two{
- 	color:RGBA(251, 251, 251, 0.6);
- }
- .input-bg{
- 	background: RGBA(48, 48, 48, 1);
- }
- .foot-img{
- 	width:100%;
- 	height:80px;
- 	 
- 	border-bottom: 1px solid RGBA(83, 83, 83, 1);
- }
- .foot-img img{
- 	width:80px;
- 	height:80px;
- 	margin-left:10%;
- }
- .foot-two{
- 	width:100%;
- 	height:50px;
- 	line-height: 50px;
- }
- .foot-two span{
- 	color:RGBA(255, 255, 255, 0.6);
- 	font-size: 12px;
- 	float: right;
- 	margin-right:5%;
- }
- .foot-two img{
-  
- 	height:28px;
- 	margin-top:20px;
- 	margin-left:10%;
- }
- /*我们合作的医院*/
-.home-doctor{
-	width:100%;
-	clear: both;
-	padding-top:50px;
-	
-}
-.home-doctor-title{
-	width:100%;
-	height:100px;
-	 
-}
-.title-col-blue{
-	width:100%;
-	height:50px;
-	line-height: 50px;
-	text-align: center;
-	font-size: 36px;
-	color:#58A2FC;
-}
-.title-col-english{
-	width:100%;
-	height:50px;
-	line-height:22px;
-	text-align: center;
-	font-size: 16px;
-	color:#546497;
-}
-.home-doctor-logo{
-	width:100%;
-	text-align: center;
-	 
-}
-.home-doctor-logo>img{
-	width:95%;
-	margin:0 auto;
-	 
-}
- 
-
-@media screen and ( max-width: 1124px ) {
-	  .start-head-box{
-	width:100%;
-	margin:0 auto;
-	height:45px;
-	background: RGBA(70, 70, 70, 1);
-	color:RGBA(255, 255, 255, 1);
-	font-size: 13px;
-	padding-left:10%;
-	overflow: hidden;
-}
-#head{
-    height: 80px;
-    width: 100%;
-    
-    margin: 0 auto;
-     
-}
-#main{
-	 width:100%;
-	 margin: 0 auto;
-	 
-}
-#foot{
-	width:100%;
-	height:301px;
-	background: #303030;
-	margin:0 auto;
-	padding-top:50px;
-}
- 
-    
-     
-     
-	 
-	
-}
-/*max1440px*/
-@media only screen and (max-width: 1200px) {
-    
-    .icon-header{
-	 	display: none;
-	 }
-	 
-}
-@media only screen and (max-width: 980px) {
-	 .icon-header{
-	 	display: none;
-	 }
-	  
-    
-}
-/*pc端页面布局*/
-@media screen and ( min-width: 1124px ) {
-	 .start-head-box{
-   width:100%;
-	margin:0 auto;
-	height:45px;
-	background: RGBA(251, 250, 250, 1);
-	color:RGBA(76, 76, 76, 1);
-	font-size: 12px;
-	padding-left:10%;
-	overflow: hidden;
-}
-#head{
-    height: 80px;
-    width: 100%;
-    background:white ;
-    margin: 0 auto;
-     
-}
-#main{
-	 width: 100%;
-	 margin: 0 auto;
-	 
-}
-#foot{
-	width:100%;
-	height:301px;
-	background: #303030;
-	margin:0 auto;
-	padding-top:50px;
-}
-.mobile-head-title{
-   display: none;
-  	}
-.mobile-head-right{
-	 display: none;
-	}
-
-.mobile-foot-box{
-	display: none;
-}
-
-
-
-
-	 
-}
-/*min1440px*/
-
-@media screen and ( min-width: 640px ) {
-	  .icon-header{
-	  	display: none;
-	  }
-	  .icon-header>ul{
-	  	display: none;
-	  }
-	
-}
-/*mobile手机端头部和尾部*/
-@media only screen and (max-width: 640px) {
   .head-div a:link,.head-div a:visited{
   	text-decoration: none;
   	color:RGBA(5, 200, 170, 1);
   }
 #head{
-    height: 50px;
+    height: 60px;
     width: 100%;
-    
     margin: 0 auto;
     background: RGBA(249, 249, 249, 1);
+    position: fixed;
+    z-index: 999;
+    top:0px;
      
 }
 #main{
 	 width:100%;
 	 margin: 0 auto;
+	position: relative;
+	top:60px;
 	 
 }
 #foot{
 	width:100%;
-	height:500px;
-	background: RGBA(42, 42, 42, 1);
+/*	height:500px;*/
+	display: inline-block;
+	background: RGBA(249, 249, 249, 1);
 	margin:0 auto;
 	 padding-top:0px;
+	 padding-bottom: 20px;
 	margin-top:10px;
+	margin-top:60px;
 }
  
 .home-head-bg{
@@ -489,12 +103,13 @@
         float:left;
         text-align:left;
         margin-top: 0px;
-        font-size: 20px;
+        font-size:12px;
         height:50px;
-        line-height: 50px;
+        line-height:20px;
         color:RGBA(5, 200, 170, 1);   
         width: 33.3%;
         padding-left:5%;
+        padding-top:10px;
     }
     .head-div a{
     	 color:RGBA(5, 200, 170, 1);   
@@ -506,7 +121,7 @@
   	line-height: 50px;
   	float:left;
   	text-align: center;
-  	font-size: 18px;
+  	font-size: 20px;
   	color:RGBA(5, 200, 170, 1);
   	}
   	.mobile-head-title>a{
@@ -525,12 +140,13 @@
 .mobile-head-right{
 	width:33.3%;
 	height:50px;
-	line-height: 50px;
+	line-height:20px;
 	float:left;
 	text-align: right;
 	padding-right:5%;
-	font-size: 18px;
+	font-size: 12px;
 	color:RGBA(5, 200, 170, 1);
+	padding-top:10px;
  
 	}
 	 .foot-one-box{
@@ -552,6 +168,7 @@
 	 	text-align: center;
 	 	background:RGBA(36, 36, 36, 1);
 	 	line-height: 30px;
+	 	display: none;
 	 }
 	 .mobile-foot-head i{
 	  
@@ -587,24 +204,33 @@
  	width:100%;
  	height:33px;
  	line-height: 15px;
- 	color:RGBA(255, 255, 255, 0.5);
+ 	color:RGBA(50, 50, 50, 0.5);
  	font-size: 8px;
- 	margin-top:30px;
+ 	margin-top:10px;
  	text-align: center;
+ 	margin-bottom: 30px;
  }
  .mobile-erweima-img{
  	width:100%;
  	display: inline-block;
  	text-align: center;
- 	margin-top:20px;
+ 	margin-top:30px;
  }
  .mobile-erweima-img img{
- 	width:50px;
- 	height:50px;
+ 	width:104px;
+ 	height:104px;
  }
  .new-foot-one{
  	color:RGBA(255, 255, 255, 0.5);
  	font-size: 8px;
+ }
+ .wx-erweima{
+ 	width:100%;
+ 	height:40px;
+ 	line-height: 40px;
+ 	text-align: center;
+ 	font-size: 12px;
+ 	color:#23AB39;
  }
 	/*底部手风琴选项卡*/
 	.email-input{
@@ -643,6 +269,7 @@
         .box{
         	 width:100%; 
         	 height: auto; 
+        	 display: none;
         	 
         	 }
         	  .show6:after{
@@ -655,6 +282,7 @@
         	width: 95%;
             height: 50px; 
             margin:0 auto;
+            padding-left:2%;
             border-bottom: 0.5px solid RGBA(255, 255, 255, 0.5);
              line-height: 50px;
              cursor: pointer; 
@@ -670,7 +298,12 @@
         .coll_body{
         	display: none; 
         	background: RGBA(36, 36, 36, 1);
-        	padding:20px 0 20px 2%;
+        	padding:20px 0 20px 4%;
+        	}
+        	.coll_body66{
+        	  
+        	background: RGBA(36, 36, 36, 1);
+        	padding:20px 0 20px 4%;
         	}
         .coll_body a{
         	display:block;
@@ -689,43 +322,4 @@
         	}
 	
 
-}
-
- /*弹出框*/
-.alert {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 300px;
-	max-width: 600px;
-	transform: translate(-50%,-50%);
-	z-index: 99999;
-	text-align: center;
-	padding: 15px;
-	border-radius: 3px;
-}
-
-.alert-success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-
-.alert-info {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-}
-
-.alert-warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-}
-
-.alert-danger {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
+ 

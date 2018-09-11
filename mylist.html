@@ -21,65 +21,17 @@
     </head>
     <body>
         <div>
-        	<div class="start-head-box">
-        		 <ul class="start-head-list">
-        		 	<li>&nbsp;</li>
-        		    <li class="can-weixin-erwei">
-        		    	<div>关注微信小程序&nbsp;<i class="iconfont icon-down-trangle" style="position: absolute;margin-top:1px;"></i></div>
-        		    	<div class="can-weixin"><img src="images/slide/erweima.jpg"></div>
-        		    </li>
-        		    <li><a href="index.html" class="active-a">登录</a> </li>
-        		 </ul>
-        	</div>
+        	 
             <header id="head">
-            	<div class="logo">
-            		<a href="index.html" style="display: inline-block;"> 
-            		<img src="images/1_03.jpg" />
-            		</a>
-            	</div>
-                <ul>
-                    <li><!--<a href="index.html" style="color:#3174BB;">首页</a>
-                    		<p class="border-home" style="display: block;"></p>-->
-                    </li>
-                    <li><a href="videoexpert.html">远程视频门诊</a>
-                    		<p class="border-home"></p>
-                    </li>
-                    <li><a href="shanghaiMedical.html">病人来上海</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <li><a href="expertAssignment.html">医生去外地</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <li><a href="homeHealth.html">随身医生</a>
-                    	<p class="border-home"></p>
-                    </li>
-                      <li><a href="yun.html">医学教育</a>
-                    	<p class="border-home"></p>
-                    </li>
-                    <!--   <li><a href="doctor.html">医学教育</a>
-                    	<p class="border-home"></p>
-                    </li>-->
-                     <li><a href="doctorhome.html">医生工作室</a>
-                    	<p class="border-home"></p>
-                    </li>
-                </ul>
-                <div class="head-div"><a href="menu.html"> <i class="iconfont icon-santiaogang"></i></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> 点医台</a></div>
-               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo"></i></a></div>
-                
+            	 
+               <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
            
             <!---->
-            <div class="icon-header">
-            	<ul>
-            		<li><a href="#">首页</a></li>
-            		<li><a href="#">视频专家门诊</a></li>
-            		<li><a href="#">上海就医代办</a></li>
-            		<li><a href="#">专家外派手术</a></li>
-            		<li><a href="#">居家健康监护</a></li>
-            	</ul>
-            </div>
+           
             <!--icon-header-->
             <!--头部返回-->
              <div class="login-title-gohome">
@@ -88,7 +40,7 @@
             <!--头部返回-->
             <!--list-->
             <div class="attention-title">
-            	用户中心
+            	个人中心
             </div>
             <!--list-->
                <div class="mylist-list-title">
@@ -96,9 +48,12 @@
             	 <p class="mylist-name">叶奇锐先生</p>
             	 <p id="signout"><a href="#" style="color:RGBA(120, 120, 120, 1);border-bottom: 1px solid RGBA(120, 120, 120, 1);"> 退出登录</a></p>
             	 </div>
-            	  
-            	 <input type="file" name="file" onchange="showPreview(this)" class="man-input"/>
-            	  <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img"/>
+            	  <form id="uploadForm" enctype="multipart/form-data" method="post">
+            	 <!--<input type="file" name="file" onchange="showPreview(this)" class="man-input" id="file" accept="image/*"/>-->
+            	 <input type="file" name="file" class="man-input" id="file" accept="image/*"/>
+            	 <!-- <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img" />-->
+            	  </form>
+            	   <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img" />
             	<!-- <img src="images/slide/manlogo.png" class="man-img">-->
                 </div>
              <!--list-->
@@ -143,48 +98,166 @@
              </div>
              <!--email-->
             <!--return-->
-            <div class="mylist-fanhui">
+            <!--<div class="mylist-fanhui">
             	<a href="#head"> 
             	<i class="iconfont icon-fanhuidingbu"></i> &nbsp;<span>返回顶部</span>
             	</a>
-            </div>
+            </div>-->
             <!--return-->
             <!--box-->
+             
         </div>
         
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/mylist.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
 
     function showPreview(source) {
-
       var file = source.files[0];
-
+        console.log(file)
+       // var data = new FormData(); // 创建一个表单数据对象
+        //data.append("files", file);
+       // console.log(data);
+                                //修改用户头像
+	 
+        
+        
       if(window.FileReader) {
 
           var fr = new FileReader();
 
           console.log(fr);
+          
+     $.ajax({
+		type:"post",
+		url:localStorage.getItem("url")+"photo",
+		//async:true,
+		data:{
+			id:localStorage.getItem("id"),
+			photo:fr
+		 
+			
+		},
+		cache: false,
+		processData: false, // 这里一定要写成false，不处理发送的数据
+		contentType: false, // 不设置发送头
+		 
+		//dataType:"json",
+		success:function(data){
+			console.log(data);
+		}
+	});
+  
+
+          
 
           var portrait = document.getElementById('portrait');
-
+               
           fr.onloadend = function(e) {
-
+          	 
             portrait.src = e.target.result;
+     
+	
+            
+            
+            
 
           };
 
           fr.readAsDataURL(file);
+          
+          
+           
+         // console.log(arr)
+   
+	   
 
           portrait.style.display = 'block';
 
       }
+      
+       
+  //
+//$('.inputFileClass').change(function(obj){
+//var file = this.files[0];
+//loadShow();
+//  var reader = new FileReader();
+//  reader.readAsDataURL(file);
+//  reader.onload = function (e) {
+//    $('.pictureImg').attr('src', e.target.result);
+//    registerStyle(1);
+//    loadHide()
+//  };
+//}
+//
+//});
+  
+  
+  
+      
 
     }
 
+</script>-->
+<script lang="javascript">
+	//上传用户头像
+    $(document).ready(function(){
+        $("input[name='file']").change(function(){
+            //FormData对象，
+            //可以把form中所有表单元素的name与value组成一个queryString，提交到后台。
+            //在使用Ajax提交时，使用FormData对象可以减少拼接queryString的工作量
+            var formData = new FormData();
+             formData.append("photo",$("input[name='file']")[0].files[0]);
+              formData.append("id",localStorage.getItem("id"));
+            $.ajax({
+                url:localStorage.getItem("url")+"photo",
+                type:'post',
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success:function(data){
+                	$('.man-img').attr("src",localStorage.getItem("imgurl")+data.success.photo)
+                	 
+                    console.log(data);
+//                  if(data.status=="fail"){
+//                      alert(data.message);
+//                  }
+//                  #根据上传成功并返回压缩后的图片url，更新img标签src属性
+//                  if(data.status=="success"){
+//                      $(".avatar img").attr("src",data.url+"?"+new Date().getTime());
+//                  }
+                },error:function(e){
+                    //console.log(e);
+                }
+            });
+        });
+    });
+   
+      //用户头像
+      $.ajax({
+      	type:"post",
+      	url:localStorage.getItem("url")+"userinfos",
+      	async:true,
+      	data:{
+      		id:localStorage.getItem("id")
+      		//phone:'18394596534',
+      		//rgcode:'5022'
+      	},
+      	dataType:"json",
+      	success:function(data){
+      		console.log(data)
+      		$('.man-img').attr("src",localStorage.getItem("imgurl")+data.success.photo)
+      	
+      	}
+      });
+     
+     
 </script>
 
+ 
+ 
     </body>
     
 </html>

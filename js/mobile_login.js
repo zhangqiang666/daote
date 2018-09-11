@@ -1,14 +1,35 @@
 $(function(){
-	  var url=localStorage.getItem("url")
+	var url = location.search;//获取url中"?"符后的字串
+
+    var theRequest = new Object();
+
+    if (url.indexOf("?") != -1) {
+
+        var str = url.substr(1);
+
+        strs = str.split("&");
+
+        for(var i = 0; i < strs.length; i ++) {
+
+            theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);
+
+        }
+
+    }
+
+   // console.log(theRequest.author);
+    var page=theRequest.page;
+	  var url66=localStorage.getItem("url")
 //发送短信
 	   $('#iphone-btn').click(function(){
 	   	var iphone=$('#iphone').val();
 	   	console.log(iphone);
+	   
 	   	//var iphone_code=$('#iphone-code').val();
 	   	//console.log(iphone_code);
 	
 	$.ajax({
-        url:url+"getsendsms",
+        url:url66+"getsendsms",
         type:"post",
         /*xhrFieds:{
         	widthCredentials:true
@@ -52,7 +73,7 @@ $(function(){
 	 	  localStorage.setItem("temp",iphone); //存入 参数： 1.调用的值 2.所要存入的数据 
 	 	  console.log(localStorage.getItem("temp"));//输出
 	 	  $.ajax({
-	 	  	url:url+"login",
+	 	  	url:url66+"login",
 	 	  	type:"post",
 	 	  	data:{
 	 	  		phone:iphone,
@@ -69,10 +90,25 @@ $(function(){
 	 	  	success:function(data){
 	 	  		console.log(data)
 	 	  		localStorage.setItem("token",data.success.token)
-	 	  		 
+	 	  		 localStorage.setItem("id",data.success.id)
 	 	  		if(data.success){
 	 	  			$('<div>').appendTo('body').addClass('alert alert-success').html('登录成功').show().delay(1500).fadeOut();
-	 	  				window.location.href="index.html"
+	 	  			if(page=='homeHealth'){
+	 	  				window.location.href="homeHealth.html"
+	 	  			}else if(page=='doctorhome'){
+	 	  				window.location.href="doctorhome.html"
+	 	  			}else if(page=='mobile_yun'){
+	 	  				window.location.href="mobile_yun.html"
+	 	  			}else if(page=='videoexpert'){
+	 	  			window.location.href="videoexpert.html"
+	 	  			}else if(page=='shanghaiMedical'){
+	 	  				window.location.href="shanghaiMedical.html"
+	 	  			}else if(page=='expertAssignment'){
+	 	  					window.location.href="expertAssignment.html"
+	 	  			}else{
+	 	  				window.location.href="mylist.html"
+	 	  			}
+	 	  				 
 	 	  		}
 //	 	  	 
 	 	  	/*	 if(iphone==''){
@@ -107,8 +143,8 @@ $(function(){
 	 	  },
 	 	  error: function (data) {
 　　 
-        console.log(data.responseJSON)
-        console.log(data.responseJSON.error)
+//      console.log(data.responseJSON)
+//      console.log(data.responseJSON.error)
          if(data.responseJSON.status_code==500){
          	$('.code-red').css("display","block")
          	$('.code-red').empty();
