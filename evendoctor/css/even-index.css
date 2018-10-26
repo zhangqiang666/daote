@@ -1,0 +1,258 @@
+body{
+	background: white;
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+.even-box{
+	width:100%;
+	 display: inline-block;
+	 margin-top:70px;
+}
+.even-header-box{
+	width:100%;
+	height:64px;
+	background: RGBA(247, 247, 251, 1);
+	line-height: 64px;
+}
+.header-search-left-box{
+	width:90%;
+	height:48px;
+	float:left;
+	margin-left:5%;
+	background:RGBA(255, 255, 255, 1);
+	margin-top:8px;
+	line-height: 48px;
+	/*padding-left:5%;*/
+}
+.header-search-left-box i{
+	color:RGBA(29, 30, 44, 1);
+	float:left;
+	margin-left:5%;
+	
+	  
+}
+.header-search-left-box input{
+	 width:80%;
+	 float:left;
+	 RGBA(105, 112, 127, 1);
+	 font-size: 14px;
+	 border:0px;
+	 height:48px;
+	  
+}
+.even-header-box>i{
+	float:right;
+	margin-right:5%;
+	font-size: 25px;
+	color:RGBA(74, 74, 74, 1);
+}
+/*p排名筛选*/
+.even-ranking-box{
+	width:100%;
+	height:50px;
+	margin-top:10px;
+	 border-bottom: 1px solid RGBA(219, 216, 216, 1);
+	 overflow: hidden;
+}
+.even-ranking-box p{
+	width:33.3%;
+	height:50px;
+	float:left;
+	text-align: center;
+	line-height:45px;
+	
+}
+.even-ranking-box select{
+	 
+	 height:45px;
+	font-size: 14px;
+	color:RGBA(22, 30, 35, 1);
+	 appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;
+    /* background: url("xxsj.png") no-repeat scroll right center transparent;*/
+    background: url("xxsj.png") right center no-repeat;
+   /* background-position:0px 10px; */
+    background-size:8px 8px;
+     padding-right: 14px;
+ 
+	 
+}
+.even-doctor-list-box{
+	width:100%;
+	/*height:600px;*/
+	
+	border-bottom: 1px solid RGBA(219, 216, 216, 1);
+	display: inline-block;
+	
+}
+.even-doctor-list-menu{
+	width:25%;
+	display: inline-block;
+	float:left;
+	 
+}
+.list-menu{
+	list-style: none;
+	width:100%;
+	height:600px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border-right:1px solid RGBA(219, 216, 216, 1);
+	 
+	
+}
+.list-menu li{
+	width:100%;
+	height:61px;
+	line-height: 61px;
+	text-align: center;
+	border-bottom: 1px solid RGBA(219, 216, 216, 0.5);
+	color:RGBA(79, 80, 96, 1);
+	font-size: 14px;
+	font-weight: 600;
+	
+}
+.even-doctor-list-right{
+	width:75%;
+	height:600px;
+	overflow: hidden;
+	/*overflow-y: scroll;*/
+	 background: RGBA(246, 246, 246, 1);
+	float:left;
+	position: relative;
+}
+.evne-doctor-list-card{
+	width:95%;
+	display: inline-block;
+	background: white;
+	margin-left:2.5%;
+	margin-top:10px;
+	padding-bottom: 14px;
+	
+}
+.evne-doctor-list-card:last-child{
+	margin-bottom: 70px;
+}
+.list-card-head{
+	width:95%;
+	height:80px;
+	border-bottom:1px solid RGBA(219, 216, 216, 1);
+	margin:0 auto;
+}
+.list-card-head>img{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	float:left;
+	margin-top:20px;
+	
+}
+.list-card-head-auto{
+	width:40%;
+	float:left;
+	height:80px;
+	padding-top:30px;
+	margin-left:5%;
+	line-height: 10px;
+}
+.list-card-head-right{
+	float:right;
+	margin-right:5%;
+	height:80px;
+	line-height: 70px;
+	
+}
+.card-name{
+	color:RGBA(79, 80, 96, 1);
+	font-size: 16px;
+	font-weight: 600;
+}
+.card-education{
+	border:1px solid RGBA(0, 155, 255, 1);
+	border-radius: 5px;
+	font-size: 14px;
+	color:RGBA(0, 155, 255, 1);
+	margin-left:5%;
+	padding:0px 5px;
+	overflow: hidden;
+	/*white-space:nowrap;*/
+}
+.card-position{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	
+}
+.card-money-red{
+	font-size: 16px;
+	color:RGBA(250, 65, 105, 1);
+	
+}
+.card-number{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	margin-left:2px;
+}
+.list-card-footer{
+	width:100%;
+	display: inline-block;
+	height:50px;
+	overflow: hidden;
+	line-height:22px;
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	padding:10px 2.5% 30px 2.5%;
+	  display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.img-jiazai{
+	width:40px;
+	height:40px;
+	position: fixed;
+	 left:210px;
+	top:400px;
+	z-index: 9999;
+}
+ .baidu-info-box{
+ 	width:40px;
+ 	height:40px;
+ 	position:fixed;
+ 	z-index: 999;
+ 	background:#8C8C8C;
+ 	opacity: 0.8;
+ 	bottom: 40px;
+ 	right:20px;
+ 	border-radius: 50px;
+ 	text-align: center;
+ 	line-height: 40px;
+ 	
+ }
+.baidu-info-box a i{
+	 font-size: 25px;
+	 color:white;
+}
+.zanwu-box{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+	margin-top:50px;
+}
+.zanwu-img{
+	width:50px;
+	height:50px;
+	 
+   margin:0 auto;
+}
+.zanwu-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}

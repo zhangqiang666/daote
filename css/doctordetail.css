@@ -308,9 +308,10 @@ a {
 	.login-title-gohome{
 		display:block;
 	width:100%;
-	height:50px;
+	height:60px;
 	margin:0 auto;
-	line-height:45px;
+	line-height:60px;
+	 
 	font-size:12px;
 	background: white;
 	color:RGBA(80, 80, 80, 1);
@@ -342,7 +343,7 @@ a {
 	width:100%;
 	height:50px;
 	line-height: 50px;
-	font-size: 10px;
+	font-size: 14px;
 }
 .doctor-detail-card-box{
 	width:100%;
@@ -352,52 +353,58 @@ a {
 }
 .card-head-box{
 	width:100%;
-	height:100px;
-	padding:20px 2% 20px 2%;
+	height:80px;
+	padding:30px 2% 20px 2%;
 	
 }
 .card-head-box img{
-	width:40px;
-	height:40px;
+	width:58px;
+	height:58px;
 	border-radius: 50px;
 	float:left;
 	 
 }
 .card-head-main{
-	width:50%;
-	height:40px;
+	width:40%;
+	height:58px;
 	float:left;
-	margin-left:2%;
+	margin-left:4%;
 	color:RGBA(57, 57, 57, 1);
-	font-size: 10px;
+	font-size: 14px;
 	padding-top:5px;
 }
 .card-head-main p{
 	width:100%;
 	 line-height:10px;
+	 white-space:nowrap;
 	 
 	 
+}
+.card-head-main p:first-child{
+	font-size: 16px;
 }
 .card-head-btn{
-	width:30%;
-	height:32px;
+	width:26%;
+	height:36px;
 	background: RGBA(0, 155, 255, 1);
-	line-height: 32px;
+	line-height: 36px;
 	text-align: center;
 	color:RGBA(255, 255, 255, 1);
-	font-size:10px;
+	font-size:14px;
 	float:right;
+	margin-right:2%;
 }
 .card-head-btn66{
-	width:30%;
-	height:32px;
+	width:26%;
+	height:36px;
 	background:#05C8AA;
-	line-height: 32px;
+	line-height: 36px;
 	text-align: center;
 	color:RGBA(255, 255, 255, 1);
-	font-size:10px;
+	font-size:14px;
 	float:right;
 	display: none;
+	margin-right:2%;
 }
 .card-head-centent{
 	width:96%;
@@ -406,11 +413,12 @@ a {
 	margin-top:10px;
 	display: inline-block;
 	background: RGBA(237, 244, 252, 0.35);
-	margin-bottom: 30px;
-	line-height:20px;
+	margin-bottom: 20px;
+	line-height:24px;
 	padding:10px;
-	font-size:10px;
+	font-size:16px;
 	color:RGBA(106, 106, 106, 1);
+	font-family: "微软雅黑";
 }
 /*选项卡*/
 .tab-bg-box{
@@ -422,17 +430,21 @@ a {
 }
  .nav-tabs>li>a {
     margin-right: 2px;
-    width:90px;
+    width:110%;
     text-align: center;
     line-height: 2.1;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight:bold;
+    font-weight: 600;
 }
 .nav-tabs>li {
     float: left;
     margin-bottom: -1px;
-    width:25%;
+    width:33.3%;
+     
+    height:50px;
 }
 a {
     color:RGBA(57, 57, 57, 1);
@@ -443,10 +455,26 @@ a {
     cursor: default;
     background-color: #fff;
      border: 0px solid red; 
-      border-bottom:1px solid RGBA(33, 184, 255, 1);
+     /* border-bottom:1px solid RGBA(33, 184, 255, 1);*/
     /*border-bottom-color: transparent;*/
     border-radius: 0px;
     
+    
+}
+/*.col-bottom{
+	width:40px;
+	height:1px;
+	background:RGBA(33, 184, 255, 1);
+	margin:0 35%;
+	 
+}*/
+.nav-tabs>li.active>.col-bottom,.nav-tabs>li.active>.col-bottom:focus, .nav-tabs>li.active>.col-bottom:hover {
+	width:40px;
+	height:1px;
+	background:RGBA(33, 184, 255, 1);
+	margin:0 38%;
+	/*margin-top:10px;*/
+	 
 }
 .tab-home-list-box{
 	width:100%;
@@ -475,6 +503,8 @@ a {
 	font-size: 12px;
 	color:RGBA(51, 51, 51, 1);
 	overflow: hidden;
+	font-weight: bold;
+	font-weight: 600;
 }
 .home-video-doctor{
 	width:100%;
@@ -717,19 +747,23 @@ a {
 	display: inline-block;
 	margin-left:2.5%;
 	list-style: none;
+	margin-top:20px;
 }
 .doctor-article-list-box li{
 	width:100%;
 	display: inline-block;
 	border-bottom: 1px solid #D8D8D8;
-	margin-top:20px;
+	 
 }
 .article-list-title{
 	width:100%;
-	line-height: 18px;
+	line-height: 26px;
 	color:#393939;
-	font-size: 12px;
+	font-size: 14px;
 	display: inline-block;
+	margin-top:15px;
+	font-weight: 600;
+	padding-bottom: 20px;
 }
 .col-red{
 	color:#05C8AA;
@@ -741,16 +775,29 @@ a {
 .article-foot{
 	width:100%;
 	height:40px;
-	line-height: 40px;
+	line-height: 25px;
 }
 .article-foot-i{
-	width:14px;
-	height:14px;
+	width:20px;
+	height:20px;
 	border-radius:50px;
 	background: #D8D8D8;
 	display: inline-block;
 	float:left;
 	margin-top:13px;
+	overflow: hidden;
+	position: relative;
+	
+	
+} 
+.article-foot-i img{
+	width:100%;
+	height:100%;
+	border-radius: 50px;
+	clear: both;
+	position: absolute;
+	top:0px;
+	left:0px;
 }
 .col-blue{
 	color:#009BFF;
@@ -759,7 +806,7 @@ a {
 }
 .col-gray{
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	margin-left:2%;
 	
 }
@@ -772,14 +819,14 @@ a {
 .col-right-argument{
 	float:right;
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	
 	
 }
 .col-right-can{
 	float:right;
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	margin-right:2%;
 }
 /* 找他就医 */
@@ -854,10 +901,33 @@ a {
 	 
 	margin-left:3%;
 }
+.video-title-copy{
+	width:100%;
+	height:80px;
+	line-height: 20px;
+	padding-top:10px;
+	 
+}
 	
-	
-	
-	
+	.video-title-copy span{
+	font-size: 14px;
+	color:RGBA(57, 57, 57, 1);
+	font-weight: 800;
+}
+.valist-video-left{
+	width:68%;
+	float:left;
+	 
+}	
+.video-img{
+	width:30%;
+	height:100px;
+	float:left;
+	margin-top:10px;
+	margin-left:2%;
+	padding:5px;
+	/*background: #E1E1E1;*/
+}
 	
 	
   }

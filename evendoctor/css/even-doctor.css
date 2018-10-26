@@ -1,0 +1,323 @@
+body{
+	background: RGBA(246, 246, 246, 1);
+}
+ 
+.doctor-good-box{
+	width:95%;
+	height:100px;
+	background: RGBA(255, 255, 255, 1);
+	overflow: hidden;
+	margin:0 auto;
+	margin-top:10px;
+}
+.doctor-good-left{
+	width:20%;
+	height:100px;
+	float:left;
+	padding:30px 5%;
+	 line-height: 10px;
+	 text-align: center;
+	
+}
+.doctor-good-right{
+	width:80%;
+	height:80px;
+	float:left;
+	color:RGBA(79, 80, 96, 1);
+	font-size: 12px;
+	line-height:22px;
+	padding:10px 10px 20px 10px;
+	overflow: hidden;
+	  display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.doctor-good-left i{
+	color:RGBA(45, 177, 251, 1);
+	font-size: 30px;
+}
+.doctor-good-left span{
+	color:RGBA(45, 177, 251, 1);
+	font-size: 12px;
+}
+/*医生秀*/
+.doctor-show-box{
+	width:95%;
+	height:80px;
+	background: RGBA(255, 255, 255, 1);
+	margin-top:10px;
+	 margin-left:2.5%;
+}
+.doctor-show-left{
+	width:20%;
+	height:80px;
+	float:left;
+	padding:15px 5%;
+	 
+}
+.doctor-show-auto{
+	width:60%;
+	height:80px;
+	float:left;
+	padding:22px 2%;
+	line-height: 15px;
+}
+.doctor-show-right{
+	width:20%;
+	height:80px;
+	float:left;
+	padding:27px 5%;
+	
+	
+}
+.doctor-show-left img{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+}
+.doctor-show-auto p:first-child{
+	color:RGBA(79, 80, 96, 1);
+	font-size: 16px;
+	font-weight: 600;
+}
+.doctor-show-auto p:last-child{
+	color:RGBA(79, 80, 96, 1);
+	font-size: 12px;
+	font-weight: 400;
+}
+.doctor-show-right p{
+	width:26px;
+	height:26px;
+	border-radius: 50px;
+	box-shadow: 0px 0px 5px  6px RGBA(246, 246, 246, 1);
+	line-height: 26px;
+	text-align: center;
+	
+}
+.doctor-show-right i{
+	font-size: 20px;
+	color:RGBA(119, 128, 135, 1);
+}
+/*为你提供一下服务*/
+.doctor-service-box{
+	width:95%;
+	height:443px;
+	background: RGBA(255, 255, 255, 1);
+	margin-top:10px;
+	margin-left:2.5%;
+}
+.doctor-service-title{
+	width:95%;
+	height:53px;
+	line-height: 53px;
+	border-bottom: 1px solid RGBA(219, 216, 216, 1);
+	margin:0 auto;
+	color:RGBA(79, 80, 96, 1);
+	font-size: 14px;
+	font-weight: 600;
+}
+.doctor-service-list{
+	width:95%;
+	height:90px;
+	background: RGBA(255, 255, 255, 1);
+	margin-top:10px;
+	 margin-left:2.5%;
+	 border-bottom: 1px solid RGBA(219, 216, 216, 1);
+}
+.doctor-service-list:last-child{
+	border-bottom: 0px solid RGBA(219, 216, 216, 1);
+}
+.doctor-service-list-left{
+	width:20%;
+	height:90px;
+	float:left;
+	padding:15px 5%;
+	 
+}
+.doctor-service-list-auto{
+	width:60%;
+	height:90px;
+	float:left;
+	padding:22px 2%;
+	line-height: 15px;
+	line-height: 45px;
+}
+.doctor-service-list-right{
+	width:20%;
+	height:90px;
+	float:left;
+	padding:27px 5%;
+	
+	
+}
+.doctor-service-list-left img{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+}
+ 
+.doctor-service-list-right p{
+	width:26px;
+	height:26px;
+	border-radius: 50px;
+	box-shadow: 0px 0px 5px  6px RGBA(246, 246, 246, 1);
+	line-height: 26px;
+	text-align: center;
+}
+.doctor-service-list-right i{
+	font-size: 20px;
+	color:RGBA(119, 128, 135, 1);
+}
+.col-title-blue{
+	font-size: 16px;
+	color:RGBA(60, 159, 252, 1);
+	font-weight: 600;
+	margin-left:10px;
+}
+.col-money{
+	font-size: 16px;
+	color:RGBA(250, 65, 105, 1);
+	margin-left:10px;
+}
+.col-number{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	margin-left:2px;
+}
+.money-number{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	font-weight: 600;
+}
+/*患者评价*/
+.article-detail-argument-box{
+	width:95%;
+	 display: inline-block;
+	background:white;
+	margin-top:10px;
+	margin-left:2.5%;
+	margin-bottom: 50px;
+}
+.xueyuan-content-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	 background: white;
+	list-style: none;
+	padding:0 2%;
+}
+.xueyuan-content-list-box li{
+	width:100%;
+	display: inline-block;
+	margin-top:20px;
+	 
+	border-bottom: 1px solid #D8D8D8;
+}
+.xueyuan-content-list-box li:last-child{
+	border-bottom: 0px solid #D8D8D8;
+}
+.xueyuan-list-head{
+	width:100%;
+	height:40px;
+	
+}
+.list-head-i{
+	width:28px;
+	height:28px;
+	border-radius: 50px;
+	float:left;
+	 
+	overflow: hidden;
+}
+.list-head-i img{
+	width:28px;
+	height:28px;
+	border-radius: 50px;
+}
+.list-head-auto{
+	width:50%;
+	height:22px;
+	line-height:8px;
+	float:left;
+	margin-left:10px;
+ 
+}
+.list-head-phone{
+	font-size: 10px;
+	color:RGBA(153, 153, 153, 1);
+}
+.list-head-day{
+	font-size: 10px;
+	color:#999999;
+	
+}
+.list-head-right{
+	float:right;
+	font-size: 12px;
+	color:#686868;
+}
+.xueyuan-list-content{
+	width:100%;
+	display: inline-block;
+	padding:0 0 0 36px;
+	font-size: 12px;
+	color:#393939;
+	line-height: 20px;
+	margin-bottom: 25px;
+}
+.user-title{
+	width:95%;
+	height:53px;
+	line-height: 53px;
+	background: white;
+	font-size: 14px;
+	color: RGBA(79, 80, 96, 1);
+	margin:0 auto;
+	font-weight: 600;
+	padding-left:2.5%;
+	border-bottom: 1px solid #D8D8D8;
+}
+.video-detail-foot{
+	width:100%;
+	height:50px;
+	position: fixed;
+	bottom: 0px;
+	background: #F5F5F5;
+}
+.video-detail-foot-auto{
+	width:95%;
+	height:40px;
+	background: white;
+	font-size: 14px;
+	color:#999999;
+	border:0px;
+	margin-top:5px;
+	text-align: left;
+	padding-left:2%;
+	margin-left:2.5%;
+	 
+	
+	
+}
+ .zanwu-box{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+	margin-top:50px;
+	margin-bottom: 30px;
+}
+.zanwu-img{
+	width:50px;
+	height:50px;
+   margin:0 auto;
+}
+.zanwu-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}

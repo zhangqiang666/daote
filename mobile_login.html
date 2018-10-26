@@ -25,7 +25,7 @@
             <header id="head">
             	 
                  <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -43,15 +43,17 @@
             </div>
             
             <div class="mobile-iphone">
-            	<input placeholder="手机号" value=""/ id="iphone">
+            	 <form name='loginForm'>
+            	<input placeholder="输入手机号" value=""/ id="iphone" type='text' name='user'>
+            	</form>
             </div>
-             <div class="phone-red">请填写正确</div>
+             <div class="phone-red">请先填写手机号码</div>
            <!-- <div class="mobile-code">
             	<input placeholder="验证码" value=""/><img src="images/bag/code.png">
             </div>-->
             <div class="mobile-sex">
-            	<input placeholder="短信验证码" value=""/ id="iphone-code"><!--<button id="iphone-btn">发送</button>-->
-            	 <input type="button" class="button" id="iphone-btn" value="发送"  name="phone" onclick="showtime(60)" >
+            	<input placeholder="填写验证码" value=""/ id="iphone-code"><!--<button id="iphone-btn">发送</button>-->
+            	 <input type="button" class="button" id="iphone-btn" value="获取验证码"  name="phone" onclick="showtime(60)" >
             </div>
              <div class="code-red">请填写正确的验证码</div>
             <div class="yzm"></div>
@@ -70,26 +72,56 @@
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/mobile_login.js"></script>
         <script type="text/javascript">
+        	// document.getElementById("iphone-btn").disabled=true;
+        	var loginForm=document.forms['loginForm'],
+    user=loginForm.elements['user'];
+    //无需设置input的id属性，只设置name即可
+     user.oninput=function(){
+            console.log(user.value);
+            
+            var phone=document.getElementById("iphone").value.length;
+            console.log(phone)
+//          if(phone<11){
+//      		$('.phone-red').css("display","block")
+//      	}
+        	if(phone>1){
+        	     $('.phone-red').css("display","none")
+        		document.getElementById("iphone-btn").disabled=false;
+        	}
+        	console.log(phone)
+        }
+        	 
+        		 
         	  function showtime(t){
 	//document.myform.phone.disabled=true;
-	document.getElementById("iphone-btn").disabled=true;
+	 
+	var iphone=document.getElementById("iphone").value
+		console.log(iphone)
+		 if(!iphone){ 
+		 $('.phone-red').css("display","block")
+		}else{
+			document.getElementById("iphone-btn").disabled=true;
 	for(i=1;i<=t;i++) {
 		window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+		 
 	}
+		}
 
 }
-
+  
 function update_p(num,t) {
 	if(num == t) {
 		//document.myform.phone.value =" 重新发送 ";
 		//document.myform.phone.disabled=false;
-		document.getElementById("iphone-btn").value="重新发送";
+		document.getElementById("iphone-btn").value="重新获取";
 		document.getElementById("iphone-btn").disabled=false;
 	}
 	else {
-		printnr = t-num;
+		  
+			printnr = t-num;
 		//document.myform.phone.value = " (" + printnr +")秒后重新发送";
 		document.getElementById("iphone-btn").value = " " + printnr +"s";
+		 
 	}
 }//发送按钮倒计时
         </script>

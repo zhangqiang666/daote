@@ -36,6 +36,9 @@ $(function(){
         $('.argument-href').html(argument);
       
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"doctorlist",
 		async:true,
@@ -48,21 +51,22 @@ $(function(){
 			//关注该医生
 			$('.doctor-detail-card-box').empty();
 			var html="";
-			 
 			    //$.each(JSON.parse(data).data.detail, function(key,list) {
 				$.each(data.success, function(key,list) {
+					videodetail(list.name,list.photo)
 					localStorage.setItem("d_id",list.d_id)
 					localStorage.setItem("name",list.name)
 					 videodetail(list.name);
-					 console.log(list.name)
+					 console.log(list.name);
 				html+='<div class="card-head-box">'+
                			'<img src='+imgurl+list.photo+'>'+
                			'<div class="card-head-main">'+
-               				'<p><strong>'+list.name+'：'+list.position+'</strong></p>'+
+               				'<p><strong>'+list.name+'&nbsp;&nbsp;'+list.edu+'</strong></p>'+
+               				'<p>'+list.position+'</p>'+
                				'<p>'+list.from+'</p>'+
                			'</div>'+
                			'<div class="card-head-btn">关注该医生</div>'+
-               			'<div class="card-head-btn66">取消关注</div>'+
+               			'<div class="card-head-btn66">已关注</div>'+
                		'</div>'+
                		'<div class="card-head-centent">'+list.intro+'</div>'
 			});
@@ -80,9 +84,12 @@ $(function(){
 			 
 			 
 			 
-			 
+			
 			  //判断是否关注该医生
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"getcom",
 		async:true,
@@ -90,7 +97,7 @@ $(function(){
 			classify:'1',
 			f_type:'1',
 			focus:d_id,
-			id:localStorage.getItem("id")
+			//id:localStorage.getItem("id")
 			
 		},
 		dataType:"json",
@@ -116,6 +123,9 @@ $(function(){
 if(localStorage.getItem("temp")){
 	//关注医生
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"getcollect",
 		async:true,
@@ -123,7 +133,7 @@ if(localStorage.getItem("temp")){
 			classify:'1',
 			f_type:'1',
 			focus:d_id,
-			id:localStorage.getItem("id")
+			//id:localStorage.getItem("id")
 			
 			
 		},
@@ -150,6 +160,9 @@ if(localStorage.getItem("temp")){
 //				$('<div>').appendTo('body').addClass('alert alert-success').html('取消成功').show().delay(1500).fadeOut();
 //取消关注医生
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"losecollect",
 		async:true,
@@ -157,9 +170,7 @@ if(localStorage.getItem("temp")){
 			classify:'1',
 			f_type:'1',
 			focus:d_id,
-			id:localStorage.getItem("id")
-			
-			
+			//id:localStorage.getItem("id")	
 		},
 		dataType:"json",
 		success:function(data){
@@ -197,57 +208,69 @@ if(localStorage.getItem("temp")){
 		}
 	});
 	//课程视频
-	function videodetail(name){ 
-		console.log(name)
-	$.ajax({
-		type:"post",
-		url:url66+"videolist",
-		async:true,
-		data:{
-			author:d_id,
-			type:'0'
-		},
-		dataType:"json",
-		success:function(data){
-			console.log(data);
-			$('.tab-home-list-box').empty();
-			var shipin="";
-			$.each(data.success, function(key,list) {
-				if(list.is_fee==1){ 
-				shipin+='<li>'+
-				'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+
-      		'<div class="tab-home-list-video"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
-      		'<div class="home-video-name">'+list.title+'</div>'+
-      		'<div class="home-video-doctor">'+
-      		'<span class="fot-doctor">授课：'+name+'</span><br><span class="col-red66">￥'+list.price+'</span>'+
-      		'</div>'+
-      		'</a>'+
-      	     '</li>'
-      	    }else{
-      	    	shipin+='<li>'+
-      	    	'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+
-      		'<div class="tab-home-list-video"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
-      		'<div class="home-video-name">'+list.title+'</div>'+
-      		'<div class="home-video-doctor">'+
-      		'<span class="fot-doctor">授课：'+name+'</span><span class="col-green">公开课</span>'+
-      		'</div>'+
-      		'</a>'+
-      	     '</li>'
-      	    }
-			});
-			$('.tab-home-list-box').html(shipin);
-			 
-			//});
-			
-			
-			
-			
-		}
-	});
+	function videodetail(name,img){ 
+		//console.log(name)
+		//console.log(img)
+//	$.ajax({
+//		 headers:{
+//    'Authorization':localStorage.getItem("token"),
+//   },
+//		type:"post",
+//		url:url66+"videolist",
+//		async:true,
+//		data:{
+//			author:d_id,
+//			type:'0'
+//		},
+//		dataType:"json",
+//		success:function(data){
+//			console.log(data);
+//			$('.tab-home-list-box').empty();
+//			var shipin="";
+//			$.each(data.success, function(key,list) {
+//				if(list.is_fee==1){ 
+//				shipin+='<li>'+
+//				'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+
+//    		'<div class="tab-home-list-video"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
+//    		'<div class="home-video-name">'+list.title+'</div>'+
+//    		'<div class="home-video-doctor">'+
+//    		'<span class="fot-doctor">授课：'+list.doctor_name+'</span><br><span class="col-red66">￥'+list.price+'</span>'+
+//    		'</div>'+
+//    		'</a>'+
+//    	     '</li>'
+//    	    }else{
+//    	    	shipin+='<li>'+
+//    	    	'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+
+//    		'<div class="tab-home-list-video"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
+//    		'<div class="home-video-name">'+list.title+'</div>'+
+//    		'<div class="home-video-doctor">'+
+//    		'<span class="fot-doctor">授课：'+list.doctor_name+'</span><span class="col-green">公开课</span>'+
+//    		'</div>'+
+//    		'</a>'+
+//    	     '</li>'
+//    	    }
+//    	    
+//    	   
+//			});
+//			$('.tab-home-list-box').html(shipin);
+//			 
+//			//});
+//		 
+//    
+//			
+//			 
+//			
+//			
+//		}
+//	});
+	 
 	//文章列表
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
-		url:url66+"articlelist",
+		url:url66+"valist",
 		async:true,
 		data:{
 			author:d_id,
@@ -261,34 +284,72 @@ if(localStorage.getItem("temp")){
 			$('.doctor-article-list-box').empty();
 			var wenzhang="";
 			$.each(data.success, function(key,list) {
+				localStorage.setItem("manname",list.doctor_name)
+				if(list.a_id){ 
 				if(list.is_fee==1){ 
-				wenzhang+='<li>'+
-      		'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
-      		'<div class="article-list-title"> '+list.title+'<span class="col-red">&nbsp;&nbsp;New</span></div>'+
+				wenzhang+='<li class="dyt-money" data-type="2" data-id='+list.a_id+' data-author='+list.author+' onClick="fun(1,this)">'+
+      		//'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
+      		'<div class="article-list-title"> '+list.title+'</div>'+
       		'<div class="article-foot">'+
-      			'<span class="article-foot-i">&nbsp;</span>'+
-      			'<span class="col-blue">'+name+'</span>'+
+      			//'<span class="article-foot-i">&nbsp;</span>'+
+      			//'<img  class="article-foot-i" src='+imgurl+img+'>'
+      			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      			'<span class="col-money">付费阅读'+list.price+'元</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-pinglun"></i>'+localStorage.getItem("number")+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>'+
+      			'<span class="col-money">付费'+list.price+'元</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
       		'</div>'+
-      		'</a>'+
+      		//'</a>'+ 
       	'</li>'
       }else{
       	wenzhang+='<li>'+
       		'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
-      		'<div class="article-list-title">'+list.title+'<span class="col-red">&nbsp;&nbsp;New</span></div>'+
+      		'<div class="article-list-title">'+list.title+'</div>'+
       		'<div class="article-foot">'+
-      			'<span class="article-foot-i">&nbsp;</span>'+
-      			'<span class="col-blue">'+name+'</span>'+
+      			//'<span class="article-foot-i"><img src='+imgurl+img+'></span>'+
+      			//'<img class="article-foot-i" src='+imgurl+img+'>'
+      			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-pinglun"></i>'+localStorage.getItem("number")+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
       		'</div>'+
       		'</a>'+
       	'</li>'
       }
+     }else{
+     	if(list.is_fee==1){ 
+				wenzhang+='<li class="dyt-money" data-type="1" data-id='+list.v_id+' data-author='+list.author+' onClick="fun(1,this)">'+
+      		//'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+ 
+      		'<div class="valist-video-left"><div class="video-title-copy"><span>'+list.title+'</span><span>【</span><span>视频</span><span>】</span></div>'+
+      		//'<div class="video-img"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
+      		'<div class="article-foot">'+
+      			//'<span class="article-foot-i">&nbsp;</span>'+
+      			'<span class="col-blue">'+list.doctor_name+'</span>'+
+      			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
+      			'<span class="col-money">付费'+list.price+'元</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
+      		'</div></div>'+
+      		'<div class="video-img"><img src='+imgurl+list.img+' style="width:100%;"></div>'+
+      		//'</a>'+
+      	'</li>'
+      	    }else{
+      	    		wenzhang+='<li>'+
+      		'<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+ 
+      		'<div class="valist-video-left"><div class="video-title-copy"><span>'+list.title+'</span><span>【</span><span>视频</span><span>】</span></div>'+
+      		//'<div class="video-img"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
+      		'<div class="article-foot">'+
+      			//'<span class="article-foot-i">&nbsp;</span>'+
+      			'<span class="col-blue">'+list.doctor_name+'</span>'+
+      			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
+      		'</div></div>'+
+      		'<div class="video-img"><img src='+imgurl+list.img+' style="width:100%;"></div>'+
+      		'</a>'+
+      	'</li>'
+}
+     }
       	$('.doctor-article-list-box').html(wenzhang);
 			});
 			
@@ -307,6 +368,9 @@ if(localStorage.getItem("temp")){
 	 videodetail();
 	 //评论列表
 	$.ajax({
+		 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"commentlist",
 		async:true,
@@ -338,10 +402,10 @@ if(localStorage.getItem("temp")){
 				
 				$('.xueyuan-content-list-box').html(pinlun);
 			});
-//			$('.argument-head-number').empty()
-//			var hznumber=""
-//			hznumber+='<span>患者评价(<span>'+data.success.length+'</span>)</span>';
-//			$('.argument-head-number').html(hznumber)
+			$('.argument-head-number').empty()
+			var hznumber=""
+			hznumber+='<span>患者评价(<span>'+data.success.length+'</span>)</span>';
+			$('.argument-head-number').html(hznumber)
 			 
 			
 			

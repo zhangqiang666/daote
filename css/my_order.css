@@ -7,6 +7,7 @@
 	font-size:12px;
 	color:RGBA(80, 80, 80, 1);
 	background: white;
+	margin-top:10px;
 	 
 	 
 	 
@@ -21,13 +22,13 @@
 	 }
 .page-title{
 	width:95%;
-	height:50px;
+	height:1px;
 	line-height: 50px;
 	font-size: 14px;
 	color:#000000;
 	text-align: center;
 	border-bottom: 1px solid #EBEBEB;
-	border-top: 1px solid #EBEBEB;
+	 
 	margin:0 auto;
 }
   .nav-tabs>li>a {
@@ -35,6 +36,17 @@
     line-height: 2.62857143;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
+    
+}
+.nav-tabs>li{
+	height:53px;
+	/*overflow: hidden;*/
+	    /*display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;*/
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #009BFF;
@@ -43,9 +55,17 @@
     background-color: white;
      border: 0px solid #ddd; 
      border-bottom-color: transparent;
-     font-size: 12px; 
-     border-bottom: 1px solid #009BFF;
+     font-size:12px; 
+     /*border-bottom: 1px solid #009BFF;*/
+    
 }
+.nav-tabs>li.active>.menu-bottom, .nav-tabs>li.active>.menu-bottom:focus, .nav-tabs>li.active>.menu-bottom:hover {
+	width:50px;
+	height:1px;
+	background:#009BFF;
+	margin-left:20%;
+	
+	}
 a {
     color: #999999;
     text-decoration: none;
@@ -139,11 +159,11 @@ a:link,a:visited{
 .col-blue{
 	color:#009BFF;
 	font-size: 12px;
-	margin-left:2%;
+	margin-left:0%;
 }
 .col-gray{
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	margin-left:2%;
 	
 }
@@ -156,14 +176,14 @@ a:link,a:visited{
 .col-right-argument{
 	float:right;
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	
 	
 }
 .col-right-can{
 	float:right;
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	margin-right:2%;
 }
 .zanwu-box{
@@ -185,4 +205,70 @@ a:link,a:visited{
 	line-height: 50px;
 	text-align: center;
 	font-size: 16px;
+}
+.service-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	
+	
+}
+.service-list-box li{
+	width:100%;
+	height:150px;
+	background: white;
+	list-style: none;
+	margin-top:10px;
+	padding:10px 3%;
+	
+}
+.service-number{
+	width:100%;
+	height:22px;
+	line-height: 22px;
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	
+}
+.service-time{
+	width:100%;
+	height:40px;
+	line-height: 30px;
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	border-bottom: 1px solid RGBA(219, 216, 216, 1);
+}
+.service-title{
+	width:100%;
+	height:44px;
+	font-size: 16px;
+	color:RGBA(79, 80, 96, 1);
+	line-height: 44px;
+	font-weight: 600;
+}
+.service-money span{
+	float:left;
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	
+}
+.service-money button{
+	width:75px;
+	height:28px;
+	float:right;
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	background: white;
+	border:1px solid RGBA(196, 196, 196, 1);
+	 	
+}
+.service-money button:last-child{
+	margin-right:10px;
+}
+.service-money button a{
+	 
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	 
+	 	
 }

@@ -70,6 +70,20 @@ $(function(){
 	 	var code=$('#iphone-code').val();
 	 	console.log(iphone)
 	 	console.log(code)
+	 	function Setcookie (name, value){ 
+    //设置名称为name,值为value的Cookie
+    var expdate = new Date();   //初始化时间
+   // expdate.setTime(expdate.getTime() + 3600 * 60 * 1000);   //时间单位毫秒
+     expdate.setHours(expdate.getHours() + (24 * 30)); //保存一个月
+    document.cookie = name+"="+value+";expires="+expdate.toGMTString()+";path=/";
+ 
+   //即document.cookie= name+"="+value+";path=/";  时间默认为当前会话可以不要，但路径要填写，因为JS的默认路径是当前页，如果不填，此cookie只在当前页面生效！
+  }
+  Setcookie ("temp",iphone)
+	
+	 	
+	 	
+	 	
 	 	  localStorage.setItem("temp",iphone); //存入 参数： 1.调用的值 2.所要存入的数据 
 	 	  console.log(localStorage.getItem("temp"));//输出
 	 	  $.ajax({
@@ -96,7 +110,7 @@ $(function(){
 	 	  			if(page=='homeHealth'){
 	 	  				window.location.href="homeHealth.html"
 	 	  			}else if(page=='doctorhome'){
-	 	  				window.location.href="doctorhome.html"
+	 	  				window.location.href="even-index.html"
 	 	  			}else if(page=='mobile_yun'){
 	 	  				window.location.href="mobile_yun.html"
 	 	  			}else if(page=='videoexpert'){
@@ -106,7 +120,9 @@ $(function(){
 	 	  			}else if(page=='expertAssignment'){
 	 	  					window.location.href="expertAssignment.html"
 	 	  			}else{
-	 	  				window.location.href="mylist.html"
+	 	  				//window.location.href="mylist.html"
+	 	  				
+	 	  				window.location.href=localStorage.getItem("windowhref")
 	 	  			}
 	 	  				 
 	 	  		}

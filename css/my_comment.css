@@ -7,6 +7,7 @@
 	font-size:12px;
 	color:RGBA(80, 80, 80, 1);
 	background: white;
+	margin-top:10px;
 	 
 	 
 	 
@@ -21,13 +22,13 @@
 	 }
 .page-title{
 	width:95%;
-	height:50px;
+	height:1px;
 	line-height: 50px;
 	font-size: 14px;
 	color:#000000;
 	text-align: center;
 	border-bottom: 1px solid #EBEBEB;
-	border-top: 1px solid #EBEBEB;
+	/*border-top: 1px solid #EBEBEB;*/
 	margin:0 auto;
 }
   .nav-tabs>li>a {

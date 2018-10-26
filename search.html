@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台</title>
+        <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+          
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+         <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
+         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="css/doctorhome.css"/>
+         <link rel="stylesheet" type="text/css" href="css/search.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+        <style>
+         .panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+     -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+     box-shadow: 0 0px 0px rgba(0,0,0,.05); 
+}
+ .alert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 300px;
+	max-width: 600px;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	text-align: center;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+        </style>
+    </head>
+    <body>
+        
+            <header id="head">
+            	 
+               <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
+            </header>
+            <!--icon-header-->
+            
+            <!--icon-header-->
+            <section id="main">
+                <div class="home-head-bg" style="display: none;">
+                	<div class="home-head-centent">
+                		<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"> 
+                		<!--<img src="images/bag/doctorhome01.png" class="mobile-head-bg">-->
+                			 <img src="images/ssimg/yisheng01.jpg" class="mobile-head-bg">
+                			  <img src="images/ssimg/yisheng02.jpg" class="mobile-head-bg">
+                			   <img src="images/ssimg/yisheng03.jpg" class="mobile-head-bg">
+                			    <img src="images/ssimg/yisheng04.jpg" class="mobile-head-bg">
+                		</a>
+                		<div class="head-title">
+                			<p>知名医生个人工作室</p>
+                			<!--<p>都能共享同一位专家</p>-->
+                		</div>
+                		<!--<div class="head-title-english">
+                			<p>Whether you are in a small county or a big city</p>
+                			<p>Both can share the same expert</p>
+                		</div>-->
+                		<div class="head-btn">快速为自己寻找合适医生</div>
+                	</div>
+                </div>
+                 <!--头部返回-->
+             <div class="login-title-gohome">
+             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
+             	<span class="wancheng">完成</span>
+             	<span class="qingkong">清空</span>
+             </div>
+            <!--头部返回-->
+             <div class="search-index-box">
+             	<div class="search-index-left">
+             		<div class="search-left-list">脑科</div>
+             		<div class="search-left-list">神经科</div>
+             		<div class="search-left-list">脑外科</div>
+             		<div class="search-left-list">儿科</div>
+             		<div class="search-left-list">脑科</div>
+             		<div class="search-left-list">神经科</div>
+             		<div class="search-left-list">脑外科</div>
+             		<div class="search-left-list">儿科</div>
+             		<div class="search-left-list">脑科</div>
+             		<div class="search-left-list">神经科</div>
+             		<div class="search-left-list">脑外科</div>
+             		<div class="search-left-list">儿科</div>
+             		<div class="search-left-list">脑科</div>
+             		<div class="search-left-list">神经科</div>
+             		<div class="search-left-list">脑外科</div>
+             		<div class="search-left-list">儿科</div>
+             	</div>
+             	<div class="search-index-right">
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             		<div class="search-right-list">二级脑科</div>
+             	</div>
+             </div>
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             </div>
+             
+             
+             
+            </section>
+            <!--footer-->
+            <!--<footer id="foot">
+                
+            </footer>-->
+        </div>
+        
+         
+         <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/search.js"></script>
+        
+    </body>
+    
+</html>

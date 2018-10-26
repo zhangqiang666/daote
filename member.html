@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>点医台</title>
+        <title>点医台-会员信息</title>
         
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
@@ -14,38 +13,37 @@
          <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
         <link rel="stylesheet" type="text/css" href="css/member.css"/>
-       <!-- <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/rem.js"></script>-->
+        <script type="text/javascript" src="js/rem.js"></script>
         <link rel="stylesheet" type="text/css" href="css/lib/css/main.css" />
+        
 		<style type="text/css">
 			.demo{width:80%; margin:20px auto}
 			.demo h3{height:32px; line-height:32px}
 			.demo p{line-height:24px}
 			pre{margin-top:10px; padding:6px; background:#f7f7f7}
 		</style>
-		<script type="text/javascript" src="lib/jquery.js"></script>
 		 
-		<script type="text/javascript">
+		 
+		<!--<script type="text/javascript">
 			$(function(){
 				$("#city").citySelect({
 					nodata:"none",
 					required:false
 				}); 
 			});
-		</script>
-        <style>
-         
-        </style>
+		</script>-->
+      
     </head>
     <body>
         <div>
         	 
             <header id="head">
-            	 
-                 <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+            	<div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
+                
             </header>
             <!--icon-header-->
            
@@ -58,9 +56,9 @@
              </div>
             <!--头部返回-->
             <!--list-->
-            <div class="attention-title">
+            <!--<div class="attention-title">
             	会员信息
-            </div>
+            </div>-->
             <!---->
              <div class="member-list">
                  <p><span>手机号</span><sup>*</sup></p>
@@ -75,7 +73,7 @@
              </div>
              <!--list-->
               <div class="member-list">
-                 <p><span>姓名</span><sup>*</sup></p>
+                 <p><span>姓名</span></p>
                  <p><input placeholder="" type="text" class="member-email" id="name" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
               <div class="name-red">姓名不能为空</div>
@@ -88,7 +86,7 @@
                  </select></p>
              </div>
              <!--list-->
-              <div id="city"> 
+              <!--<div id="city"> 
              <div class="member-list">
                  <p><span>省份</span><sup>*</sup></p>
                  <p>
@@ -99,9 +97,9 @@
                  </select>
                  </p>
              </div>
-                <div class="sf-red">省份不能为空</div>
+                <div class="sf-red">省份不能为空</div>-->
              <!--list-->
-             <div class="member-list">
+             <!--<div class="member-list">
                  <p><span>城市</span><sup>*</sup></p>
                  <p  class="diqu-bg citys-box">
                  
@@ -111,9 +109,9 @@
                  </select>
                  </p>
              </div>
-                <div class="cs-red">城市不能为空</div>
+                <div class="cs-red">城市不能为空</div>-->
              <!--list-->
-             <div class="member-list">
+             <!--<div class="member-list">
                  <p><span>地区</span><sup>*</sup></p>
                  <p class="diqu-bg">
                  	 
@@ -123,16 +121,23 @@
                  </select>
                  </p>
              </div>
-             </div>
+             </div>-->
              <!--list-->
              <div class="member-list">
-                 <p><span>详细地址</span><sup>*</sup></p>
-                 <p><input placeholder="" type="text" class="member-email" id="detailed" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+                 <p><span>年龄</span></p>
+                 <p><input placeholder="" type="text" class="member-email" id="age" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
              </div>
               <div class="address-red">详细地址不能为空</div>
-             <!--list-->  <div class="member-list">
-                 <p><span>邮编</span></p>
-                 <p><input placeholder="" type="text" class="member-email" id="youbian" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+               <!--list-->
+             <div class="member-list">
+                 <p><span>身份证号</span></p>
+                 <p><input placeholder="" type="text" class="member-email" id="idcard" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+             </div>
+             <!--list--> 
+             <div class="member-list" style="height:150px;">
+                 <p><span>身体健康描述</span></p>
+                <!-- <p><input placeholder="" type="text" class="member-email" id="youbian" onfocus="myFunction(this)" onblur="myEnd(this)"></p>-->
+                <p><textarea class="member-email" placeholder="请描述你的身体状况" id="condition" onfocus="myFunction(this)" onblur="myEnd(this)" style="height:100px;"></textarea></p>
              </div>
              <!--list-->
              
@@ -153,8 +158,9 @@
         </div>
         
          
-        <!-- <script type="text/javascript" src="js/style.js"></script>-->
-         <script type="text/javascript" src="lib/jquery.cityselect.js"></script>
+        <script type="text/javascript" src="js/style.js"></script>
+       <!--  <script type="text/javascript" src="lib/jquery.cityselect.js"></script>-->
+           
         <script type="text/javascript" src="js/member.js"></script>
         
         <script type="text/javascript">
@@ -226,6 +232,7 @@
 //		
 //		 
 //		}
+ 
         </script>
     </body>
     

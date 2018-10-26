@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>点医台</title>
+        <title>点医台-我的收藏</title>
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
          
@@ -44,7 +44,7 @@
             <header id="head">
             	 
                  <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -59,14 +59,18 @@
              </div>
             <!--头部返回-->
                  <div class="page-title">
-                 	我的收藏
+                 <!--	我的收藏-->
                  </div>
                <!--选项卡-->
               <ul id="myTab" class="nav nav-tabs" style="width:95%;margin:0 auto;">
-   <li class="active" style="margin-left:15%;">
+   <li class="active" style="width:50%;text-align: center;">
    	<a href="#home" data-toggle="tab">视频课程(<span class="number01">0</span>)</a>
+   	<p class="menu-bottom"></p>
    </li>
-   <li style="margin-left:15%;"><a href="#ios" data-toggle="tab">医学文章(<span class="number02">0</span>)</a></li>
+   <li style="width:50%;text-align: center;">
+   	<a href="#ios" data-toggle="tab">医学文章(<span class="number02">0</span>)</a>
+    	<p class="menu-bottom"></p>
+   </li>
    
 </ul>
 <div id="myTabContent" class="tab-content">
@@ -165,7 +169,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                	<!--<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->
@@ -234,6 +238,7 @@
    $(function () {
       $('#myTab li:eq(0) a').tab('show');
    });
+   //底部样式的布局console.log(wo shi shui)
 </script>
 
     </body>

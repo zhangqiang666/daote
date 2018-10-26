@@ -41,6 +41,14 @@
 	color:RGBA(155, 154, 154, 1);
 	
 }
+#iphone{
+	width:95%;
+	height:45px;
+	/*line-height:45px;*/
+	margin:0 auto;
+	margin-bottom:15px;
+	 
+}
 .mobile-code input{
 	display: inline-block;
 	width:60%;

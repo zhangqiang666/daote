@@ -9,12 +9,14 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         
          <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
-         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
         <link rel="stylesheet" type="text/css" href="css/new/mobile_yun.css"/>
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
+          <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
       
      <style>
 	/*body {
@@ -34,6 +36,43 @@
      -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05); 
      box-shadow: 0 0px 0px rgba(0,0,0,.05); 
 }
+ .alert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 300px;
+	max-width: 600px;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	text-align: center;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
 </style>
 
          
@@ -44,7 +83,7 @@
             <header id="head">
             	 
                 <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
                 
             </header>
@@ -71,20 +110,20 @@
                 	</div>
                 </div>
                 <!--中间空格-->
-                <div style="width:100;height:10px;background: #FFF9F9F9;margin-top:15px;"></div> <!--中间空格-->
+               <!-- <div style="width:100;height:10px;background: #FFF9F9F9;margin-top:15px;"></div>--> <!--中间空格-->
                <!--选项卡-->
-              <ul id="myTab" class="nav nav-tabs" style="width:95%;margin:0 auto;">
+              <!--<ul id="myTab" class="nav nav-tabs" style="width:95%;margin:0 auto;">
               	<li style="margin-left:15%;"><a href="#ios" data-toggle="tab">文章</a></li>
    <li class="active" style="margin-left:30%;">
    	<a href="#home" data-toggle="tab">视频</a>
    </li>
    
    
-</ul>
-<div id="myTabContent" class="tab-content">
-	<div class="tab-pane fade" id="ios" style="padding-left:2%;">
-			<div class="search-box">
-				<input type="text" class="search" value="" placeholder="请输入要查找的文章">
+</ul>-->
+<!--<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade" id="ios" style="padding-left:2%;">-->
+			<div class="search-box search_box">
+				<input type="text" class="search" value="" placeholder="请输入要查找的文章和视频">
 				<button class="search-btn"><i class="iconfont icon-sousuo"></i></button>
 			</div>
        <ul class="video-head-list-box02">
@@ -99,8 +138,8 @@
        
       </ul>
       <!--医学文章内容列表-->
-      <ul class="doctor-article-list-box">
-      	<li>
+      <ul class="doctor-article-list-box search_content search_default">
+      	<!--<li>
       		<a href="article_detail.html"> 
       		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
       		<div class="article-foot">
@@ -112,56 +151,16 @@
       		    <span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>
       		</div>
       		</a>
-      	</li>
-      	<!--list-->
-      		<li>
-      		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
-      		<div class="article-foot">
-      			<span class="article-foot-i">&nbsp;</span>
-      			<span class="col-blue">王强医生</span>
-      			<span class="col-gray">昨天11:40</span>
-      		    <span class="col-right-argument"><i class="iconfont icon-pinglun"></i>100</span>
-      		    <span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>
-      		</div>
-      	</li>
-      	<!--list-->
-      		<li>
-      		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
-      		<div class="article-foot">
-      			<span class="article-foot-i">&nbsp;</span>
-      			<span class="col-blue">王强医生</span>
-      			<span class="col-gray">昨天11:40</span>
-      		   <span class="col-right-argument"><i class="iconfont icon-pinglun"></i>100</span>
-      		    <span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>
-      		</div>
-      	</li>
-      	<!--list-->
-      		<li>
-      		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
-      		<div class="article-foot">
-      			<span class="article-foot-i">&nbsp;</span>
-      			<span class="col-blue">王强医生</span>
-      			<span class="col-gray">昨天11:40</span>
-      		   <span class="col-right-argument"><i class="iconfont icon-pinglun"></i>100</span>
-      		    <span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>
-      		</div>
-      	</li>
-      	<!--list-->
-      		<li>
-      		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
-      		<div class="article-foot">
-      			<span class="article-foot-i">&nbsp;</span>
-      			<span class="col-blue">王强医生</span>
-      			<span class="col-gray">昨天11:40</span>
-      		    <span class="col-right-argument"><i class="iconfont icon-pinglun"></i>100</span>
-      		    <span class="col-right-can"><i class="iconfont icon-chakan"></i>300</span>
-      		</div>
-      	</li>
+      	</li>-->
+      	  <div class="zanwu-box"> 
+            	<img src="images/bag/zanwushuju.png" class="zanwu-img">
+            	<div class="zanwu-content">暂无数据</div>
+            	</div>
       	<!--list-->
       </ul>
    </div>
-   <div class="tab-pane fade in active" id="home">
-   	<div class="search-box">
+   <!--<div class="tab-pane fade in active" id="home">
+   	<div class="search-box search_box01">
    		<input type="text" class="search" value="" placeholder="请输入要查找的视频">
    		<button class="search-btn"><i class="iconfont icon-sousuo"></i></button>
    	</div>
@@ -175,73 +174,31 @@
       	<li>整形口腔</li>
       	<li>综合其他</li>
        
-      </ul>
+      </ul>-->
       <!--视频内容列表-->
-      <ul class="video-content-list-box">
+     <!-- <ul class="video-content-list-box search_content01 search_default01">-->
       	<!--list-->
-      	<li>
+      	<!--<li>
       		<a href="video_detail.html"> 
       		<div class="video-img"></div>
       		<div class="video-title">临床基因组学的应用</div>
       		<div class="video-man-name">王强主治医师</div>
       		<div class="video-no-money">公开课</div>
       		</a>
-      	</li>
-      	<!--list-->
-      	<li>
-      		<a href="video_detail.html"> 
-      		<div class="video-img"></div>
-      		<div class="video-title">临床基因组学的应用</div>
-      		<div class="video-man-name">王强主治医师</div>
-      		<div class="video-yes-money">￥200.00</div>
-      		</a>
-      	</li>
-      	<!--list-->
-      	<li>
-      		<a href="video_detail.html"> 
-      		<div class="video-img"></div>
-      		<div class="video-title">临床基因组学的应用</div>
-      		<div class="video-man-name">王强主治医师</div>
-      		<div class="video-yes-money">￥200.00</div>
-      		</a>
-      	</li>
-      	<!--list-->
-      	<li>
-      		<a href="video_detail.html"> 
-      		<div class="video-img"></div>
-      		<div class="video-title">临床基因组学的应用</div>
-      		<div class="video-man-name">王强主治医师</div>
-      		<div class="video-yes-money">￥200.00</div>
-      		</a>
-      	</li>
-      	<!--list-->
-      	<li>
-      		<a href="video_detail.html"> 
-      		<div class="video-img"></div>
-      		<div class="video-title">临床基因组学的应用</div>
-      		<div class="video-man-name">王强主治医师</div>
-      		<div class="video-yes-money">￥200.00</div>
-      		</a>
-      	</li>
-      	<!--list-->
-      	<li>
-      		<a href="video_detail.html"> 
-      		<div class="video-img"></div>
-      		<div class="video-title">临床基因组学的应用</div>
-      		<div class="video-man-name">王强主治医师</div>
-      		<div class="video-yes-money">￥200.00</div>
-      		</a>
-      	</li>
-      	<!--list-->
+      	</li>-->
+      	  <!--<div class="zanwu-box"> 
+            	<img src="images/bag/zanwushuju.png" class="zanwu-img">
+            	<div class="zanwu-content">暂无数据</div>
+            	</div>
       </ul>
-   </div>
+   </div>-->
     
     
-</div>
+<!--</div>-->
 
                  
                 
-                
+              <!--  <div class="yellow-explain">付费全部给作者</div>-->
                 
             </section>
             <!--footer-->
@@ -287,7 +244,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                	<!--<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->
@@ -349,6 +306,7 @@
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/mobile_yun.js"></script>
+        <script type="text/javascript" src="js/money.js"></script>
         
 <!--初始化 Foundation JS -->
 <!--选项卡-->
@@ -359,8 +317,8 @@
 </script>
 <script>
 $(function() {
-    var search_input = $(".search-box input"),
-        search_content = $(".video-head-list-box");
+    var search_input = $(".search_box input"),
+        search_content = $(".search_content");
     $(search_input).on("keyup", function() {
         if (search_input.val() == '') {
             $(search_content).show();
@@ -374,7 +332,24 @@ $(function() {
     });
 });
 </script>
+<script>
+$(function() {
+    var search_input01 = $(".search_box01 input"),
+        search_content01 = $(".search_content01");
+    $(search_input01).on("keyup", function() {
+        if (search_input01.val() == '') {
+            $(search_content01).show();
+        }
+        $(".search_content01 li:contains(" + search_input01.val().trim() + ")").show();
+        $(".search_content01 li:not(:contains(" + search_input01.val().trim() + "))").hide();
 
+
+        //第二中方法
+        //$(".search_content li").hide().filter(":contains("+ search_input.val().trim() +")").show();
+    });
+});
+</script>
+ 
     </body>
     
 </html>

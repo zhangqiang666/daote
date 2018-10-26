@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>点医台</title>
+        <title>点医台-我的订单</title>
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
          
@@ -15,6 +15,7 @@
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
+        <script type="text/javascript" src="js/api.js"></script>
       
      <style>
 	/*body {
@@ -44,7 +45,7 @@
             <header id="head">
             	 
                <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                    <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -59,14 +60,23 @@
              </div>
             <!--头部返回-->
                  <div class="page-title">
-                 	我的订单
+                 	<!--我的订单-->
                  </div>
                    <!--选项卡-->
               <ul id="myTab" class="nav nav-tabs" style="width:95%;margin:0 auto;background: white;">
-   <li class="active" style="width:50%;text-align: center;">
-   	<a href="#home" data-toggle="tab">已购视频课程（<span class="number">0</span>）</a>
+              	<li style="width:33.3%;text-align: center;">
+   	<a href="#fuwu" data-toggle="tab">已购服务（<span class="number02">0</span>）</a>
+   		<p class="menu-bottom"></p>
    </li>
-   <li style="width:50%;text-align: center;"><a href="#xueyuan" data-toggle="tab">已购医学文章（<span class="number01">0</span>）</a></li>
+   <li class="active" style="width:33.3%;text-align: center;">
+   	<a href="#home" data-toggle="tab">已购视频（<span class="number">0</span>）</a>
+   	<p class="menu-bottom"></p>
+   </li>
+   <li style="width:33.3%;text-align: center;">
+   	<a href="#xueyuan" data-toggle="tab">已购文章（<span class="number01">0</span>）</a>
+   		<p class="menu-bottom"></p>
+   </li>
+    
    
 </ul>
 <div id="myTabContent" class="tab-content">
@@ -92,7 +102,7 @@
    
    <div class="tab-pane fade" id="xueyuan" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
        <!--医学文章内容列表-->
-      <ul class="doctor-article-list-box">
+      <ul class="doctor-article-list-box wenzhang">
       	<!--<li>
       		<a href="article_detail.html"> 
       		<div class="article-list-title">老年糖尿病患者的心血管死亡因素分析患者的心血管患者的心血管因素分析<span class="col-red">&nbsp;&nbsp;New</span></div>
@@ -111,6 +121,32 @@
             	<img src="images/bag/zanwushuju.png" class="zanwu-img">
             	<div class="zanwu-content">暂无数据</div>
             	</div>
+      	 
+      </ul>
+   </div>
+   <div class="tab-pane fade" id="fuwu" style="background: RGBA(246, 246, 246, 1);width:100%;margin-bottom: 10px;">
+       <!--医学文章内容列表-->
+      <ul class="service-list-box fuwu">
+           <!--<li>
+           	<div class="service-number"><span>订单编号：</span><span>804120180009</span></div>
+           	 <div class="service-time"><span>下单时间：</span><span>2018-10-08 11:00:55</span></div>
+           	 <div class="service-title">杨洁英副主任医师指定咨询服务</div>
+           	 <div class="service-money">
+           	 	<span>￥100/次</span>
+           	 	 <button>再次购买</button><button>去评价</button>
+           	 </div>
+           </li>-->
+       
+      	 
+      	<!--list-->
+      	<!--无数据时候显示样式-->
+      	<div class="zanwu-box"> 
+            	<img src="images/bag/zanwushuju.png" class="zanwu-img">
+            	<div class="zanwu-content">暂无数据</div>
+         </div>
+      	 
+      	 
+      	 
       	 
       </ul>
    </div>
@@ -229,6 +265,7 @@
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/my_order.js"></script>
+        <script type="text/javascript" src="evendoctor/js/zixun.js"></script>
         
 <!--初始化 Foundation JS -->
 <!--选项卡-->

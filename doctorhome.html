@@ -22,7 +22,7 @@
             <header id="head">
             	 
                <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -31,7 +31,7 @@
             <section id="main">
                 <div class="home-head-bg">
                 	<div class="home-head-centent">
-                		<a href="http://mdm.miduoke.net/Web/im.aspx?_=t&accountid=102565"> 
+                		<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"> 
                 		<!--<img src="images/bag/doctorhome01.png" class="mobile-head-bg">-->
                 			 <img src="images/ssimg/yisheng01.jpg" class="mobile-head-bg">
                 			  <img src="images/ssimg/yisheng02.jpg" class="mobile-head-bg">
@@ -57,17 +57,18 @@
              		<div class="tj-doctor-title">
              			<span class="title-left"><strong>推荐医生</strong></span>
              		     <div class="title-right">
-             		     	<input value="" placeholder="搜索医生/文章"/><i class="iconfont icon-sousuo icon-btn" ></i>
+             		     	<a href="doctorhomeadd.html">查看更多&nbsp;》</a>
+             		     	<!--<input value="" placeholder="搜索医生/文章"/><i class="iconfont icon-sousuo icon-btn" ></i>-->
              		     </div>	
              		 
              		</div>
-             		<div class="search-box">
+             		<div class="search-box search_box">
 				<input type="text" class="search" value="" placeholder="请输入要查找的医生">
 				<button class="search-btn"><i class="iconfont icon-sousuo"></i></button>
 			    </div>
              		<!--title-->
              		<!--list-->
-             		<div class="tj-doctor-list-box">
+             		<div class="tj-doctor-list-box search_content search_default">
              			<ul class="tj-doctor-list">
              				<li><a href="doctordetail.html"> 
              					<img src="images/slide/doctor-home.png">
@@ -194,7 +195,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                	<!--<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->
@@ -256,6 +257,23 @@
          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/doctorhome.js"></script>
+        <script>
+$(function() {
+    var search_input = $(".search_box input"),
+        search_content = $(".search_content");
+    $(search_input).on("keyup", function() {
+        if (search_input.val() == '') {
+            $(search_content).show();
+        }
+        $(".search_content li:contains(" + search_input.val().trim() + ")").show();
+        $(".search_content li:not(:contains(" + search_input.val().trim() + "))").hide();
+
+
+        //第二中方法
+        //$(".search_content li").hide().filter(":contains("+ search_input.val().trim() +")").show();
+    });
+});
+</script>
     </body>
     
 </html>

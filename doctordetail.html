@@ -14,7 +14,43 @@
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <style>
-         
+          .alert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 300px;
+	max-width: 600px;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	text-align: center;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
         </style>
     </head>
     <body>
@@ -22,7 +58,7 @@
             <header id="head">
             	 
                <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -31,7 +67,7 @@
             <section id="main">
             		 <!--头部返回-->
              <div class="login-title-gohome">
-             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
+             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;&nbsp;返回</a> 
              </div>
             <!--头部返回-->
             	 <!--bg-->
@@ -77,14 +113,23 @@
                	<!--选项卡-->
                	<div class="tab-bg-box">
                		<ul id="myTab" class="nav nav-tabs">
-   <li class="active">
+   <!--<li class="active">
       <a href="#home" data-toggle="tab">
                 课程视频
       </a>
+   </li>-->
+   <li>
+   	<a href="#yxwz" data-toggle="tab">医生秀</a>
+   	<p class="col-bottom"></p>
    </li>
-   <li><a href="#yxwz" data-toggle="tab">医学文章</a></li>
-  <li><a href="#hztw" data-toggle="tab">找他就医</a></li>
-   <li><a href="#xypj" data-toggle="tab" class="argument-head-number">患者评价</a></li>
+  <li>
+  	<a href="#hztw" data-toggle="tab">找Ta就医</a>
+  	 	<p class="col-bottom"></p>
+  </li>
+   <li>
+   	<a href="#xypj" data-toggle="tab" class="argument-head-number">患者评价</a>
+   	 	<p class="col-bottom"></p>
+   </li>
   <!-- <li class="dropdown">
       <a href="#" id="myTabDrop1" class="dropdown-toggle" 
          data-toggle="dropdown">Java 
@@ -250,16 +295,21 @@
     	
 			
 			<div class="can-doctor-list">
-				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我要上海让你手术</a>
+				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我想去上海找您就医</a>
 			</div>
 			
 			<div class="can-doctor-list">
-				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我要请你来我当地手术</a>
+				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我想请您来我当地手术</a>
+			</div>
+			<div class="can-doctor-list">
+				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我想远程看您的视频门诊</a>
 			</div>
 			
 			<div class="can-doctor-list list-end">
-				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">我要远程看你的视频门诊</a>
+				<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">其他</a>
 			</div>
+			
+			 
      <!-- <div class="yxwz-main-list">
       	<a href="bookdetail.html"> 
       	 <p class="yxwz-list-btn">学术类</p>
@@ -477,7 +527,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                	<!--<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->
@@ -493,21 +543,18 @@
         <a href="#">官网公告1</a>
         <a href="#">官网公告2</a>
         <a href="#">官网公告3</a>
-        
     </div>
     <div class="Collapsing">联系我们 </div>
         <div class="coll_body">
             <a href="#">联系我们1</a>
             <a href="#">联系我们2</a>
             <a href="#">联系我们3</a>
-            
         </div>
     <div class="Collapsing">就医指南 </div>
     <div class="coll_body">
         <a href="#">就医指南1</a>
         <a href="#">就医指南2</a>
         <a href="#">就医指南3</a>
-        
     </div>
      <div class="Collapsing" style="background: RGBA(36, 36, 36, 1);border-bottom: 0px;">订阅我们 </div>
     <div class="coll_body66">
@@ -535,14 +582,26 @@
                    <!--mobile-->
             </footer>
         </div>
-        
-         
-         <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/doctordetail.js"></script>
+        <script type="text/javascript" src="js/money.js"></script>
         <script>
    $(function () {
       $('#myTab li:eq(0) a').tab('show');
+      
+      
+       
+      
+      
    });
+   //支付
+//    function funA(e){
+//    	 
+//    	console.log(e);
+//    	return false;
+//    	//$('.link').attr("onClick","return false")
+//    }
+//    
 </script>
     </body>
     

@@ -5,16 +5,37 @@
         <title>点医台</title>
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
-         
+         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript">
+         	  //获取微信openid
+        if (navigator !== void 0 && navigator.userAgent.match(/MicroMessenger/)) {
+          $.ajax({
+          	type:"get",
+          	url:"http://www.dianyitai.cn/api/hasopenid",
+          	async:true,
+          	data:{},
+          	dataType:"json",
+            success:function(data){ 
+            	console.log(data)
+            	if(data.hasOpenId==false){
+            		window.location.href="http://www.dianyitai.cn/api/getopenid";
+            	}else{
+            		
+            	}
+            }
+          });
+        }
+         </script>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         
          <link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
          <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
         <link rel="stylesheet" type="text/css" href="css/index_copy.css"/>
-        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+        
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
+         <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
       
 <style>
 	/*body {
@@ -23,9 +44,7 @@
     line-height:0.9;
     color: #333;
     background-color: #fff;
-}*/
-  
-     
+}*/ 
 .panel {
     margin-bottom: 20px;
     background-color: #fff;
@@ -80,7 +99,7 @@
                     </li>
                 </ul>-->
                 <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
                 
             </header>
@@ -116,7 +135,7 @@
                 </div>
                 <!--list-->
                   <div class="home-head-bg-copy">
-                  	<a href="doctorhome.html" class="doctorhome-page"> 
+                  	<a href="even-index.html" class="doctorhome-page"> 
                  	<!--<img src="images/bag/ysgzs.png" class="img-hidden">-->
                  	<img src="images/bag/mobile-ysgzs.png">
                 	<div class="home-head-centent-copy">
@@ -222,7 +241,7 @@
                 			<!--<input value="发送" onclick="settime(this)"style="width:100px;float:left;margin-left:10px;height:35px;border:1px solid RGBA(234, 234, 234, 1);border-radius:5px;line-height: 35px;text-align: center;box-shadow: 0;" /> -->
                 			 
                 			 <!--<form action="" method="post" name="myform">-->
-	                    <input type="button" class="button" id="phone" value="发送"  name="phone" onclick="showtime(60)"style="width:100px;float:left;margin-left:10px;background:white;height:35px;border:1px solid RGBA(234, 234, 234, 1);border-radius:5px;line-height: 35px;text-align: center;box-shadow: 0;">
+	                    <input type="button" class="button" id="phone" value="发送"  name="phone" onclick="showtime(60)" style="width:100px;float:left;margin-left:10px;background:white;height:35px;border:1px solid RGBA(234, 234, 234, 1);border-radius:5px;line-height: 35px;text-align: center;box-shadow: 0;">
                         <!-- </form>-->
                          
                 		</p>
@@ -284,7 +303,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                <!--	<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->

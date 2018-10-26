@@ -28,6 +28,7 @@ var url = location.search;//获取url中"?"符后的字串
    // console.log(theRequest.author);
     var author=theRequest.author;
     var v_id=theRequest.v_id;
+    //var v_id=theRequest.d_id;
     localStorage.setItem("v_id",v_id)
     console.log(v_id)
     console.log(author)
@@ -40,8 +41,11 @@ var url = location.search;//获取url中"?"符后的字串
         $('.argument-href').html(argument);
       
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
-		url:url66+"videolist",
+		url:url66+"video",
 		async:true,
 		data:{
 			 author:author,
@@ -51,30 +55,34 @@ var url = location.search;//获取url中"?"符后的字串
 		dataType:"json",
 		success:function(data){
 			console.log(data)
+			 
 			$('.video-card-box').empty();
 			var html="";
+			
+			var data = data['data'];
 			 
-			$.each(data.success, function(key,list) {
-				if(list.is_fee==1){ 
-				 html+='<video width="100%" height="126" controls>'+
-                  '<source src='+imgurl+list.video+' controls="true" controlslist="nodownload" type="video/mp4">'+
+			//$.each(data.data, function(key,list) {
+				if(data.is_fee==1){ 
+					 
+				 html+='<video width="100%" height="150" poster='+imgurl+data.img+' controls>'+
+                  '<source src='+imgurl+data.video+' controls="true" controlslist="nodownload" type="video/mp4">'+
                 '</video>'+
-            	'<div class="video-card-foot-01">'+
-            		'<span class="col-green" style="color:red;">￥'+list.price+'&nbsp;</span>'+
-            		'<span>'+list.title+'</span>'+
+            	 '<div class="video-card-foot-01">'+
+            		'<span class="col-green" style="color:red;">￥'+data.price+'&nbsp;</span>'+
+            		'<span>'+data.title+'</span>'+
             	'</div>'+
             	'<div class="video-card-foot-02">'+
             		'<span>最近在学2245人</span>'+
             		'<span class="border-auto"></span>'+
             		'<span>好评度99%</span>'+
             	'</div>'
-            }else{
-            	 html+='<video width="100%" height="126" controls>'+
-                  '<source src='+imgurl+list.video+'  type="video/mp4">'+
+           }else{ 
+            	 html+='<video width="100%" height="150"  poster='+imgurl+data.img+' controls autoplay="true">'+
+                  '<source src='+imgurl+data.video+'  type="video/mp4">'+
                 '</video>'+
-            	'<div class="video-card-foot-01">'+
+            	 '<div class="video-card-foot-01">'+
             		'<span class="col-green">【公开课】</span>'+
-            		'<span>'+list.title+'</span>'+
+            		'<span>'+data.title+'</span>'+
             	'</div>'+
             	'<div class="video-card-foot-02">'+
             		'<span>最近在学2245人</span>'+
@@ -83,7 +91,7 @@ var url = location.search;//获取url中"?"符后的字串
             	'</div>'
             }
 				
-			});
+			//});
 			 $('.video-card-box').html(html);
 			
 			
@@ -95,11 +103,14 @@ var url = location.search;//获取url中"?"符后的字串
 	});
 	//医生简介
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"doctorlist",
 		async:true,
 		data:{
-			d_id:localStorage.getItem("d_id")
+			id:author
 		},
 		dataType:"json",
 		success:function(data){
@@ -109,10 +120,11 @@ var url = location.search;//获取url中"?"符后的字串
 			$.each(data.success,function(key,list){
 			//$.each(JSON.parse(data).data,function(key,list){
 				 doctor+='<div class="home-man-img">'+
-      	'<img src='+imgurl+list.photo+'><br>'+
-      	'<span>'+list.name+list.position+'</span>'+
-      '</div>'+
-      '<div class="home-content">'+list.intro+'</div>'
+      	 '<img src='+imgurl+list.photo+'><br>'+
+      	 '<span>'+list.name+list.position+'</span>'+
+         '</div>'+
+         '<div class="home-content">'+list.intro+'</div>'
+     
              
 			})
 			 $('.doctor-jiajie').html(doctor);
@@ -120,6 +132,9 @@ var url = location.search;//获取url中"?"符后的字串
 	});
 //评论列表
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"commentlist",
 		async:true,
@@ -171,6 +186,9 @@ var url = location.search;//获取url中"?"符后的字串
 	});
 	//判断是否收藏视屏
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"getcom",
 		async:true,
@@ -202,6 +220,9 @@ var url = location.search;//获取url中"?"符后的字串
 //		$('<div>').appendTo('body').addClass('alert alert-success').html('收藏成功').show().delay(1500).fadeOut();
 //收藏视屏
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"getcollect",
 		async:true,
@@ -230,6 +251,9 @@ var url = location.search;//获取url中"?"符后的字串
 //		$('<div>').appendTo('body').addClass('alert alert-success').html('取消收藏成功').show().delay(1500).fadeOut();
 //取消收藏视屏
 	$.ajax({
+		headers:{
+    'Authorization':localStorage.getItem("token"),
+     },
 		type:"post",
 		url:url66+"losecollect",
 		async:true,

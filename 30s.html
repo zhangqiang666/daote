@@ -3,14 +3,15 @@
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <title>无标题文档</title> 
-<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="lib/jquery-2.1.0.js"></script> 
 </head> 
 
 <body> 
-<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+<!--<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
 <form action="http://www.helloweba.net/" method="post" name="myform">
 	<input type="button" class="button" value="获取手机验证码"  name="phone" onclick="showtime(5)">
 </form>
+
 <script type="text/javascript"> 
 var countdown=5; 
 function settime(val) { 
@@ -48,6 +49,26 @@ function update_p(num,t) {
 		document.myform.phone.value = " (" + printnr +")秒后重新发送";
 	}
 }
+</script>-->
+<input type="checkbox" id="all"/>全选<br />  
+<input type="checkbox" name="sub" />image1.jpg<br />  
+<input type="checkbox" name="sub"/>image2.jpg<br />  
+<input type="checkbox" name="sub"/>image3.jpg<br />  
+<input type="checkbox" name="sub"/>image4.jpg<br />  
+<script type="text/javascript">
+      $(function() {  
+       $("#all").on('click',function() {  
+      $("input[name='sub']").prop("checked", this.checked);  
+      console.log(1)
+});  
+    
+$("input[name='sub']").on('click',function() {  
+      var $subs = $("input[name='sub']");  
+      $("#all").prop("checked" , $subs.length == $subs.filter(":checked").length ? true :false);  
+}); 
+
+     });  
 </script>
+
 </body> 
 </html> 

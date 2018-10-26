@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+          <link type="text/css" rel="stylesheet" href="css/lib/css/mui.min.css" rel="external nofollow"/>
+           
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+         <!--<link rel="stylesheet" type="text/css" href="css/lib/css/bootstrap.css"/>
+         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+            
+         <link rel="stylesheet" type="text/css" href="css/doctorhomeadd.css"/>
+          <link rel="stylesheet" type="text/css" href="css/project.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="lib/mui.min.js"></script>
+       <!-- <script type="text/javascript" src="lib/bootstrap.min.js"></script>-->
+        <style>
+        	.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+    top: -1px;
+}
+         .mui-table-view:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+        </style>
+    </head>
+    <body>
+                    <header id="head">
+            	 
+               <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                   <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
+            </header>
+            <!--icon-header-->
+            
+            <!--icon-header-->
+             <div id="pullrefresh" class="mui-content mui-scroll-wrapper maincon">
+
+
+                       <div class="mui-scroll">
+
+            <section id="main" style="margin-bottom: 70px;">
+                 
+                 <!--头部返回-->
+             <div class="login-title-gohome">
+             	<a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
+             </div>
+            <!--头部返回-->
+             <!--推荐医生-->
+             <div class="tj-doctor-box">
+             	<div class="tj-doctor-main-box">
+             		 
+             		<!--main-->
+             		<!--title-->
+             		<div class="tj-doctor-title">
+             			<span class="title-left"><strong>全部医生</strong></span>
+             		     <div class="title-right">
+             		     	<a href="search.html">筛选&nbsp;》</a>
+             		     	<!--<input value="" placeholder="搜索医生/文章"/><i class="iconfont icon-sousuo icon-btn" ></i>-->
+             		     </div>	
+             		 
+             		</div>
+             		<div class="search-box search_box">
+				<input type="text" class="search" value=""id="borrowValue" placeholder="请输入要查找的医生">
+				<button class="search-btn" id="search-btn"><i class="iconfont icon-sousuo"></i></button>
+				 
+			    </div>
+             		<!--title-->
+             		<!--list-->
+             		 
+             		<div class="search_content search_default tj-doctor-list-box">
+             			<div class="mui-table-view mui-table-view-chevron tj-doctor-list">
+             				<!--<li><a href="doctordetail.html"> 
+             					<img src="images/slide/doctor-home.png">
+             					<div class="list-card-name">单某某主任</div>
+             					<div class="list-card-adress">上海新华医院 新生儿科</div>
+             					</a>
+             				</li>-->
+             			</div>
+             			<!---->
+             			 
+             			<!---->
+             		</div>
+             		 
+             		<!--list-->
+             		
+             		
+             		
+             		<!--main-->
+             		 
+             	</div>
+             	
+             	
+             	
+             	
+             	<!--推荐医生-->
+             </div>
+             
+             
+             
+            </section>
+            <!--footer-->
+            <!--<footer id="foot">
+              
+            </footer>-->
+        
+        </div>
+        </div>
+         
+         <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/doctorhomeadd.js"></script>
+        <script>
+$(function() {
+    var search_input = $(".search_box input"),
+        search_content = $(".search_content");
+    $(search_input).on("keyup", function() {
+//      if (search_input.val() == '') {
+//          $(search_content).show();
+//      }
+//      $(".search_content li:contains(" + search_input.val().trim() + ")").show();
+//      $(".search_content li:not(:contains(" + search_input.val().trim() + "))").hide();
+
+
+        //第二中方法
+        //$(".search_content li").hide().filter(":contains("+ search_input.val().trim() +")").show();
+    });
+});
+</script>
+    </body>
+    
+</html>

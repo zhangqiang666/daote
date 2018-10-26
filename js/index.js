@@ -111,10 +111,26 @@
 //      		
 //      	}
 //      });
-        
+       function getCookie(c_name){
+//判断document.cookie对象里面是否存有cookie
+if (document.cookie.length>0){
+  c_start=document.cookie.indexOf(c_name + "=")
+  console.log(c_start)
+	//如果document.cookie对象里面有cookie则查找是否有指定的cookie，如果有则返回指定的cookie值，如果没有则返回空字符串
+  if (c_start!=-1){ 
+    c_start=c_start + c_name.length+1 
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    } 
+  }
+return ""
+}
+getCookie("temp")
+ 
         //首页列表在用户未登录时候的跳转
-        if(!localStorage.getItem("temp")){
-        	 
+      //  if(!localStorage.getItem("temp")){
+        	  if(!getCookie("temp")){
         	$('.homeHealth-page').attr("href","mobile_login.html?page=homeHealth")
         		$('.doctorhome-page').attr("href","mobile_login.html?page=doctorhome")
         			$('.mobile_yun-page').attr("href","mobile_login.html?page=mobile_yun")
@@ -122,9 +138,26 @@
         					$('.shanghaiMedical-page').attr("href","mobile_login.html?page=shanghaiMedical")
         						$('.expertAssignment-page').attr("href","mobile_login.html?page=expertAssignment")
         }
+//      //获取微信openid
+//      if (navigator !== void 0 && navigator.userAgent.match(/MicroMessenger/)) {
+//        $.ajax({
+//        	type:"get",
+//        	url:"http://www.dianyitai.cn/api/hasopenid",
+//        	async:true,
+//        	data:{},
+//        	dataType:"json",
+//          success:function(data){ 
+//          	console.log(data)
+//          	if(data.hasOpenId==false){
+//          		window.location.href="http://www.dianyitai.cn/api/getopenid";
+//          	}else{
+//          		
+//          	}
+//          }
+//        });
+//      }
         
-        
-        
+         
         
         
         

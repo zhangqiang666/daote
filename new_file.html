@@ -6,6 +6,7 @@
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
         <link rel="stylesheet" type="text/css" href="css/mo2.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <style>
         	*{
     margin: 0px;
@@ -115,6 +116,43 @@
      justify-content:  space-between; /* 相对父元素水平居中 */
      align-items: center; /*  子元素相对父元素垂直居中 */
 }
+.alert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 300px;
+	max-width: 600px;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	text-align: center;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
         </style>
     </head>
     <body>
@@ -161,5 +199,8 @@
 
 
         </script>-->
+        <script type="text/javascript">
+        	$('<div>').appendTo('body').addClass('alert alert-success').html('操作成功').show().delay(1500).fadeOut();
+        </script>
     </body>
 </html>

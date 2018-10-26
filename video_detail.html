@@ -12,6 +12,7 @@
          <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
         <link rel="stylesheet" type="text/css" href="css/video_detail.css"/>
+         <link rel="stylesheet" type="text/css" href="lib/zy.media.min.css"/>
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
@@ -44,7 +45,7 @@
             <header id="head">
             	 
                 <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                    <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
             </header>
             <!--icon-header-->
@@ -65,6 +66,16 @@
             	<a href="#"><span> 临床基因组学的应用</span></a>
             </div>
             <!--视频播放卡片-->
+            
+	 
+	<!--<div class="zy_media">
+    	<video poster="https://r1.ykimg.com/05420408584A363C6A0A47047DD24931" data-config='{"mediaTitle": "测试视频--视频"}'>
+        	<source src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4" type="video/mp4" class="video">
+      	  您的浏览器不支持HTML5视频
+   	 </video>
+
+	</div>-->
+ 
             <div class="video-card-box">
             	<img src="images/bag/videodetail.png">
             	<div class="video-card-foot-01">
@@ -83,27 +94,28 @@
    	<a href="#home" data-toggle="tab">讲师介绍</a>
    </li>
    <!--<li style="margin-left:2.5%;"><a href="#ios" data-toggle="tab">课程介绍</a></li>-->
-   <li style="margin-left:2.5%;"><a href="#xueyuan" data-toggle="tab">学员评价（<span class="video-detail-number">0</span>）</a></li>
+   <li style="margin-left:2.5%;"><a href="#xueyuan" data-toggle="tab">学员评价(<span class="video-detail-number">0</span>)</a></li>
    
 </ul>
 <div id="myTabContent" class="tab-content">
    <div class="tab-pane fade in active" id="home" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
    	<!---->
    	<div class="doctor-jiajie"> 
-      <div class="home-man-img">
+      <!--<div class="home-man-img">
       	<img src="images/slide/doctor-home.png"><br> 
       	<span>单某某主任</span>
-      </div>
-      <div class="home-content">
+      </div>-->
+      <!--<div class="home-content">
       	真格基金联合创始人，新东方联合创始人。美国纽约州立大学计算机科学硕士，著名英语教学专家、美语思维学习法创始人，
       	中央人民广播电台英语频道高级顾问、特邀主持人，
       	知名的古书爱好者与收藏家，牛津大学哈里斯·曼彻斯特学院授予学院基石院士(终身荣衔)
       	 &#911] 。曾任新东方教育科技集团教育发展研究院院长，美国“贝尔传讯研究所”软件工程师。
-      </div>
+      </div>-->
       <!---->
         </div>
+       
    </div>
-   <div class="tab-pane fade" id="ios" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
+   <!--<div class="tab-pane fade" id="ios" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
       <div class="ios-content">
       	测序是生物信息学的基础和主要数据来源，可以是人类数据也可以是其他的数据。序列比对的基本问题是比较两个或两个以上符号序列的相似性或不相似性.从生物学的初衷来看,
       	这一问题包含了以下几个意义:从相互重叠的序列片断中重构DNA的完整序列.在各种试验条件下从探测数据(probe data)中决定物理和基因图存贮,
@@ -116,7 +128,7 @@
       	除非编码区,又不能完成基因的复制.显然,DNA序列作为一种遗传语言,既包含在编码区。
       </div>
      
-   </div>
+   </div>-->
    <div class="tab-pane fade" id="xueyuan" style="background: white;width:95%;margin-left:2.5%;margin-bottom: 10px;">
         <ul class="xueyuan-content-list-box">
         	<!--<li>
@@ -142,6 +154,7 @@
    </div>
     
 </div>
+ 
 <!--底部静态部分-->
 <div class="video-detail-foot">
 	<span class="argument-href"> 
@@ -154,7 +167,7 @@
 </div>
                  
                 
-                
+           
                 
             </section>
             <!--footer-->
@@ -200,7 +213,7 @@
                 <!--img-->
                 <!--foot-two-->
                 <div class="foot-two">
-                	<img src="images/weixin.png">
+                	<!--<img src="images/weixin.png">-->
                 	<span>Copyright©1998-2017,All Rights Reserved.沪ICP备16030929号-3</span>
                 </div>
                   <!--foot-two-->
@@ -259,9 +272,10 @@
             </footer>
         </div>
         
-         
+          
          <script type="text/javascript" src="js/style.js"></script>
         <script type="text/javascript" src="js/video_detail.js"></script>
+       <!-- <script type="text/javascript" src="lib/zy.media.min.js"></script>-->
         
 <!--初始化 Foundation JS -->
 <!--选项卡-->
@@ -269,6 +283,19 @@
    $(function () {
       $('#myTab li:eq(0) a').tab('show');
    });
+</script>
+<script>
+ //document.documentElement.style.overflow='hidden';
+// document.body.style.overflow='hidden';
+//  zymedia('video',{autoplay: true});
+//  var screenheight = window.screen.height/2;
+//  $("#modelView").width(window.screen.width);
+//  $("#modelView").height(window.screen.height);
+//  var videoheight = $(".zy_media").height()/2;
+//  var padding_top = screenheight-videoheight;
+//  $(".playvideo").css({"top":padding_top});
+//  $("#modelView").css({"margin-top":-1*(padding_top+$(".zy_media").height())});
+
 </script>
 
     </body>

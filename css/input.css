@@ -1,5 +1,5 @@
 body{
-	background: #F2F2F2;
+	background: white;
 }
 .login-title-gohome{
 	width:100%;
@@ -33,10 +33,15 @@ body{
 }
 .input-content{
 	width:95%;
-	height:118px;
-	background: white;
+	height:150px;
+	background: #F2F2F2;
 	margin-left:2.5%;
 	margin-top:20px;
-	font-size: 10px;
+	font-size: 14px;
 	padding:10px;
+	border:0px;
+}
+.textarea-numberbar{
+	font-size: 12px;
+	padding:5px;
 }

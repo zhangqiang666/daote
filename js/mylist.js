@@ -1,4 +1,14 @@
 $(function(){
+	//判断是否登录
+	  var cookie=$.cookie("temp")
+	  console.log(cookie)
+ 	 // var temp=localStorage.getItem("temp")
+	if(cookie==undefined){
+		var test = window.location.href;
+		localStorage.setItem("windowhref",test);
+		window.location.href="mobile_login.html"
+		 
+	}
 	 var url=localStorage.getItem("url")
 	 //登录后跳转个人信息列表
        var mylist=localStorage.getItem("temp")
@@ -46,6 +56,9 @@ $(function(){
 				 
 				 //用户信息
 				 $.ajax({
+				 	headers:{
+      'Authorization':localStorage.getItem("token"),
+       },
 				 	type:"post",
 				 	url:localStorage.getItem("url")+"userinfos",
 				 	async:true,
@@ -55,6 +68,7 @@ $(function(){
 				 	dataType:"json",
 				 	success:function(data){
 				 		console.log(data)
+				 		$('.man-img').attr("src",localStorage.getItem("imgurl")+data.success.photo)
 				 		$('.mylist-name').empty();
 	 var html='';
 	 if(data.success.name){

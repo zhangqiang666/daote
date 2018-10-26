@@ -128,10 +128,19 @@ a:link,a:visited{
 	 margin-bottom: 20px;
 	 
 }
+.valist-video-left{
+	width:68%;
+	float:left;
+	 
+}	
 .video-img{
-	width:100%;
-	height:99px;
-	background: #E1E1E1;
+	width:30%;
+	height:100px;
+	float:left;
+	margin-top:10px;
+	margin-left:2%;
+	padding:5px;
+	/*background: #E1E1E1;*/
 }
 .video-title{
 	width:100%;
@@ -168,19 +177,24 @@ a:link,a:visited{
 	display: inline-block;
 	margin-left:2.5%;
 	list-style: none;
+     margin-top:20px;
 }
 .doctor-article-list-box li{
 	width:100%;
 	display: inline-block;
 	border-bottom: 1px solid #D8D8D8;
-	margin-top:20px;
+	padding:0px 5px;
+	 
 }
 .article-list-title{
 	width:100%;
 	line-height: 18px;
 	color:#393939;
-	font-size: 12px;
+	font-size: 16px;
 	display: inline-block;
+	margin-top:15px;
+	font-weight: 800;
+	padding-bottom: 20px;
 }
 .col-red{
 	color:#05C8AA;
@@ -188,7 +202,7 @@ a:link,a:visited{
 .article-foot{
 	width:100%;
 	height:40px;
-	line-height: 40px;
+	line-height:25px;
 }
 .article-foot-i{
 	width:14px;
@@ -206,7 +220,7 @@ a:link,a:visited{
 }
 .col-gray{
 	color:#999999;
-	font-size: 10px;
+	font-size: 14px;
 	margin-left:2%;
 	
 }
@@ -219,7 +233,7 @@ a:link,a:visited{
 .col-right-argument{
 	float:right;
 	color:#999999;
-	font-size: 8px;
+	font-size: 14px;
 	
 	
 }
@@ -232,7 +246,7 @@ a:link,a:visited{
 .col-right-can{
 	float:right;
 	color:#999999;
-	font-size: 8px;
+	font-size: 14px;
 	margin-right:2%;
 }
 .col-right-can i{
@@ -244,13 +258,14 @@ a:link,a:visited{
 }
 .search-box{
 	width:90%;
-	height:30px;
-	 
+	height:35px;
+	 padding-top:5px;
 	text-align: center;
 	background: #EDEDED;
 	border-radius: 50px;
 	margin:0 auto;
-	 margin-top:15px;
+	 margin-top:25px;
+	margin-bottom: 10px;
 	
 }
 .search-box input{
@@ -258,12 +273,9 @@ a:link,a:visited{
 	height:30px;
 	float:left;
 	margin-left:10%;
-	font-size: 10px;
+	font-size: 14px;
 	border:0px;
 	background: #EDEDED;
-	
-	 
-	
 }
 input {outline:none;}
 .search-btn{
@@ -314,4 +326,48 @@ input {outline:none;}
 	 line-height: 50px;
 	 font-size: 16px;
 	
+}
+.zanwu-box{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+	margin-top:50px;
+	margin-bottom: 300px;
+}
+.zanwu-img{
+	width:50px;
+	height:50px;
+	 
+   margin:0 auto;
+}
+.zanwu-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.video-title-copy{
+	width:100%;
+	height:80px;
+	line-height: 20px;
+	padding-top:10px;
+	 
+	 
+}
+.video-title-copy span{
+	font-size: 16px;
+	color:RGBA(57, 57, 57, 1);
+	font-weight: 800;
+}
+.yellow-explain{
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	background:#CCCCCC;
+	font-size: 12px;
+	text-align: center;
+	clear: both;
+	position: fixed;
+	bottom: 0px;
 }

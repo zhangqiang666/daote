@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+		 <style>
+		 	.box{
+		 		width:200px;
+		 		height:100px;
+		 		border:1px solid black;
+		 		margin:0 auto;
+		 		margin-top:200px;
+		 		list-style: none;
+		 		overflow: hidden;
+		 		overflow-x: scroll;
+		 		white-space: nowrap;
+		 		position: relative;
+		 		 
+		 	}
+		 	.box li{
+		 		width:1000px;
+		 		height:100px;
+		 		 
+		 		 
+		 	}
+		 	.box li div{
+		 		width:100px;
+		 		height:100px;
+		 		background: bisque;
+		 		float:left;
+		 		margin-left:10px;
+		 		 
+		 		 
+		 	}
+		 	.box li div:first-child{
+		 		margin-left:50px;
+		 	}
+		 </style>
+	</head>
+	<body>
+		<ul class="box">
+			 <li>
+			 	<div>1</div>
+			 	<div>2</div>
+			 	<div>3</div>
+			 	<div>4</div>
+			 	<div>5</div>
+			 	<div>6</div>
+			 	<div>7</div>
+			 </li>
+			  
+		</ul>
+		<script>
+			$(function(){
+				$('.box li div').click(function(){
+//					$(this).css("position","absolute");
+//					$(this).css("left","40%")
+//					$(this).css("background","red")
+					 
+				})
+				
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

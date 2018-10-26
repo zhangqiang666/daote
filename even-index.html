@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <link type="text/css" rel="stylesheet" href="css/lib/css/mui.min.css" rel="external nofollow"/>
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+          <link rel="stylesheet" type="text/css" href="css/style.css"/>
+            
+         <link rel="stylesheet" type="text/css" href="evendoctor/css/even-index.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="lib/mui.min.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+     <style>
+     .mui-pull-bottom-pocket, .mui-pull-top-pocket {
+    position: relative;
+    left: 0;
+    display: block;
+    visibility: visible;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+}
+	.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+    top: -1px;
+}
+         .mui-table-view:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+     </style>
+    </head>
+    <body>
+    	 <header id="head">
+            	<!--<div class="logo">
+            		<a href="index.html" style="display: inline-block;"> 
+            		<img src="images/1_03.jpg" />
+            		</a>
+            	</div>
+                <ul>
+                    <li> 
+                    </li>
+                    <li><a href="videoexpert.html">远程视频门诊</a>
+                    		<p class="border-home"></p>
+                    </li>
+                    <li><a href="shanghaiMedical.html">病人来上海</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="expertAssignment.html">医生去外地</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    <li><a href="homeHealth.html">随身医生</a>
+                    	<p class="border-home"></p>
+                    </li>
+                      <li><a href="yun.html">医学教育</a>
+                    	<p class="border-home"></p>
+                    </li>
+                    
+                     <li><a href="doctorhome.html">医生工作室</a>
+                    	<p class="border-home"></p>
+                    </li>
+                </ul>-->
+                <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
+                 <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
+               <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
+                
+            </header>
+     <div class="even-box">
+     	 
+
+
+                       
+     	<!--搜索框-->
+     	 <div class="even-header-box">
+     	 	<div class="header-search-left-box">
+     	 		<i class="iconfont icon-sousuo"></i>
+     	 		<input type="text" placeholder="搜索医生名/科室/疾病" id="borrowValue"/>
+     	 	</div>
+     	 	<!--<i class="iconfont icon-wo"></i>-->
+     	 </div>
+     	 <!--排名筛选-->
+     	 <div class="even-ranking-box">
+     	 	<p> 
+     	 	<select>
+     	 		<option>综合排序</option>
+     	 		 
+     	 	</select>
+     	 	</p>
+     	 	<p> 
+     	 	<select>
+     	 		<option>价格排序</option>
+     	 		 
+     	 	</select>
+     	 	</p>
+     	 	<p> 
+     	 	<select>
+     	 		<option>职称排序</option>
+     	 		 
+     	 	</select>
+     	 	</p>
+     	 </div>
+     	 <!--医生列表-->
+     	  <div class="even-doctor-list-box">
+     	  	<div class="even-doctor-list-menu">
+     	  		<ul class="list-menu">
+     	  			<li>全部</li>
+     	  			<li>妇科</li>
+     	  			<li>产科</li>
+     	  			<li>男科</li>
+     	  			<li>儿科</li>
+     	  			<li>皮肤科</li>
+     	  			<li>性病科</li>
+     	  			<li>心里咨询</li>
+     	  			<li>骨科</li>
+     	  			<li>心里咨询</li>
+     	  			<li>骨科</li>
+     	  			<li>心里咨询</li>
+     	  			<li>骨科</li>
+     	  		</ul>
+     	  	</div>
+     	  	<!---->
+     	  	<div class="even-doctor-list-right" id="b">
+     	  		  <div id="pullrefresh" class="mui-content mui-scroll-wrapper maincon">
+     	  		  <div class="mui-scroll">
+     	  				<div class="mui-table-view mui-table-view-chevron">
+     	  					
+     	  				 
+     	  			
+     	  		 
+     	  		<!--医生列表-->
+     	  		<!--<div class="evne-doctor-list-card">
+     	  			<a href="even-doctor.html"> 
+     	  			<div class="list-card-head">
+     	  				<img src="evendoctor/images/zly.jpg">
+     	  				<div class="list-card-head-auto">
+     	  					<p><span class="card-name">杨洁英</span><span class="card-education">博士</span></p>
+     	  					<p><span class="card-position">副主任医师</span></p>
+     	  				</div>
+     	  				<div class="list-card-head-right">
+     	  					<p><span class="card-money-red">100元</span><span class="card-number">/次</span></p>
+     	  					 
+     	  				</div>
+     	  			</div>
+     	  			<div class="list-card-footer">
+     	  				<span>皮肤科：</span><span>尖锐湿疣，生殖器疱疹，手掌尖锐湿疣，生殖器疱疹，手掌 </span>
+     	  			</div>
+     	  			</a>
+     	  		</div>-->
+     	  		<!--医生列表-->
+     	  		 
+     	  				
+     	  		</div>
+     	  		</div>
+     	  		</div>
+     	  	</div>
+     	  	<!---->
+     	  	
+     	  	
+     	  	
+     	  	<!--scroll-->
+     	  	 
+     	   
+     	  </div>
+     	 
+     	 
+     	 
+     	 
+     	 
+     	 
+     	 
+     	 
+     	 
+   	 
+     	 
+     </div>
+     
+     <img src="evendoctor/images/jiazai02.gif" class="img-jiazai">
+     
+     <!--聊天窗口-->
+     <div class="baidu-info-box">
+     	 <a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"><i class="iconfont icon-kefu"></i></a>
+     </div>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="evendoctor/js/even-index.js"></script>
+    </body>
+    
+</html>

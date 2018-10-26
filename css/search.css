@@ -1,0 +1,66 @@
+.login-title-gohome{
+	border-bottom: 1px solid #CCCCCC;
+	width:100%;
+	padding:0px 5%;
+}
+.search-index-box{
+    width:100%;
+    height:560px;
+    display: inline-block;
+    overflow: hidden;
+  
+	
+}
+.search-index-left{
+	width:25%;
+	display: inline-block;
+	float:left;
+	/*background: #C0A16B;*/
+	background: whitesmoke;	
+	border-right:1px solid #CCCCCC;
+}
+.search-index-right{
+	width:75%;
+	display: inline-block;
+	float:left;
+	height:560px;
+	overflow: hidden;
+	overflow-y: scroll;
+	/*background: whitesmoke;*/
+	
+}
+.search-left-list{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	border-bottom:1px solid #CCCCCC;
+	padding-left:5%;
+	font-size: 14px;
+	text-align: center;
+}
+.search-left-list:first-child{
+	/*background: RGBA(5, 200, 170, 1);*/
+	color:#3dbb28;
+}
+.search-right-list{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	border-bottom:1px solid #CCCCCC;
+	padding-left:5%;
+	font-size:14px;
+	
+}
+.wancheng{
+	float:right;
+	margin-right:5%;
+	color:RGBA(5, 200, 170, 1);
+	 font-size:14px;
+	 
+}
+.qingkong{
+	float:right;
+	margin-right:5%;
+	color:red;
+	font-size: 14px;
+}

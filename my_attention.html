@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>点医台</title>
+        <title>点医台-我的关注</title>
         <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
         <meta name="format-detection" content="telephone=no,email=no"/>
          
@@ -15,6 +15,7 @@
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/rem.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
         <style>
          
         </style>
@@ -25,7 +26,7 @@
             <header id="head">
             	 
                <div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>
-                 <div class="mobile-head-title"><a href="index.html"> <strong> 点医台</strong></a></div>
+                    <div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>
                <div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:2px;font-size:20px;"></i></i><br><span>我的</span></a></div>
                 
             </header>
@@ -38,25 +39,30 @@
             <!--头部返回-->
              <div class="login-title-gohome">
              <a href="javascript:window.history.back();"><i class="iconfont icon-fanhui"></i>&nbsp;返回</a> 
+             </div>
             <!--头部返回-->
-            <div class="attention-title">
+            <!--<div class="attention-title">
             	我的关注
-            </div>
+            </div>-->
             <!--list-->
+            <div class="my-attention-main-box"> 
             <div class="attention-list-title">
             	关注的医生列表（<span class="number">0</span>）
             </div>
              <!--list-->
             <div class="attention-list-box">
             	<!---->
-            	<!--<div class="attention-list">
-            		<div class="list-img">
-            			<img src="images/bag/attention.png">
-            		</div>
-            		<div class="list-title">单某某主任</div>
-            		<div class="list-doctor">上海新华医院</div>
-            		<div class="list-newson">新生儿科</div>
-            	</div>-->
+            	<!--<div class="doctor-card-box">
+     	 	<img src="evendoctor/images/zly.jpg">
+     	 	<div class="doctor-card-auto">
+     	 		<p><span class="card-doctor-name">杨洁英</span></p>
+     	 		<p class="card-doctor-position"><span>皮肤科</span>&nbsp;&nbsp;<span>副主任医师</span></p>
+     	 		<p class="card-doctor-position"><span>上海人民医院</span></p>
+     	 	</div>
+     	 	<div class="doctor-card-right">
+     	 		<button>已关注</button>
+     	 	</div>
+     	 </div>-->
             	<!---->
             	<div class="zanwu-box"> 
             	<img src="images/bag/zanwushuju.png" class="zanwu-img">
@@ -66,7 +72,7 @@
             </div>
             
             
-            
+            </div>
             <!--box-->
         </div>
         
