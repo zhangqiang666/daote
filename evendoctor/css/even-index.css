@@ -12,18 +12,18 @@ body{
 }
 .even-header-box{
 	width:100%;
-	height:64px;
+	height:50px;
 	background: RGBA(247, 247, 251, 1);
-	line-height: 64px;
+	line-height: 50px;
 }
 .header-search-left-box{
 	width:90%;
-	height:48px;
+	height:35px;
 	float:left;
 	margin-left:5%;
 	background:RGBA(255, 255, 255, 1);
 	margin-top:8px;
-	line-height: 48px;
+	line-height:35px;
 	/*padding-left:5%;*/
 }
 .header-search-left-box i{
@@ -39,7 +39,7 @@ body{
 	 RGBA(105, 112, 127, 1);
 	 font-size: 14px;
 	 border:0px;
-	 height:48px;
+	 height:35px;
 	  
 }
 .even-header-box>i{
@@ -51,23 +51,23 @@ body{
 /*p排名筛选*/
 .even-ranking-box{
 	width:100%;
-	height:50px;
-	margin-top:10px;
+	height:30px;
+	margin-top:0px;
 	 border-bottom: 1px solid RGBA(219, 216, 216, 1);
 	 overflow: hidden;
 }
 .even-ranking-box p{
 	width:33.3%;
-	height:50px;
+	height:30px;
 	float:left;
 	text-align: center;
-	line-height:45px;
+	/*line-height:45px;*/
 	
 }
 .even-ranking-box select{
 	 
-	 height:45px;
-	font-size: 14px;
+	 height:30px;
+	font-size: 12px;
 	color:RGBA(22, 30, 35, 1);
 	 appearance:none;  
     -moz-appearance:none;  
@@ -84,7 +84,7 @@ body{
 	width:100%;
 	/*height:600px;*/
 	
-	border-bottom: 1px solid RGBA(219, 216, 216, 1);
+	/*border-bottom: 1px solid RGBA(219, 216, 216, 1);*/
 	display: inline-block;
 	
 }
@@ -97,7 +97,7 @@ body{
 .list-menu{
 	list-style: none;
 	width:100%;
-	height:600px;
+	height:500px;
 	overflow: hidden;
 	overflow-y: scroll;
 	border-right:1px solid RGBA(219, 216, 216, 1);
@@ -117,7 +117,7 @@ body{
 }
 .even-doctor-list-right{
 	width:75%;
-	height:600px;
+	height:500px;
 	overflow: hidden;
 	/*overflow-y: scroll;*/
 	 background: RGBA(246, 246, 246, 1);
@@ -151,12 +151,19 @@ body{
 	
 }
 .list-card-head-auto{
-	width:40%;
+	width:70%;
 	float:left;
 	height:80px;
 	padding-top:30px;
 	margin-left:5%;
 	line-height: 10px;
+	overflow: hidden;
+	 
+}
+.list-card-head-auto p{
+	white-space : normal nowrap;
+	 
+	 
 }
 .list-card-head-right{
 	float:right;
@@ -171,7 +178,7 @@ body{
 	font-weight: 600;
 }
 .card-education{
-	border:1px solid RGBA(0, 155, 255, 1);
+	border:0px solid RGBA(0, 155, 255, 1);
 	border-radius: 5px;
 	font-size: 14px;
 	color:RGBA(0, 155, 255, 1);
@@ -183,14 +190,18 @@ body{
 .card-position{
 	font-size: 12px;
 	color:RGBA(79, 80, 96, 1);
+	white-space : normal nowrap;
+	line-height: 20px;
 	
 }
 .card-money-red{
+	float:right;
 	font-size: 16px;
 	color:RGBA(250, 65, 105, 1);
 	
 }
 .card-number{
+	float:right;
 	font-size: 12px;
 	color:RGBA(79, 80, 96, 1);
 	margin-left:2px;
@@ -219,24 +230,32 @@ body{
 	top:400px;
 	z-index: 9999;
 }
- .baidu-info-box{
- 	width:40px;
- 	height:40px;
+ /*.baidu-info-box{
+ 	width:42px;
+ 	height:42px;
  	position:fixed;
  	z-index: 999;
- 	background:#8C8C8C;
- 	opacity: 0.8;
+ 	background:white;
+ 
+ 	border:1px solid #CCCCCC;
  	bottom: 40px;
  	right:20px;
  	border-radius: 50px;
  	text-align: center;
- 	line-height: 40px;
+ 	line-height:15px;
+ 	padding-top:5px;
  	
  }
-.baidu-info-box a i{
-	 font-size: 25px;
-	 color:white;
+.baidu-info-box a span{
+	 font-size: 12px;
+	 color:RGBA(5, 200, 170, 1);
+	 
 }
+.baidu-info-box a i{
+	color:RGBA(5, 200, 170, 1);
+	font-size:18px;
+	 
+}*/
 .zanwu-box{
 	width:100%;
 	text-align: center;

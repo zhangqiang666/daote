@@ -49,7 +49,7 @@ function callpay() {
                 'Authorization':localStorage.getItem("token"),
             },
             type:"post",
-            url:apiurl666+"getorder",
+            url:apiurl+"getorder",
             async:true,
             data:{
                 type:type,
@@ -95,7 +95,7 @@ function callpay() {
                         'Authorization':localStorage.getItem("token"),
                     },
                     type:"post",
-                    url:apiurl666+"towxpaymp",
+                    url:apiurl+"towxpaymp",
                     async:true,
                     data:{
                         order_id:data.success,

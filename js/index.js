@@ -130,14 +130,15 @@ getCookie("temp")
  
         //首页列表在用户未登录时候的跳转
       //  if(!localStorage.getItem("temp")){
-        	  if(!getCookie("temp")){
-        	$('.homeHealth-page').attr("href","mobile_login.html?page=homeHealth")
-        		$('.doctorhome-page').attr("href","mobile_login.html?page=doctorhome")
-        			$('.mobile_yun-page').attr("href","mobile_login.html?page=mobile_yun")
-        				$('.videoexpert-page').attr("href","mobile_login.html?page=videoexpert")
-        					$('.shanghaiMedical-page').attr("href","mobile_login.html?page=shanghaiMedical")
-        						$('.expertAssignment-page').attr("href","mobile_login.html?page=expertAssignment")
-        }
+//      	  if(!getCookie("temp")){
+//      	$('.homeHealth-page').attr("href","mobile_login.html?page=homeHealth")
+//      		$('.doctorhome-page').attr("href","mobile_login.html?page=doctorhome")
+//      			$('.mobile_yun-page').attr("href","mobile_login.html?page=mobile_yun")
+//      				$('.videoexpert-page').attr("href","mobile_login.html?page=videoexpert")
+//      					$('.shanghaiMedical-page').attr("href","mobile_login.html?page=shanghaiMedical")
+//      						$('.expertAssignment-page').attr("href","mobile_login.html?page=expertAssignment")
+//      }
+
 //      //获取微信openid
 //      if (navigator !== void 0 && navigator.userAgent.match(/MicroMessenger/)) {
 //        $.ajax({

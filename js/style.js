@@ -1,8 +1,8 @@
  $(document).ready(function(){
  	
  	//公共地址
-// 	var url="http://172.16.30.231/ucenter/public/api/"
-// 	var imgurl="http://172.16.30.231/ucenter/public/uploads/"
+// 	var url="http://dyttest.pi.imjs.0cdn.cn/api/"
+// 	var imgurl="http://dyttest.pi.imjs.0cdn.cn/uploads/"
    	var url="http://www.dianyitai.cn/api/"
    	var imgurl="http://www.dianyitai.cn/uploads/"
  	localStorage.setItem("url",url)
@@ -14,7 +14,7 @@
  		$(".icon-header").toggle();
  		 
  	})*/
- 	 
+ 	  
  	/*$("#head ul li").hover(function(){
  		$(".border-home").hide()
  	    var _index=$("#head ul li").index(this)
@@ -76,17 +76,7 @@
     });
 });
 				 
-				/*$('.foot-add').click(function(){
-					  $('.foot-add').removeClass("span_plus")
-					  $('.foot-add').addClass("span_minus")
-					   $(this).toggleClass("span_plus");
-					    
-					  
-					  $(this).addClass("span_minus");
-				
-				})*/
-				 
-				 	
+			 
 				 //移动端底部邮箱
 				 $('.email-input span').click(function(){
 				 	var email=$('.email-input input').val();
@@ -127,10 +117,15 @@
 				//底部样式替换
 				 $('#foot').empty();
 				 var  footmain="";
-				    footmain+='<div class="mobile-erweima-img">'+
-                  		'<img src="images/bag/footerweima04.png">'+
-                  	'</div>'+
-                  	'<div class="wx-erweima"><strong>微信支付二维码</strong></div>'+
+//				    footmain+='<div class="mobile-erweima-img">'+
+//                		'<img src="images/bag/footerweima04.png">'+
+//                	'</div>'+
+//                	'<div class="wx-erweima"><strong>微信支付二维码</strong></div>'+
+//                	'<div class="mobile-foot-title-one">'+
+//                		'<span>All Rights Reserved.沪ICP备16030929号-3</span> <br/>'+
+//                		'<span>Copyright©1691998-2017</span>'+
+//                	'</div>'
+                  footmain+='<div class="wx-erweima"><strong></strong></div>'+
                   	'<div class="mobile-foot-title-one">'+
                   		'<span>All Rights Reserved.沪ICP备16030929号-3</span> <br/>'+
                   		'<span>Copyright©1691998-2017</span>'+
@@ -142,7 +137,7 @@
 				   var head="";
 				   head+='<div class="head-div"><a href="menu.html"><i class="iconfont icon-santiaogang" style="margin-left:2px;font-size:20px;"></i><br><span>菜单</span></a></div>'+
                  '<div class="mobile-head-title"><a href="index.html"> <strong> 点&nbsp;医&nbsp;台</strong><br><span class="dyt-fot">DOCTOR POOL</span></a></div>'+
-               '<div class="mobile-head-right"><a href="mobile_login.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:14px;font-size:20px;"></i></i><br><span>个人中心</span></a></div>'
+               '<div class="mobile-head-right"><a href="mylist.html" class="mylist"> <i class="iconfont icon-wo" style="margin-right:14px;font-size:20px;"></i></i><br><span>个人中心</span></a></div>'
 				   $('#head').html(head)
 				 //头部修改个人中心文字
 //				 $('.mylist span').empty();
@@ -156,36 +151,43 @@
 				 function getCookie(c_name){
 //判断document.cookie对象里面是否存有cookie
 if (document.cookie.length>0){
-  c_start=document.cookie.indexOf(c_name + "=")
-  console.log(c_start)
+c_start=document.cookie.indexOf(c_name + "=")
+console.log(c_start)
 	//如果document.cookie对象里面有cookie则查找是否有指定的cookie，如果有则返回指定的cookie值，如果没有则返回空字符串
-  if (c_start!=-1){ 
+if (c_start!=-1){ 
     c_start=c_start + c_name.length+1 
     c_end=document.cookie.indexOf(";",c_start)
     if (c_end==-1) c_end=document.cookie.length
     return unescape(document.cookie.substring(c_start,c_end))
     } 
-  }
+}
 return "" 
 }
 getCookie("temp")
-		var mylist=getCookie("temp");
-		console.log(mylist)
+//		var mylist=getCookie("temp");
+//		console.log(mylist)
+//				 
+//				 
+//				 
+//    // var mylist=localStorage.getItem("temp")
+//     
+//     if(mylist){ 
+//     $('.mylist').attr("href","mylist.html")
+//     }
+//				 
+				 
+			//公共聊天窗口
+			var baidu="";
+			baidu+='<div class="baidu-info-box">'+
+     	  '<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">'+
+     	 	'<div><i class="iconfont icon-kefu"></i></div>'+
+     	 	 '<div> <span>客服</span></div>'+
+     	 '</a>'+
+    '</div>'
+			$('body').append(baidu)
 				 
 				 
-				 
-      // var mylist=localStorage.getItem("temp")
-       
-       if(mylist){ 
-       $('.mylist').attr("href","mylist.html")
-       }
-				 
-				 
-				 
-				 
-				 
-				 
-				 
+		
 				 
 				
 			});

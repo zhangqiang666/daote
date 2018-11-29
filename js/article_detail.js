@@ -61,9 +61,9 @@ $(function(){
             	'<span class="man">'+localStorage.getItem("manname")+'</span>'+
             	'<span class="time">'+data.created_at+'</span>'+
             	'<span class="argument">0条评论</span>'+
-            	'<span class="read">300人查看</span>'+
+            	'<span class="read">'+data.view_count+'人查看</span>'+
             '</div>'+
-            '<img src="images/bag/detail666.png" class="article-detail-img">'+
+           // '<img src="images/bag/detail666.png" class="article-detail-img">'+
             '<div class="article-detail-content">'+data.article+'</div>'
 				
 			//});

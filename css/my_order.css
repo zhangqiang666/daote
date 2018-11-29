@@ -252,7 +252,7 @@ a:link,a:visited{
 	color:RGBA(79, 80, 96, 1);
 	
 }
-.service-money button{
+/*.service-money button{
 	width:75px;
 	height:28px;
 	float:right;
@@ -261,14 +261,61 @@ a:link,a:visited{
 	background: white;
 	border:1px solid RGBA(196, 196, 196, 1);
 	 	
-}
-.service-money button:last-child{
+}*/
+/*.service-money button:last-child{
 	margin-right:10px;
-}
+}*/
 .service-money button a{
 	 
-	font-size: 14px;
+	font-size: 12px;
 	color:RGBA(79, 80, 96, 1);
 	 
 	 	
+}
+.purchase{
+	width:75px;
+	height:28px;
+	float:right;
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	background: white;
+	border:1px solid RGBA(196, 196, 196, 1);
+}
+.purchase a{
+	font-size: 14px;
+	color:RGBA(79, 80, 96, 1);
+	text-decoration: none;
+}
+.evaluate{
+	float:right;
+	width:65px;
+	height:25px;
+	font-size: 12px;
+	margin-right:10px;
+	color:RGBA(79, 80, 96, 1);
+	background: white;
+	border:1px solid RGBA(196, 196, 196, 1);
+	margin-top:2px;
+}
+.evaluate a{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	text-decoration: none;
+}
+.reply{
+	float:right;
+	width:55px;
+	height:20px;
+	font-size: 12px;
+	margin-right:10px;
+	color:RGBA(79, 80, 96, 1);
+	background: white;
+	border:1px solid RGBA(196, 196, 196, 1);
+	margin-top:5px;
+	
+}
+.reply a{
+	font-size: 12px;
+	color:RGBA(79, 80, 96, 1);
+	text-decoration: none;
 }

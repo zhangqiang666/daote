@@ -214,7 +214,7 @@
  	font-size: 10px;
  	margin-top:10px;
  	text-align: center;
- 	margin-bottom: 30px;
+ 	margin-bottom: 10px;
  }
  .mobile-erweima-img{
  	width:100%;
@@ -232,8 +232,8 @@
  }
  .wx-erweima{
  	width:100%;
- 	height:40px;
- 	line-height: 40px;
+ 	height:20px;
+ 	line-height: 20px;
  	text-align: center;
  	font-size: 12px;
  	color:#23AB39;
@@ -365,4 +365,31 @@
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
+}
+/*公共聊天窗口*/
+.baidu-info-box{
+ 	width:42px;
+ 	height:42px;
+ 	position:fixed;
+ 	z-index: 999;
+ 	background:white;
+ /*	opacity: 0.5;*/
+ 	border:1px solid #CCCCCC;
+ 	bottom: 140px;
+ 	right:20px;
+ 	border-radius: 50px;
+ 	text-align: center;
+ 	line-height:15px;
+ 	padding-top:5px;
+ 	
+ }
+.baidu-info-box a span{
+	 font-size: 12px;
+	 color:RGBA(5, 200, 170, 1);
+	 
+}
+.baidu-info-box a i{
+	color:RGBA(5, 200, 170, 1);
+	font-size:18px;
+	 
 }

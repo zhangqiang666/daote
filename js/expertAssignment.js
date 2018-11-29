@@ -1,14 +1,14 @@
 $(function(){
 	  //判断是否登录
-	  var cookie=$.cookie("temp")
-	  console.log(cookie)
- 	 // var temp=localStorage.getItem("temp")
-	if(cookie==undefined){
-		var test = window.location.href;
-		localStorage.setItem("windowhref",test);
-		window.location.href="mobile_login.html"
-		 
-	}
+//	  var cookie=$.cookie("temp")
+//	  console.log(cookie)
+// 	 // var temp=localStorage.getItem("temp")
+//	if(cookie==undefined){
+//		var test = window.location.href;
+//		localStorage.setItem("windowhref",test);
+//		window.location.href="mobile_login.html"
+//		 
+//	}
 	var imgurl='http://www.dianyitai.cn';
 	$.ajax({
 		type:"post",

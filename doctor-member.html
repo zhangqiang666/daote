@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台医生端</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <!--<link type="text/css" rel="stylesheet" href="css/lib/css/mui.min.css" rel="external nofollow"/>-->
+         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+          <link rel="stylesheet" type="text/css" href="css/style.css"/>
+            <link rel="stylesheet" type="text/css" href="doctorcore/css/style.css"/>
+         <link rel="stylesheet" type="text/css" href="doctorcore/css/doctor-member.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="js/getopenid.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+     
+    </head>
+    <body>
+    	 <header id="head">
+            	 
+            </header>
+    	<!--返回-->
+    	<div class="doctor-money-fanhui-box">
+    		<a href="javascript:window,history.back();"> 
+    		<i class="iconfont icon-fanhui1"></i>
+    		</a>
+    		 <span>个人信息</span>
+    	</div>
+    	<!--返回-->
+    	  <!---->
+             <div class="member-list">
+                 <p><span>手机号</span><sup>*</sup></p>
+                 <p><input placeholder="请输入手机号" disabled type="text" class="member-email phone66" id="phone" value="" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+                 
+             </div>
+              <div class="phone-red">手机号不能为空</div>
+             <!--list-->
+               <div class="member-list">
+                 <p><span>职称</span></p>
+                 <p><input placeholder="请输入职称" class="member-email email66" id="zhicheng" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+             </div>
+             <!--list-->
+              <div class="member-list">
+                 <p><span>姓名</span></p>
+                 <p><input placeholder="" type="text" class="member-email" id="name" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+             </div>
+              <div class="name-red">姓名不能为空</div>
+             <!--list-->
+              <div class="member-list">
+                 <p><span>性别</span></p>
+                 <p><select class="member-email" id="sex" onfocus="myFunction(this)" onblur="myEnd(this)">
+                 	<option value="1">男</option>
+                 	<option value="2">女</option>
+                 </select></p>
+             </div>
+              
+             <!--list-->
+             <div class="member-list">
+                 <p><span>年龄</span></p>
+                 <p><input placeholder="" type="text" class="member-email" id="age" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+             </div>
+              <div class="address-red">详细地址不能为空</div>
+               <!--list-->
+             <div class="member-list">
+                 <p><span>身份证号</span></p>
+                 <p><input placeholder="请输入你的身份证号" type="text" class="member-email" id="idcard" onfocus="myFunction(this)" onblur="myEnd(this)"></p>
+             </div>
+             <!--list--> 
+             <div class="member-list" style="height:150px;">
+                 <p><span>学历</span></p>
+                <!-- <p><input placeholder="" type="text" class="member-email" id="youbian" onfocus="myFunction(this)" onblur="myEnd(this)"></p>-->
+                <p><input placeholder="请输入你的学历" type="text" class="member-email" id="xueli" onfocus="myFunction(this)" onblur="myEnd(this)"> </p>
+             </div>
+             <!--list-->
+             
+             <!---->
+             <div class="member-checkbox">
+             	<input type="checkbox" name="test" />&nbsp;<a href="#">我已阅读并接受个人信息收集声明</a>
+             </div>
+             <div class="member-btn">
+             	<button id="vip-btn">保存</button>
+             </div>
+             
+             
+    	 
+     <script type="text/javascript" src="doctorcore/js/style.js"></script>
+     <script type="text/javascript" src="doctorcore/js/doctor-member.js"></script>
+     <script type="text/javascript">
+     	 //input输入框点击变色
+	       function myFunction(x){
+	       x.style.background="RGBA(193, 238, 231, 1)";
+          }
+	       function myEnd(x){
+	       	 x.style.background="RGBA(236, 236, 236, 1)";
+	       }
+	       
+     </script>
+    </body>
+    
+</html> 

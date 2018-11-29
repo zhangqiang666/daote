@@ -21,7 +21,7 @@ $(function(){
    // console.log(theRequest.author);
     var classify=theRequest.classify;
     var comment=theRequest.comment;
-    
+    var orderDetailId=theRequest.orderDetailId;
     console.log(classify);
     console.log(comment);
 	var url66=localStorage.getItem("url");
@@ -57,6 +57,7 @@ $(function(){
 			classify:classify,
 			comment:comment,
 			content:content,
+			orderDetailId:orderDetailId
 			//id:localStorage.getItem("id")
 			
 		},

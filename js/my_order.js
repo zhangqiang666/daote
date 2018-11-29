@@ -55,7 +55,7 @@ $(function(){
 //               '</li>'
 //              }
       	  });
-      	  $('.my-order-list-box').html(dingdan)
+      	   $('.my-order-list-box').html(dingdan)
       	  //我的订单头部显示数量
       	 var _length=$('.my-order-list-box li').length;
       	 console.log(_length)
@@ -63,8 +63,15 @@ $(function(){
       	  var number="";
       	  number+=data.success.length;
       	  $('.number').html(_length)
-      	
-      	
+      	  //无数据时候的判断
+//    	  if(_length==0){
+//    	  	dingdan+='<div class="zanwu-box">'+ 
+//          	'<img src="images/bag/zanwushuju.png" class="zanwu-img">'+
+//          	'<div class="zanwu-content">暂无数据</div>'+
+//          	'</div>'
+//    	  }
+//    	 
+//    	 $('.my-order-list-box').html(dingdan)
       	//文章列表
 			$('.doctor-article-list-box').empty();
 			var wenzhang="";
@@ -84,8 +91,8 @@ $(function(){
       	'</li>'
  
       }
-      	$('.doctor-article-list-box').html(wenzhang);
-      	 
+       
+      	 $('.doctor-article-list-box').html(wenzhang);
       	  //我的订单头部显示数量
       	  var _length01=$('.wenzhang li').length;
       	 //console.log(_length01)
@@ -93,7 +100,14 @@ $(function(){
       	  var number="";
       	  number+=data.success.length;
       	  $('.number01').html(_length01)
-      	
+      	  //无数据时候的判断
+//    	  if(_length01==0){
+//    	  	wenzhang+='<div class="zanwu-box">'+ 
+//          	'<img src="images/bag/zanwushuju.png" class="zanwu-img">'+
+//          	'<div class="zanwu-content">暂无数据</div>'+
+//          	'</div>'
+//    	  }
+//    		  $('.doctor-article-list-box').html(wenzhang);
       		//服务列表
 			$('.fuwu').empty();
 			var fuwu="";
@@ -125,17 +139,19 @@ $(function(){
            	 '<div class="service-title">'+list.details.product_type+'</div>'+
            	 '<div class="service-money">'+
            	 	'<span>￥'+list.price+'/次</span>'+
-           	 	'<button data-type='+zixun_name[list.details.product_type]+' data-id='+list.details.product_id+' onclick="fun(this)">再次购买</button><button><a href="input.html?classify=医生&comment='+list.details.product_id+'&&id=1&&d_id='+list.details.product_id+'">去评价</a></button>'+
+           	 	'<button class="purchase" data-type='+zixun_name[list.details.product_type]+' data-id='+list.details.product_id+' onclick="fun(this)">再次购买</button>'+
+           	 	'<button class="evaluate"><a href="input.html?classify='+list.details.product_type+'&comment='+list.details.product_id+'&&id=1&&d_id='+list.details.product_id+'&&orderDetailId='+list.details.id+'">去评价</a></button>'+
+           	 	'<button class="reply"><a href="even-reply.html?order='+list.details.order_id+'">查看回复</a></button>'+
            	 '</div>'+
            '</li>'
       	
       	
       	
       }
+       
+      	
+      	
       	$('.fuwu').html(fuwu);
-      	
-      	
-      	
       
       	//我的订单头部显示数量
       	  var _length02=$('.fuwu li').length;
@@ -144,6 +160,15 @@ $(function(){
       	  var number="";
       	  number+=data.success.length;
       	  $('.number02').html(_length02)
+      	   //无数据时候的判断
+//    	  if(_length02==0){
+//    	  	fuwu+='<div class="zanwu-box">'+ 
+//          	'<img src="images/bag/zanwushuju.png" class="zanwu-img">'+
+//          	'<div class="zanwu-content">暂无数据</div>'+
+//          	'</div>'
+//    	  }
+//    	  	 	$('.fuwu').html(fuwu);
+      	  
       	});
       	 
       	

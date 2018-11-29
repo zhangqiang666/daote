@@ -11,6 +11,7 @@
             
          <link rel="stylesheet" type="text/css" href="evendoctor/css/even-index.css"/>
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="js/getopenid.js"></script>
          <script type="text/javascript" src="lib/mui.min.js"></script>
          <script type="text/javascript" src="js/api.js"></script>
         <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -111,8 +112,13 @@
      	 	</select>
      	 	</p>
      	 	<p> 
-     	 	<select>
+     	 	<select id="select-id">
      	 		<option>职称排序</option>
+     	 		<option>主任医师</option>
+     	 		<option>副主任医师</option>
+     	 		<option>主治医师</option>
+     	 		<option>医师</option>
+     	 		<option>医学生</option>
      	 		 
      	 	</select>
      	 	</p>
@@ -195,9 +201,14 @@
      <img src="evendoctor/images/jiazai02.gif" class="img-jiazai">
      
      <!--聊天窗口-->
-     <div class="baidu-info-box">
-     	 <a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"><i class="iconfont icon-kefu"></i></a>
-     </div>
+     <!--<div class="baidu-info-box">
+     	 <a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907">
+     	 	 
+     	 	<div><i class="iconfont icon-kefu"></i></div>
+     	 	 <div> <span>客服</span></div> 
+     	 </a>
+     </div>-->
+     <script type="text/javascript" src="js/style-login.js"></script>
      <script type="text/javascript" src="js/style.js"></script>
      <script type="text/javascript" src="evendoctor/js/even-index.js"></script>
     </body>

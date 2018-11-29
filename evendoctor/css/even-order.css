@@ -26,6 +26,7 @@ body{
     display: inline-block;
     margin-left:5%;
     list-style: none;
+    margin-bottom: 50px;
 }
 .order-list-box li{
 	width:100%;
@@ -38,7 +39,7 @@ body{
 	width:26px;
 	height:26px;
 	border-radius: 50px;
-	/*background: RGBA(61, 158, 252, 1);*/
+	background: white;
 	 border:1px solid RGBA(224, 224, 224, 1);
 	float:left;
 	margin-top:24.5px;

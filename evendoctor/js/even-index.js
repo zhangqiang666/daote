@@ -2,20 +2,28 @@ $(function(){
 	 
 	  
 	  //判断是否登录
-	  var cookie=$.cookie("temp")
-	  console.log(cookie)
- 	 // var temp=localStorage.getItem("temp")
-	if(cookie==undefined){
-		var test = window.location.href;
-		localStorage.setItem("windowhref",test);
-		window.location.href="mobile_login.html"
-		 
-	}
-	
+//	  var cookie=$.cookie("temp")
+//	  console.log(cookie)
+// 	 // var temp=localStorage.getItem("temp")
+//	if(cookie==undefined){
+//		var test = window.location.href;
+//		localStorage.setItem("windowhref",test);
+//		window.location.href="mobile_login.html"
+//		 
+//	}
+	 //加载更多
+	     var borrowValue='';//搜索
+	     var departmentIds='';//科室id
+        var dataNum=16;//获取数据总数
+        var pageSize=1;//每页显示条数
+        var counter=1;//计数器
+        var pageStart=0;//开始数据条数
+        var position01=  {'position': ['主任医师', '副主任医师']}//职称排序
 	//上拉加载下拉刷新
-	 function box(borrowValue,departmentIds){
-	 	
-	 console.log(departmentIds)
+	 //function box(page01){
+	 	  
+	 	  
+	// console.log(departmentIds)
         var page=1;
         mui.init({
             pullRefresh: {
@@ -37,11 +45,7 @@ $(function(){
 	
 	
 	
-	 //加载更多
-        var dataNum=1;//获取数据总数
-        var pageSize=1;//每页显示条数
-        var counter=1;//计数器
-        var pageStart=0;//开始数据条数
+	 
        // var url ='http://zhukeyunfu.com:8870/ntsjlaborplatapp2/'
         //var orgcode ='A03';
         getData(pageStart,pageSize);
@@ -49,54 +53,70 @@ $(function(){
 //显示数不足每页显示条数
             if(dataNum-pageStart<pageSize){
                 pageSize=dataNum-pageStart;
-                data(pageStart,pageSize);
+                data01(pageStart,pageSize);
 
                 console.log("显示数不足每页显示条数");
             }
 //显示隐藏加载更多
             else if(pageStart+pageSize>=dataNum){
-                data(pageStart,pageSize);
+                data01(pageStart,pageSize);
                 
                 console.log("没有更多数据了");
 //没有更多数据了
             }else{
-                data(pageStart,pageSize);
+                data01(pageStart,pageSize);
                // console.log("显示dataNum"+dataNum+"pageSize"+pageSize+"pageStart"+pageStart);
 
 //显示
             }
         }
-        function data(pageStart,pageSize){
-//业务
+        
+        function data01(pageStart,pageSize,borrowValue,departmentIds,position01){
+//业务               
+            
+            
+            
             var result="";
             for(var i=pageStart;i<(pageStart+pageSize);i++){
    
 	//医生列表
 	 
-		
+		//console.log(departmentIds)
 	 
 	$.ajax({
 	  headers:{
       'Authorization':localStorage.getItem("token"),
      },
 		type:"post",
-		url:apiurl666+"doctorlist?"+(new Date()).getTime(),
+		url:apiurl+"doctorlist?"+(new Date()).getTime(),
 		async:true,
 		data: (function() {
-			if (departmentIds === '0') {
+			if (departmentIds ==='0') {
 				return {
 					search: borrowValue,
-					page: page,
-					recommend: ''
+					page:page,
+					recommend: '',
+					filter:position01,
 				};
-			}
-			return {
+			}else if(JSON.stringify(position01)==JSON.stringify({"position":["全部职称排序"]})){
+				return {
 				subDepartmentIds:'',
 				search:borrowValue,
 				page:page,
 				recommend:'',
 				departmentIds:departmentIds,
+				filter:'',
 			};
+			}else{ 
+			  return {
+				subDepartmentIds:'',
+				search:borrowValue,
+				page:page,
+				recommend:'',
+				departmentIds:departmentIds,
+				filter:position01,
+			};
+			}
 		})(),
 		dataType:"json",
 		success:function(data){
@@ -119,48 +139,35 @@ $(function(){
                   	$('.zanwu-box').hide();
                   	  mui('#pullrefresh').pullRefresh().enablePullupToRefresh();
                   }
+                  
+                  //获取当前窗口的高度
+                  var window_height=$(window).height();
+                  console.log(window_height)
+                  $('.list-menu').css("height",window_height-155)
+                  $('.even-doctor-list-right').css("height",window_height-155)
                   //医生列表渲染
 				 for( j=0;j<list.length;j++){
-			 
-				 if(list[j].edu==''){
-				 	result+='<div class="evne-doctor-list-card">'+
-     	  			'<a href="even-doctor.html?id='+list[j].d_id+'&&d_id='+list[j].d_id+'">'+
-     	  			'<div class="list-card-head">'+
-     	  				'<img src='+imgurl+list[j].photo+'>'+
-     	  				'<div class="list-card-head-auto">'+
-     	  					'<p><span class="card-name">'+list[j].name+'</span><span>'+list[j].edu+'</span></p>'+
-     	  					'<p><span class="card-position">'+list[j].position+'</span></p>'+
-     	  				'</div>'+
-     	  				'<div class="list-card-head-right">'+
-     	  					'<p><span class="card-money-red">100元</span><span class="card-number">/次</span></p>'+ 
-     	  				'</div>'+
-     	  			'</div>'+
-     	  			'<div class="list-card-footer">'+
-     	  				'<span>'+list[j].department.department+':</span><span class="keshi01">'+list[j].intro+'</span>'+
-     	  			'</div>'+
-     	  			'</a>'+
-     	  		'</div>'
-				 }else{ 
+			   //console.log(list[0].service[0].v)
+				 
 				result+='<div class="evne-doctor-list-card">'+
-     	  			'<a href="even-doctor.html?id='+list[j].id+'&&d_id='+list[j].d_id+'">'+
+     	  			'<a href="even-doctor.html?id='+list[j].id+'&&d_id='+list[j].d_id+'&&service='+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[0].v))+'&&shiping='+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[1].v))+'">'+
      	  			'<div class="list-card-head">'+
      	  				'<img src='+imgurl+list[j].photo+'>'+
      	  				'<div class="list-card-head-auto">'+
-     	  					'<p><span class="card-name">'+list[j].name+'</span><span class="card-education">'+list[j].edu+'</span></p>'+
-     	  					'<p><span class="card-position">'+list[j].position+'</span></p>'+
-     	  				'</div>'+
-     	  				'<div class="list-card-head-right">'+
-     	  					'<p><span class="card-money-red">100元</span><span class="card-number">/次</span></p>'+ 
+     	  					'<p><span class="card-name">'+list[j].name+'</span><span class="card-education">'+list[j].edu+'</span>'+
+     	  					'<span class="card-number">/次</span><span class="card-money-red">'+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[0].v))+'元</span>'+
+     	  					'</p>'+
+     	  					'<p><span class="card-position">'+list[j].position+'</span>&nbsp;&nbsp;<span class="card-position">'+list[j].department.department+'</span></p>'+
      	  				'</div>'+
      	  			'</div>'+
      	  			'<div class="list-card-footer">'+
-     	  				'<span>'+list[j].department.department+':</span><span class="keshi01">'+list[j].intro+'</span>'+
+     	  				'<span>擅长:</span><span class="keshi01">'+list[j].intro+'</span>'+
      	  			'</div>'+
      	  			'</a>'+
      	  		'</div>'
-     	  	}
+     	   
              				}
-                      
+                     // item.isClick?'click':''
                         jQuery(result).insertBefore('#pullrefresh .mui-scroll .mui-table-view');
              		console.log(dataNum)
              		 
@@ -183,7 +190,7 @@ $(function(){
         function pullupRefresh() {
             setTimeout(function() {
                 ++page;
-                    
+                   
                 var flag=counter++<(dataNum/pageSize)
                 console.log(dataNum/pageSize);
                 mui('#pullrefresh').pullRefresh().endPullupToRefresh((!flag)); //参数为true代表没有更多数据了。
@@ -193,7 +200,16 @@ $(function(){
                 if(flag){
                     console.log(counter);
                     pageStart=counter*pageSize;
-                    data(pageStart,pageSize);
+                    console.log(departmentIds)
+                    //if(departmentIds===''){
+                    //	var departmentIds02='';
+                    //	 data01(pageStart,pageSize,borrowValue,departmentIds02);
+                    //}else{ 
+                     var departmentIds02=localStorage.getItem("departmentIds")
+                       //box(borrowValue,departmentIds)
+                       data01(pageStart,pageSize,borrowValue,departmentIds02);
+                      //return departmentIds=localStorage.getItem("departmentIds");
+                    // }
                 }
             }, 1500);
         }
@@ -202,12 +218,33 @@ $(function(){
 	
 	
      
+	 
+	 
 	
+	//}
+	 
+	// var borrowValue='' 
+	 //var departmentIds=localStorage.getItem("departmentIds")
+	 //box(1)
+	 
+//	 function box02(departmentIds){
+//	 	 var departmentIds=localStorage.getItem("departmentIds")
+//	 box(borrowValue,departmentIds)
+//	 }
+	  //职称排序
+	  $('#select-id').change(function(){ 
+	  	 
+	  	var selval=$(this).val()
+	  	console.log(selval)
+	  	var position02={'position':[selval]}
+	    	console.log(position02)
+	  	 var valueStr = JSON.stringify(position02);  //对象转字符串
+	  	 var departmentIds=localStorage.getItem("departmentIds");
+	  	console.log(valueStr)
+	  	$('.evne-doctor-list-card').hide();
+	  	data01(pageStart,pageSize,borrowValue,departmentIds,position02)
+	  })
 	
-	
-	 }
-	 var borrowValue=''
-	 box(borrowValue)
 	      //搜索
 	 $('#borrowValue').bind('input propertychange', function() {
 	 	$('.evne-doctor-list-card').hide();
@@ -217,8 +254,8 @@ $(function(){
 	  		 //console.log(borrowValue)
 		 //listfun(borrowValue)
 		  
-          
-		 box(borrowValue)
+         data01(pageStart,pageSize,borrowValue)
+		// box(borrowValue)
 		 
 		 
     });
@@ -232,7 +269,7 @@ $(function(){
 	//医生科室列表
 	$.ajax({
 		type:"post",
-		url:apiurl666+"departmentlist?"+(new Date()).getTime(),
+		url:apiurl+"departmentlist?"+(new Date()).getTime(),
 		async:true,
 		data:{},
 		dataType:"json",
@@ -243,6 +280,7 @@ $(function(){
 				'department':'全部',
 				 
 			};
+			
 			var arr=data.data;
 			arr.unshift(quanbu)
 			console.log(arr)
@@ -254,14 +292,27 @@ $(function(){
 			 
 			});
 			$('.list-menu').html(subject)
-			var departmentIds=''
-			box(borrowValue,departmentIds)
+//		      var departmentIds='2'
+//			box(borrowValue,departmentIds)
 			//医生科室选择列表
 	$('.list-menu>li').eq(0).css("color","RGBA(0, 155, 255, 1)")
 	$('.img-jiazai').hide()
-	$('.list-menu>li').click(function(){
 	 
 		 
+	 
+	 
+	$('.list-menu>li').click(function(){
+	     
+	     $("#select-id").empty()
+	     var selsectval=""
+	       selsectval+='<option>职称排序</option>'+
+     	 		'<option>主任医师</option>'+
+     	 		'<option>副主任医师</option>'+
+     	 		'<option>主治医师</option>'+
+     	 		'<option>医师</option>'+
+     	 		'<option>医学生</option>'
+	       $('#select-id').html(selsectval)
+		 	//var departmentIds=0
 		// var scroll = mui('.mui-scroll-wrapper').scroll(); 
 //  document.querySelector('.mui-scroll-wrapper' ).addEventListener('scroll', function (e ) { 
 //    console.log(scroll.y); 
@@ -274,14 +325,24 @@ $(function(){
  
  
 		 
-		var departmentIds=$(this).attr("data-id")
+		var departmentIds01=$(this).attr("data-id")
+		localStorage.setItem("departmentIds",departmentIds01);
 		$('.list-menu>li').css("color","RGBA(79, 80, 96, 1)")
 		$(this).css("color","RGBA(0, 155, 255, 1)")
 			$('.evne-doctor-list-card').fadeOut(2000);
 			 //$('.evne-doctor-list-card').remove();
 		 $('.img-jiazai').show()
 		 $('.img-jiazai').fadeOut(3000)
-		box(borrowValue,departmentIds)
+		//box(borrowValue,$(this).attr("data-id"))
+		 
+		 var position02='';
+	   data01(pageStart,pageSize,borrowValue,departmentIds01,position02)
+	     
+		console.log(departmentIds)
+		console.log(departmentIds01)
+		console.log(page)
+		 return page=1;
+		return departmentIds=$(this).attr("data-id");
 		
 	})
 			
@@ -298,10 +359,10 @@ $(function(){
     deceleration: 0.1, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值 0.0006 
     indicators: false  //隐藏一条滚动条 增大减速系数。。。
 });
+  
  
-	
   
  
 	 
-	
+	 
 })

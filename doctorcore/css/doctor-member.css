@@ -1,0 +1,98 @@
+ body{
+ 	background: white;
+ }
+.attention-title{
+	width:95%;
+	height:50px;
+	margin:0 auto;
+	margin-top:10px;
+	line-height:50px;
+	font-size: 14px;
+	color:RGBA(0, 0, 0, 1);
+	text-align: center;
+	border-bottom: 1px solid RGBA(235, 235, 235, 1);
+}
+.member-list{
+	width:95%;
+	height:90px;
+	margin:0 auto;
+	font-size: 12px;
+	color:RGBA(0, 0, 0, 1);
+	padding-top:15px;
+}
+.member-list p{
+	width:100%;
+	height:45px;
+	line-height: 45px;
+}
+.member-list:last-child{
+	width:95%;
+	height:150px;
+	margin:0 auto;
+	font-size: 12px;
+	color:RGBA(0, 0, 0, 1);
+	padding-top:15px;
+}
+.member-phone{
+	width:100%;
+	height:39px;
+	line-height:39px;
+	background: RGBA(193, 238, 231, 1);
+	border:0px;
+	padding-left:2%;
+	color:RGBA(97, 97, 97, 1);
+}
+.member-email{
+	width:100%;
+	height:39px;
+	line-height:39px;
+	background: RGBA(236, 236, 236, 1);
+	border:0px;
+	padding-left:2%;
+	color:RGBA(97, 97, 97, 1);
+}
+.member-checkbox{
+	display: none;
+	width:95%;
+	height:40px;
+	line-height:40px;
+	margin:0 auto;
+	font-size: 12px;
+	color:RGBA(0, 0, 0, 1);
+}
+.member-checkbox a:link,.member-checkbox:visited{
+		color:RGBA(0, 0, 0, 1);
+		text-decoration:none;
+}
+.member-btn{
+	width:95%;
+	height:45px;
+	margin:0 auto;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+.member-btn button{
+	width:100%;
+	height:39px;
+	 background: RGBA(10, 206, 176, 1);
+	 color:RGBA(255, 255, 255, 1);
+	 font-size: 14px;
+	 border-radius: 4px;
+	 border:0px;
+}
+.diqu-bg{
+	width:100%;
+	height:39px;
+	line-height:39px;
+	background: RGBA(236, 236, 236, 1);
+	border:0px;
+	color:RGBA(97, 97, 97, 1);
+}
+.phone-red,.name-red,.sf-red,.cs-red,.address-red{
+	 padding-left:2.5%;
+	display: inline-block;
+	color:red;
+	font-size: 8px;
+	display: none;
+}
+  

@@ -38,7 +38,7 @@ $(function(){
     		$('.doctor-card-box').empty()
     		var doctor="";
     		$.each(data.success, function(key,list) {
-    			doctor+='<img src='+imgurl666+list.photo+'>'+
+    			doctor+='<img src='+imgurl+list.photo+'>'+
      	 	'<div class="doctor-card-auto">'+
      	 		'<p><span class="card-doctor-name">'+list.name+'</span></p>'+
      	 		'<p class="card-doctor-position"><span>'+list.department.department+'</span>&nbsp;&nbsp;<span>'+list.position+'</span></p>'+
@@ -54,7 +54,7 @@ $(function(){
     		  var shanzhang="";
     		  shanzhang+='<span>'+data.success[0].intro+'</span>'
     		  $('.doctor-good-right').html(shanzhang)
-    		
+    		 
     		
     		
     		

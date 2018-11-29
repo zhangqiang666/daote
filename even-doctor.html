@@ -12,8 +12,9 @@
          <link rel="stylesheet" type="text/css" href="evendoctor/css/even-doctor.css"/>
          <script type="text/javascript" src="js/api.js"></script>
         <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="js/getopenid.js"></script>
          <script type="text/javascript" src="lib/mui.min.js"></script>
-      
+       
      
     </head>
     <body>
@@ -86,6 +87,7 @@
      	 	</div>
      	 </div>
      	 <!--医生秀-->
+     	 
      	 <div class="doctor-show-box">
      	 	<a href="even-show.html"> 
      	 	<div class="doctor-show-left">
@@ -93,52 +95,29 @@
      	 	</div>
      	 	<div class="doctor-show-auto">
      	 		<p><span>医生秀</span></p>
-     	 		<p><span>汇集该医生的文章及视频</span></p>
+     	 		<p><span style="font-weight: 600;">生活点播、文章视频、看病花絮</span></p>
      	 	</div>
      	 	<div class="doctor-show-right">
      	 		<p><i class="iconfont icon-arrowright"></i></p>
      	 	</div>
      	 	</a>
      	 </div>
+     	 
      	 <!--为你提供一下服务-->
      	 <div class="doctor-service-box">
      	 	<div class="doctor-service-title">
-     	 		<span>为你提供一下服务</span>
+     	 		<span>为你提供以下服务</span>
      	 	</div>
      	 	<!--list-->
-     	 	 <div class="doctor-service-list" data-type="4" onclick="fun(this)">
-     	 	<div class="doctor-service-list-left">
-     	 		<img src="evendoctor/images/erji.png">
-     	 	</div>
-     	 	<div class="doctor-service-list-auto">
-     	 		<p><span class="col-title-blue">图文问诊</span><span class="col-money">100元</span><span class="col-number">/次</span></p>
-     	 		<!--<p><span class="money-number">已有20000人购买</span></p>-->
-     	 	</div>
-     	 	<div class="doctor-service-list-right">
-     	 		<p><i class="iconfont icon-arrowright"></i></p>
-     	 	</div>
-     	 </div>
-     	  <!--list-->
-     	   <div class="doctor-service-list" data-type="5" onclick="fun(this)">
-     	 	<div class="doctor-service-list-left">
-     	 		<img src="evendoctor/images/siren.png">
-     	 	</div>
-     	 	<div class="doctor-service-list-auto">
-     	 		<p><span class="col-title-blue">电话问诊</span><span class="col-money">100元</span><span class="col-number">/次10分钟</span></p>
-     	 		<!--<p><span class="money-number">已有20000人购买</span></p>-->
-     	 	</div>
-     	 	<div class="doctor-service-list-right">
-     	 		<p><i class="iconfont icon-arrowright"></i></p>
-     	 	</div>
-     	 </div>
-     	  <!--list-->
-     	   <div class="doctor-service-list private-doctor">
-     	   	<a href="even-order.html"> 
+     	   <div class="doctor-service-list">
+     	   	<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"> 
      	 	<div class="doctor-service-list-left">
      	 		<img src="evendoctor/images/shiping.png">
      	 	</div>
      	 	<div class="doctor-service-list-auto">
-     	 		<p><span class="col-title-blue">私人医生</span><span class="col-money">300元</span><span class="col-number">/周</span></p>
+     	 		<p><span class="col-title-blue">与医生交朋友</span><span class="col-money">6千元</span><span class="col-number">/年</span>
+     	 			<!--<br><span class="dianji-fuwu">点击此处联系客服</span>-->
+     	 		</p>
      	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
      	 	</div>
      	 	<div class="doctor-service-list-right">
@@ -147,20 +126,128 @@
      	 	</a>
      	 </div>
      	  <!--list-->
-     	   <div class="doctor-service-list video-money">
+     	 	 
+     	   <!--<div class="doctor-service-list" data-type="5" onclick="fun(this)">
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/siren.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">电话问诊</span><span class="col-money">100元</span><span class="col-number">/次10分钟</span></p>
+     	 		 
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 </div>-->
+     	  <!--list-->
+     	   <!--<div class="doctor-service-list private-doctor">
+     	   	<a href="even-order.html"> 
      	 	<div class="doctor-service-list-left">
      	 		<img src="evendoctor/images/shiping.png">
      	 	</div>
      	 	<div class="doctor-service-list-auto">
-     	 		<p><span class="col-title-blue">远程视频门诊</span></p>
+     	 		<p><span class="col-title-blue">私人医生</span><span class="col-money">360元</span><span class="col-number">/周</span></p>
+     	 		 
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>-->
+     	  <!--list-->
+     	   <div class="doctor-service-list">
+     	   	<a href="videoexpert.html"> 
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/shiping.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">远程视频门诊</span><span class="col-money"><span class="shiping">100</span>元</span><span class="col-number">/次</span></p>
      	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>
+     	  <!--list-->
+     	   <div class="doctor-service-list">
+     	   	<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"> 
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/shiping.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">随身医疗队</span><span class="col-money">2.6万元</span><span class="col-number">/年</span>
+     	 			<!--<br><span class="dianji-fuwu">点击此处联系客服</span>-->
+     	 		</p>
+     	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>
+     	  <!--list-->
+     	   <div class="doctor-service-list">
+     	   	<a href="http://p.qiao.baidu.com/cps/chat?siteId=12421912&userId=26143907"> 
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/shiping.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">线下医疗队</span><span class="col-money">16万元</span><span class="col-number">/年</span>
+     	 			<!--<br><span class="dianji-fuwu">点击此处联系客服</span>-->
+     	 		</p>
+     	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>
+     	   
+     	   <div class="doctor-service-list">
+     	   	<a href="expertAssignment.html"> 
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/shiping.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">请TA去你当地手术(会诊)</span></p>
+     	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>
+     	  <!--list-->
+     	  <div class="doctor-service-list">
+     	  	<a href="shanghaiMedical.html"> 
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/shiping.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">去医院看TA的门诊</span></p>
+     	 		<!--<p><span class="money-number">该功能后期开放</span></p>-->
+     	 	</div>
+     	 	<div class="doctor-service-list-right">
+     	 		<p><i class="iconfont icon-arrowright"></i></p>
+     	 	</div>
+     	 	</a>
+     	 </div>
+     	  <!--list-->
+     	   <!--list-->
+     	 	 <div class="doctor-service-list" data-type="4" onclick="fun01(this)">
+     	 	<div class="doctor-service-list-left">
+     	 		<img src="evendoctor/images/erji.png">
+     	 	</div>
+     	 	<div class="doctor-service-list-auto">
+     	 		<p><span class="col-title-blue">图文电话问诊</span><span class="col-money"><span class="service">100</span>元</span><span class="col-number">/次</span></p>
+     	 		<!--<p><span class="money-number">已有20000人购买</span></p>-->
      	 	</div>
      	 	<div class="doctor-service-list-right">
      	 		<p><i class="iconfont icon-arrowright"></i></p>
      	 	</div>
      	 </div>
      	  <!--list-->
-     	  
      	 </div>
      	 <!--患者评价-->
      	 <div class="article-detail-argument-box">
@@ -185,7 +272,7 @@
             	</div>
            
            <!--list-->
-        </ul>
+          </ul>
             </div>
      	 
      	 

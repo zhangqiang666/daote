@@ -1,0 +1,262 @@
+body{
+	background: #F9F9F9;
+}
+.patient-info-box{
+	width:92%;
+	display: inline-block;
+	margin-left:4%;
+	background: white;
+	margin-top:15px;
+	
+}
+ .reply-title{
+	 width:92%;
+	height:40px;
+	margin:0 auto;
+	line-height: 40px;
+	font-size: 16px;
+	 margin-top:10px;
+	 
+}
+ .reply-title input{
+ 	width:100%;
+ 	height:30px;
+ 	line-height: 30px;
+ 	 border:1px solid #efeff4;
+ 	 font-size: 14px;
+  
+ }
+.textarea-box{
+	width:100%;
+	display: inline-block;
+	 
+	
+}
+.textarea-box textarea{
+	width:92%;
+	height:300px;
+	 margin:15px 4%;
+	 padding:5px 0px;
+	 border:1px solid #efeff4;
+	 font-size: 14px;
+}
+.reply-btn{
+	width:100%;
+	height:50px;
+    margin-top:50px;
+	margin-bottom: 10px;
+	
+}
+.reply-btn button{
+	width:92%;
+	height:39px;
+	background: white;
+	border:1px solid #efeff4;
+	margin:0px 4%;
+	border-radius: 5px;
+	
+}
+.man-input{
+	opacity: 0;
+	margin-top:20px;
+}
+.man-img{
+	margin-top:-30px;
+	margin-left:4%;
+	margin-bottom:20px;
+	border:1px solid #efeff4;
+	width:60px;
+	height:60px;
+}
+.money-box{
+	width:90%;
+	height:130px;
+	background: white;
+	margin-top:20px;
+	margin-left:5%;
+}
+.money-title{
+	width:100%;
+	height:40px;
+	line-height: 50px;
+	font-size: 14px;
+	
+}
+.money-title span{
+	margin:15px 0 0 10px;
+}
+.money-title button{
+	float:right;
+	width:100px;
+	height:30px;
+	margin-top:15px;
+	margin-right:10px;
+	line-height: 20px;
+}
+.money-content{
+	width:100%;
+	margin-top:20px;
+	font-size: 14px;
+}
+.money-content input{
+	width:50%;
+	border:0px;
+	font-size: 14px;
+}
+.fee-btn01{
+	width:70px;
+	display: none;
+}
+/*上传视频*/
+.navbar {
+  background-color: #fff;
+}
+.mainContainer {
+  position: relative;
+  top: 0px;
+}
+.mainContainer {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 15px 15px;
+}
+.mainContainer .row .tip li {
+  list-style: none;
+}
+.mainContainer .nav-box ul li a {
+  color: #777;
+}
+#box,
+#box2 {
+  margin-top: 20px;
+  height: 46px;
+}
+.fragment-group {
+  overflow: hidden;
+  padding-left: 0;
+}
+.hide {
+  visibility: hidden;
+}
+.fragment-group .fragment {
+  float: left;
+  width: 30%;
+  padding-right: 10px;
+  list-style: none;
+  margin-top: 10px;
+}
+.file-input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 130px;
+  height: 46px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mainContainer .select-button {
+  position: absolute;
+ /* background-color: #00b7ee;*/
+  color: #fff;
+  font-size: 18px;
+  padding: 0 10px;
+  line-height: 44px;
+  font-weight: 100;
+  border:0px;
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
+}
+.speed {
+  margin-top: 15px;
+}
+.control-upload {
+  line-height: 14px;
+  margin-left: 10px;
+}
+.control-container {
+  float: left;
+  width: 20%;
+}
+#totalBar {
+  margin-bottom: 40px;
+  float: left;
+  width: 80%;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+.linkWrapper img {
+  width: 100px;
+  height: 100px;
+}
+.modal-body {
+  text-align: center;
+}
+.buttonList a {
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.buttonList ul {
+  text-align: left;
+}
+.buttonList li {
+  list-style: none;
+  margin-top: 15px;
+}
+.disabled {
+  background: #ccc;
+}
+.display a {
+  display: block;
+  background: #fff;
+}
+.video-box{
+	width:100%;
+	display: inline-block;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#box2{
+	position: relative;
+}
+#box2 input{
+	opacity: 0;
+}
+#box2 img{
+	 
+	width:60px;
+	height: 60px;
+ 
+}
+.video-img-title{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	font-size: 14px;
+	padding-left:2.5%;
+}
+.video-img{
+	width:100%;
+	display: inline-block;
+	padding-left:2.5%;
+	
+}
+.video-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 14px;
+	padding-left:2.5%;
+}
+.red-tips{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	color:red;
+	font-size: 14px;
+	padding-left:2.5%;
+	display: none;
+}

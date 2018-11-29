@@ -50,7 +50,25 @@ body{
 	background: RGBA(255, 255, 255, 1);
 	margin-top:10px;
 	 margin-left:2.5%;
+	 border:1px solid RGBA(5, 200, 170, 1);
 }
+.zhanshi{
+	 font-weight: 400;
+	color:black;
+	font-size: 12px;
+}
+.shenghuo{
+	padding-left:15%;
+	 
+	font-size: 12px;
+}
+/*.show-box{
+	width:95%;
+	 border:1px solid RGBA(246, 246, 246, 1);
+	 display: inline-block;
+	 margin:5px;
+	  margin-left:2.5%;
+}*/
 .doctor-show-left{
 	width:20%;
 	height:80px;
@@ -64,6 +82,13 @@ body{
 	float:left;
 	padding:22px 2%;
 	line-height: 15px;
+	position:relative;
+}
+.doctor-show-auto img{
+	width:60%;
+	position:absolute;
+	margin-top:-10px;
+	margin-left:5px;
 }
 .doctor-show-right{
 	width:20%;
@@ -104,10 +129,11 @@ body{
 /*为你提供一下服务*/
 .doctor-service-box{
 	width:95%;
-	height:443px;
+	/*height:443px;*/
 	background: RGBA(255, 255, 255, 1);
 	margin-top:10px;
 	margin-left:2.5%;
+	display: inline-block;
 }
 .doctor-service-title{
 	width:95%;
@@ -121,7 +147,7 @@ body{
 }
 .doctor-service-list{
 	width:95%;
-	height:90px;
+	height:70px;
 	background: RGBA(255, 255, 255, 1);
 	margin-top:10px;
 	 margin-left:2.5%;
@@ -132,24 +158,30 @@ body{
 }
 .doctor-service-list-left{
 	width:20%;
-	height:90px;
+	height:70px;
 	float:left;
-	padding:15px 5%;
+	padding:5px 5%;
 	 
 }
 .doctor-service-list-auto{
 	width:60%;
-	height:90px;
+	height:70px;
 	float:left;
-	padding:22px 2%;
-	line-height: 15px;
-	line-height: 45px;
+	padding:20px 2%;
+	 
+	line-height:18px;
+}
+.dianji-fuwu{
+	font-size: 14px;
+	 
+	margin-left:5px;
+	 
 }
 .doctor-service-list-right{
 	width:20%;
-	height:90px;
+	height:70px;
 	float:left;
-	padding:27px 5%;
+	padding:17px 5%;
 	
 	
 }

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台医生端</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <link type="text/css" rel="stylesheet" href="css/lib/css/mui.min.css" rel="external nofollow"/>
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+          <link rel="stylesheet" type="text/css" href="css/style.css"/>
+            
+         <link rel="stylesheet" type="text/css" href="doctorcore/css/doctor-core.css"/>
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="js/getopenid.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+     
+    </head>
+    <body>
+    	 <header id="head">
+            	 
+            </header>
+    	<!--个人中心头部-->
+    	 <div class="doctor-core-header">
+    	 	<div class="doctor-core-header-left">
+    	 		<a href="doctor-myhome.html"><span>我的工作室</span></a>
+    	 		 
+    	 	</div>
+    	 	<div class="doctor-core-header-right">
+    	 		<a href="#"><span>个人中心</span></a>
+    	 		<div class="line-bottom"></div>
+    	 	</div>
+    	 </div>
+    	 <!--医生名字和头像-->
+    	 <div class="mylist-list-title">
+               	<div> 
+            	 <p class="mylist-name" style="overflow:hidden;height:30px;width:100px">未登录</p>
+            	<!-- <p id="signout"><a href="#" style="color:RGBA(120, 120, 120, 1);border-bottom: 1px solid RGBA(120, 120, 120, 1);"> 退出登录</a></p>-->
+            	 </div>
+            	  <form id="uploadForm" enctype="multipart/form-data" method="post">
+            	 <!--<input type="file" name="file" onchange="showPreview(this)" class="man-input" id="file" accept="image/*"/>-->
+            	 <input type="file" name="file" class="man-input" id="file" accept="image/*"/>
+            	 <!-- <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img" />-->
+            	  </form>
+            	   <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img" />
+            	<!-- <img src="images/slide/manlogo.png" class="man-img">-->
+                </div>
+                 <!--list-->
+             <div class="mylist-list">
+             	<a href="doctor-member.html"> 
+             	<span>个人信息</span><i class="iconfont icon-arrowright"></i>
+             	</a>
+             </div>
+             <!--list-->
+              <div class="mylist-list" style="border-bottom: 0px;">
+             	<a href="doctor-money.html"> 
+             	<span>我的收入</span><i class="iconfont icon-arrowright"></i><span style="float:right;margin-right:2%;">0.0元</span>
+             	</a>
+             </div>
+             <!--list-->
+              
+             
+             <!--空格背景-->
+             <div class="konege-bg">
+             	
+             </div>
+    	  <!--list-->
+              <div class="mylist-list myfuwu">
+             	 
+             	<span>我开通的服务</span><span class="jianhao">-</span><span class="jiahao">+</span>
+             	 
+             </div>
+             <!--list-->
+             <div class="my-service-box service-box"> 
+             	<!--service-list-->
+             <div class="my-service-list service" data-service="图文问诊">
+             	<a href="doctor-imgandtext.html?service=图文问诊" data-service="图文问诊"> 
+             	<span class="service-title">图文电话问诊</span> <i class="iconfont icon-arrowright"></i><span class="service-money" data-service="图文问诊">待开通</span>
+             	</a>
+             </div>
+            <!--service-list-->
+             <!--<div class="my-service-list service" data-service="电话问诊">
+             	<a href="doctor-imgandtext.html?service=电话问诊" data-service="电话问诊"> 
+             	<span class="service-title">电话问诊</span> <i class="iconfont icon-arrowright"></i><span class="service-money" data-service="电话问诊">待开通</span>
+             	</a>
+             </div>-->
+            <!--service-list-->
+             <!--<div class="my-service-list service" data-service="私人医生">
+             	<a href="doctor-private.html?service=私人医生" data-service="私人医生"> 
+             	<span class="service-title">私人医生</span> <i class="iconfont icon-arrowright"></i><span class="service-money"data-service="私人医生">待开通</span>
+             	</a>
+             </div>-->
+            <!--service-list-->
+             <div class="my-service-list service" data-service="远程视频门诊">
+             	<a href="doctor-imgandtext.html?service=远程视频门诊" data-service="远程视频门诊"> 
+             	<span class="service-title">远程视频门诊</span> <i class="iconfont icon-arrowright"></i><span class="service-money" data-service="远程视频门诊">待开通</span>
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list suisheng">
+             	<a href="#"> 
+             	<span class="service-title">随身医疗队&nbsp;2.6万元/年</span><!--<span class="service-money" style="margin-right:5%;">默认开通</span>-->
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list suisheng">
+             	<a href="#"> 
+             	<span class="service-title">线下医疗队&nbsp;16万元/年</span><!--<span class="service-money" style="margin-right:5%;">默认开通</span>-->
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list suisheng">
+             	<a href="#"> 
+             	<span class="service-title">患者与你交朋友&nbsp;6千元/年</span><!--<span class="service-money" style="margin-right:5%;">默认开通</span>-->
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list suisheng">
+             	<a href="#"> 
+             	<span class="service-title">请你异地手术（会诊）</span><!--<span class="service-money" style="margin-right:5%;">默认开通</span>-->
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list suisheng">
+             	<a href="#"> 
+             	<span class="service-title">患者去医院看你的门诊</span><!--<span class="service-money" style="margin-right:5%;">默认开通</span>-->
+             	</a>
+             </div>
+            <!--service-list-->
+             </div>
+               <!--my-service-box-->
+                <!--空格背景-->
+             <div class="konege-bg">
+             	
+             </div>
+              <!--订单统计-->
+              <div class="mylist-list mydingdan">
+             	 
+             	<span>订单统计</span><span class="jianhao">-</span><span class="jiahao">+</span>
+             	 
+             </div>
+             <!--list-->
+             <div class="my-service-box"> 
+             	<!--service-list-->
+             <div class="my-service-list">
+             	<a href="doctor-conduct.html"> 
+             	<span class="service-title">正在进行（<span class="number">0</span>）</span> <i class="iconfont icon-arrowright"></i> 
+             	</a>
+             </div>
+            <!--service-list-->
+             <div class="my-service-list">
+             	<a href="doctor-complete.html"> 
+             	<span class="service-title">完成订单（<span class="number">0</span>）</span> <i class="iconfont icon-arrowright"></i> 
+             	</a>
+             </div>
+             
+            <!--service-list-->
+             <div class="my-service-list">
+             	<a href="doctor-comment.html"> 
+             	<span class="service-title">已收到评价（<span class="comment">0</span>）</span> <i class="iconfont icon-arrowright"></i> 
+             	</a>
+             </div>
+            <!--service-list-->
+            
+             </div>
+               <!--my-service-box-->
+                 <!--空格背景-->
+             <div class="konege-bg">
+             	
+             </div>
+                  <!--list-->
+              <div class="mylist-list">
+             	<a href="doctor-tuwen-list.html"> 
+             	<span>待处理图文问诊列表（<span class="number">0</span>）</span><i class="iconfont icon-arrowright"></i>
+             	</a>
+             </div>
+             <!--list-->
+                <!--list-->
+              <!--<div class="mylist-list" >
+             	<a href="mylist.html"> 
+             	<span>切换身份</span><i class="iconfont icon-arrowright"></i><span class="service-money" style="color:#C0C0C0;">用户</span>
+             	</a>
+             </div>-->
+             <!--list-->
+              <div class="doctor-home">
+             	<a href="mylist.html"> 
+             	<button>返回普通用户界面</button>
+             	</a>
+             </div>
+      <!--切换身份弹窗-->
+        <!--<div class="user-mask">
+        	<div class="user-box">
+        		<div class="current-user">当前为医生用户<span class="no-mask"><i class="iconfont icon-cuo"></i></span></div>
+        		<div class="doctor-user doctor-home"><a href="mylist.html">切换到普通用户</a></div>
+        	</div>
+        </div>-->
+        
+     <script type="text/javascript" src="doctorcore/js/style.js"></script>
+     <script type="text/javascript" src="doctorcore/js/doctor-core.js"></script>
+      <script type="text/javascript" src="doctorcore/js/doctor-conduct.js"></script>
+       <script type="text/javascript" src="doctorcore/js/doctor-comment.js"></script>
+     <script lang="javascript">
+	//上传用户头像
+    $(document).ready(function(){
+    	 
+        $("input[name='file']").change(function(){
+            //FormData对象，
+            //可以把form中所有表单元素的name与value组成一个queryString，提交到后台。
+            //在使用Ajax提交时，使用FormData对象可以减少拼接queryString的工作量
+            var formData = new FormData();
+             formData.append("file",$("input[name='file']")[0].files[0]);
+              //formData.append("id",localStorage.getItem("id"));
+            $.ajax({
+            	 headers:{
+      'Authorization':localStorage.getItem("token"),
+     },
+                url:localStorage.getItem("url")+"doctor/profile/photo",
+                type:'post',
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success:function(data){
+                	$('.man-img').attr("src",localStorage.getItem("imgurl")+data.path)
+                	 
+                    console.log(data);
+//                  if(data.status=="fail"){
+//                      alert(data.message);
+//                  }
+//                  #根据上传成功并返回压缩后的图片url，更新img标签src属性
+//                  if(data.status=="success"){
+//                      $(".avatar img").attr("src",data.url+"?"+new Date().getTime());
+//                  }
+                },error:function(e){
+                    //console.log(e);
+                }
+            });
+        });
+    });
+   
+      //用户头像
+//    $.ajax({
+//    	headers:{
+//    'Authorization':localStorage.getItem("token"),
+//     },
+//    	type:"post",
+//    	url:localStorage.getItem("url")+"userinfos",
+//    	async:true,
+//    	data:{
+//    		id:localStorage.getItem("id")
+//    		//phone:'18394596534',
+//    		//rgcode:'5022'
+//    	},
+//    	dataType:"json",
+//    	success:function(data){
+//    		console.log(data)
+//    		$('.man-img').attr("src",localStorage.getItem("imgurl")+data.success.photo)
+//    	
+//    	}
+//    });
+//   
+     
+</script>
+
+    </body>
+    
+</html>

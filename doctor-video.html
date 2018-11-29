@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>点医台医生端</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <link type="text/css" rel="stylesheet" href="css/lib/css/mui.min.css" rel="external nofollow"/>
+         <link rel="stylesheet" type="text/css" href="lib/iconfont.css"/>
+          <link rel="stylesheet" type="text/css" href="css/style.css"/>
+            <link rel="stylesheet" type="text/css" href="doctorcore/css/style.css"/>
+         <link rel="stylesheet" type="text/css" href="doctorcore/css/doctor-video.css"/>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+         <script type="text/javascript" src="js/getopenid.js"></script>
+         <script type="text/javascript" src="js/api.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+     
+    </head>
+    <body>
+    	 <header id="head">
+            	 
+            </header>
+    	<!--返回-->
+    	<div class="doctor-money-fanhui-box">
+    		<a href="javascript:window,history.back();"> 
+    		<i class="iconfont icon-fanhui1"></i>
+    		</a>
+    		 <span>发布视频</span>
+    	</div>
+    	<!--返回-->
+    	 <!--发表信息-->
+    	 <div class="patient-info-box">
+    	 	 
+    	 <!--输入内容-->
+    	 <div class="doctor-reply-info-box">
+    	 	<div class="reply-title"><input type="text" placeholder="输入标题"></div>
+    	 	<!--<div class="textarea-box">
+    	 		<textarea name="" rows="" cols="" placeholder="输入文章内容，字数不能超过10个字"></textarea>
+    	 	</div>-->
+    	 	<!--上传视频封面-->
+    	 	<!--上传图片-->
+    	 	  <div class="video-img-title">
+    	 	  	<span>请上传视频封面图片</span>
+    	 	  </div>
+    	 	    <div class="video-img">
+    	 	    <form id="uploadForm" enctype="multipart/form-data" method="post">
+            	 <!--<input type="file" name="file" onchange="showPreview(this)" class="man-input" id="file" accept="image/*"/>-->
+            	 <input type="file" name="file" class="man-input" id="file" accept="image/*"/>
+            	 <!-- <img id="portrait" src="images/bag/morentouxiang.png"  class="man-img" />-->
+            	  </form>
+            	    <div class="img"> 
+            	    <img id="img01" src="evendoctor/images/shangchuang.png"  class="man-img" />
+            	    </div>
+            	   </div>
+    	 	 <!--上传视频-->
+    	 	 <div class="video-content">
+    	 	 	<span>请上传视频</span>
+    	 	 </div>
+    	 	 <div class="video-box">
+  <div class="mainContainer">
+     
+    <form method="post" enctype="multipart/form-data" id="form" action="upload">
+      <div id="box" class="hide">
+        <button class="select-button">选择文件</button>
+        <a class="file-input" id="select"></a>
+      </div>
+      <span style="margin-left:0px;color:red;">（*请上传mp4格式的视频）</span>
+      <div id="box2">
+      	 
+        <button class="select-button"><img src="evendoctor/images/shangchuang.png"></button>
+        <input class="file-input" type="file" id="select2" />
+         
+        <!--<img src="evendoctor/images/shangchuang.png">-->
+      </div>
+    </form>
+    <div class="nav-box" style="margin-top:30px">
+      <ul id="myTab" class="nav nav-tabs">
+        <!--<li role="presentation" class="active">
+          <a href="#h5" name="h5" data-toggle="tab">
+            七牛h5上传
+          </a>
+        </li>-->
+        <!--<li role="presentation">
+          <a href="#expand" name="expand" data-toggle="tab">plupload插件上传</a>
+        </li>-->
+        <!--<li role="presentation">
+          <a href="#directForm" name="directForm" data-toggle="tab">form表单直传</a>
+        </li>-->
+      </ul>
+      <div id="process" class="tab-content">
+        <div class="tab-pane fade in active" id="h5">
+          <div class="table table-striped table-hover text-left" style="margin-top:30px">
+            <div>
+              <div>
+                <!--<span class="col-md-4">Filename</th>
+                <span class="col-md-2">Size</th>
+                <span class="col-md-6">Detail</th>-->
+              </div>
+            </div>
+            <div id="fsUploadProgress">
+
+            </div>
+          </div>
+        </div>
+        <!--<div class="tab-pane fade" id="expand">
+          <div class="table table-striped table-hover text-left" style="margin-top:30px">
+            <div>
+              <div>
+                <div class="col-md-4">Filename</div>
+                <div class="col-md-2">Size</div>
+                <div class="col-md-6">Detail</div>
+              </div>
+            </div>
+            <div id="fsUploadProgress2">
+
+            </div>
+          </div>
+        </div>-->
+         <!---->
+      </div>
+    </div>
+  </div>
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="display">
+            <a id = "imgContainer">
+              <img data-key="">
+            </a>
+          </div>
+          <div class="buttonList">
+            <ul>
+              <li>
+                <div class="watermark">
+                  <span>水印控制：</span>
+                  <a href="#" data-watermark="NorthWest" class="btn btn-default disabled">
+                    左上角
+                  </a>
+                  <a href="#" data-watermark="SouthWest" class="btn btn-default">
+                    左下角
+                  </a>
+                  <a href="#" data-watermark="NorthEast" class="btn btn-default">
+                    右上角
+                  </a>
+                  <a href="#" data-watermark="SouthEast" class="btn btn-default">
+                    右下角
+                  </a>
+                  <a href="#" data-watermark="false" class="btn btn-default">
+                    无水印
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="imageView2">
+                  <span>缩略控制：</span>
+                  <a href="#" data-imageview="large" class="btn btn-default disabled">
+                    大缩略图
+                  </a>
+                  <a href="#" data-imageview="middle" class="btn btn-default">
+                    中缩略图
+                  </a>
+                  <a href="#" data-imageview="small" class="btn btn-default">
+                    小缩略图
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="imageMogr2">
+                  <span>旋转控制：</span>
+                  <a href="#" data-imagemogr="left" class="btn btn-default no-disable-click">
+                    逆时针
+                  </a>
+                  <a href="#" data-imagemogr="right" class="btn btn-default no-disable-click">
+                    顺时针
+                  </a>
+                  <a href="#" data-imagemogr="no-rotate" class="btn btn-default">
+                    无旋转
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	 
+    	 	</div>
+    	 	 <!--上传视频-->
+            	    </div>
+    	 </div>
+    	 </div>
+    	 <!--价格确定-->
+    	 <div class="money-box">
+    	 	<div class="money-title">
+    	 		<span>设置观看视频价格</span><button class="fee-btn">不设价免费</button><button class="fee-btn01">设价</button>
+    	 	</div>
+    	 	<div class="money-content">
+    	 		<input type="text"  placeholder="请输入价格" data-money='1' maxlength='10'/><span>元</span>
+    	 	</div>
+    	 	<div class="red-tips">价格不能超过10000元</div>
+    	 </div>
+    	 <!--发表按钮-->
+    	 <div class="reply-btn">
+    	 		<button>发布</button>
+    	 </div>
+    	 	<!--[if !IE]><!-->
+      <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+       <!--<![endif]-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+      <script src="https://cdn.bootcss.com/json3/3.3.2/json3.min.js"></script>
+      <script type="text/javascript" src='video/js/plupload.full.min.js'></script>
+<script type="text/javascript" src='https://unpkg.com/qiniu-js@2.5.1/dist/qiniu.min.js'></script>
+<script type="text/javascript" src='video/component/widget.js'></script>
+<script type="text/javascript" src='video/common/common.js'></script>
+<script type="text/javascript" src='video/component/ui.js'></script>
+<script type="text/javascript" src='video/scripts/uploadWithOthers.js'></script>
+<script type="text/javascript" src='video/scripts/uploadWithForm.js'></script>
+<script type="text/javascript" src='video/scripts/uploadWithSDK.js'></script>
+<script type="text/javascript" src='video/main.js'></script>
+<!---->
+     <script type="text/javascript" src="doctorcore/js/style.js"></script>
+     <script type="text/javascript" src="doctorcore/js/doctor-video.js"></script>
+     <script lang="javascript">
+	//上传用户头像
+	
+    $(document).ready(function(){
+        $("input[name='file']").change(function(){
+            //FormData对象，
+            //可以把form中所有表单元素的name与value组成一个queryString，提交到后台。
+            //在使用Ajax提交时，使用FormData对象可以减少拼接queryString的工作量
+            var formData = new FormData();
+            console.log($("input[name='file']")[0].files[0])
+             formData.append("file",$("input[name='file']")[0].files[0]);
+               
+              console.log(formData)
+            $.ajax({
+            		headers:{
+      'Authorization':localStorage.getItem("token"),
+       },
+                url:apiurl+"doctor/verify/upload",
+                type:'post',
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success:function(data){
+                	 console.log(data);
+                	$('.man-img').attr("src",imgurl+data.path)
+                	 $('.man-img').attr("data-url",data.path)
+                    
+//                  if(data.status=="fail"){
+//                      alert(data.message);
+//                  }
+//                  #根据上传成功并返回压缩后的图片url，更新img标签src属性
+//                  if(data.status=="success"){
+//                      $(".avatar img").attr("src",data.url+"?"+new Date().getTime());
+//                  }
+                },error:function(e){
+                    //console.log(e);
+                }
+            });
+        });
+    });
+   
+   
+     
+</script>
+
+    </body>
+    
+</html> 

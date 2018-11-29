@@ -1,14 +1,15 @@
 $(function(){
 	  //判断是否登录
-	  var cookie=$.cookie("temp")
-	  console.log(cookie)
- 	 // var temp=localStorage.getItem("temp")
-	if(cookie==undefined){
-		var test = window.location.href;
-		localStorage.setItem("windowhref",test);
-		window.location.href="mobile_login.html"
-		 
-	}
+//	  var cookie=$.cookie("temp")
+//	  console.log(cookie)
+// 	 // var temp=localStorage.getItem("temp")
+//	if(cookie==undefined){
+//		var test = window.location.href;
+//		localStorage.setItem("windowhref",test);
+//		window.location.href="mobile_login.html"
+//		 
+//	}
+
 //	 var w = document.documentElement.clientWidth || document.body.clientWidth;
 //	 if(w>640){
 //	 	 window.location.href="yun.html" 
@@ -119,28 +120,30 @@ $(function(){
 				if(list.is_fee==1){ 
 				wenzhang+='<li class="dyt-money" data-type="2" data-id='+list.a_id+' data-author='+list.author+' onClick="fun(1, this)">'+
       		//'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
-      		'<div class="article-list-title"> '+list.title+'</div>'+
+      		'<div class="valist-video-left"><div class="article-list-title"> '+list.title+'<span>【</span><span>文章</span><span>】</span></div>'+
       		'<div class="article-foot">'+
       			//'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      			'<span class="col-money">付费'+list.price+'元</span>'+
+      			'<span class="col-money">付费'+parseFloat(list.price)+'元</span>'+
       		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
-      		'</div>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
+      		'</div></div>'+
+      		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
       		//'</a>'+
       	'</li>'
       }else{
       	wenzhang+='<li>'+
       		'<a href="article_detail.html?author='+list.author+'&a_id='+list.a_id+'"> '+
-      		'<div class="article-list-title">'+list.title+'</div>'+
+      		'<div class="valist-video-left"><div class="article-list-title">'+list.title+'<span>【</span><span>文章</span><span>】</span></div>'+
       		'<div class="article-foot">'+
       			//'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
       		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
-      		'</div>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
+      		'</div></div>'+
+      		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
       		'</a>'+
       	'</li>'
       }
@@ -154,9 +157,9 @@ $(function(){
       			//'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
-      			'<span class="col-money">付费'+list.price+'元</span>'+
+      			'<span class="col-money">付费'+parseFloat(list.price)+'元</span>'+
       		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
       		//'</a>'+
@@ -173,7 +176,7 @@ $(function(){
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
       		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
       		'</a>'+
@@ -182,7 +185,11 @@ $(function(){
 }
      }
       	$('.doctor-article-list-box').html(wenzhang);
-       
+      	//当图片加载失败时加载默认图片
+      	
+       $("img").on("error",function(){
+       	$(this).attr("src",'images/bag/ssys.png')
+       })
       	
       	
       	

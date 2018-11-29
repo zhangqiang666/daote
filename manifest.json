@@ -473,7 +473,8 @@
 					"expertAssignment.html",
 					"homeHealth.html",
 					"yun.html",
-					"doctorhome.html"
+					"doctorhome.html",
+					"mobile_login.html"
 				],
 				"priority": 13
 			},
@@ -587,7 +588,10 @@
 				],
 				"refer": [
 					"videoexpert.html",
-					"doctorhome.html"
+					"doctorhome.html",
+					"mobile_login.html",
+					"homeHealth.html",
+					"even-index.html"
 				],
 				"priority": 1
 			},
@@ -618,7 +622,9 @@
 					"expertAssignment.html",
 					"homeHealth.html",
 					"yun.html",
-					"doctorhome.html"
+					"doctorhome.html",
+					"even-index.html",
+					"mylist.html"
 				],
 				"priority": 0
 			},
@@ -784,7 +790,8 @@
 					"expertAssignment.html",
 					"homeHealth.html",
 					"yun.html",
-					"doctorhome.html"
+					"doctorhome.html",
+					"doctor-core.html"
 				],
 				"priority": 0
 			},
@@ -819,7 +826,8 @@
 					"images/slide/erweima.jpg",
 					"images/weixin.png",
 					"images/1_03.jpg",
-					"images/12.jpg"
+					"images/12.jpg",
+					"images/bag/footerweima04.png"
 				],
 				"refer": [
 					"mylist.html",
@@ -831,7 +839,9 @@
 					"expertAssignment.html",
 					"homeHealth.html",
 					"yun.html",
-					"doctorhome.html"
+					"doctorhome.html",
+					"even-index.html",
+					"mobile_yun.html"
 				],
 				"priority": 0
 			},
@@ -839,6 +849,55 @@
 				"resources": [],
 				"refer": [
 					"search.html"
+				],
+				"priority": 0
+			},
+			"even-index.html": {
+				"resources": [],
+				"refer": [
+					"mobile_login.html",
+					"even-doctor.html",
+					"index.html",
+					"mylist.html"
+				],
+				"priority": 0
+			},
+			"even-doctor.html": {
+				"resources": [],
+				"refer": [
+					"even-index.html",
+					"even-tuwen.html",
+					"index.html",
+					"even-show.html"
+				],
+				"priority": 0
+			},
+			"even-tuwen.html": {
+				"resources": [],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"doctor-core.html": {
+				"resources": [],
+				"refer": [
+					"doctor-myhome.html",
+					"mylist.html"
+				],
+				"priority": 0
+			},
+			"doctor-myhome.html": {
+				"resources": [],
+				"refer": [
+					"doctor-core.html"
+				],
+				"priority": 0
+			},
+			"even-show.html": {
+				"resources": [],
+				"refer": [
+					"even-doctor.html"
 				],
 				"priority": 0
 			}

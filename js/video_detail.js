@@ -65,7 +65,7 @@ var url = location.search;//获取url中"?"符后的字串
 				if(data.is_fee==1){ 
 					 
 				 html+='<video width="100%" height="150" poster='+imgurl+data.img+' controls>'+
-                  '<source src='+imgurl+data.video+' controls="true" controlslist="nodownload" type="video/mp4">'+
+                  '<source src='+data.video+' controls="true" controlslist="nodownload" type="video/mp4">'+
                 '</video>'+
             	 '<div class="video-card-foot-01">'+
             		'<span class="col-green" style="color:red;">￥'+data.price+'&nbsp;</span>'+
@@ -78,7 +78,7 @@ var url = location.search;//获取url中"?"符后的字串
             	'</div>'
            }else{ 
             	 html+='<video width="100%" height="150"  poster='+imgurl+data.img+' controls autoplay="true">'+
-                  '<source src='+imgurl+data.video+'  type="video/mp4">'+
+                  '<source src='+data.video+'  type="video/mp4">'+
                 '</video>'+
             	 '<div class="video-card-foot-01">'+
             		'<span class="col-green">【公开课】</span>'+

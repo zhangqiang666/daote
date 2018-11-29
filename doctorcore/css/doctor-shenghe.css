@@ -1,0 +1,44 @@
+body{
+	background: white;
+}
+.doctor-shenhe-box{
+	width:123px;
+	height:123px;
+	border:1px solid #CCCCCC;
+	border-radius:50%;
+	margin:100px auto;
+	overflow: hidden;
+	text-align: center;
+	padding-top:25px;
+}
+.shenhe-img{
+	width:100%;
+	
+}
+.shenhe-img img{
+	width:50px;
+	height:50px;
+	
+}
+.shenhe-text{
+	width:100%;
+	font-size: 16px;
+	
+}
+.shenhe-btn{
+	width:90%;
+	height:40px;
+	line-height: 40px;
+	border:1px solid #CCCCCC;
+	border-radius: 4px;
+	margin:100px auto;
+	text-align: center;
+}
+.shenhe-btn a{
+	width:100%;
+	text-decoration: none;
+	font-size: 16px;
+	color:black;
+	display: inline-block;
+	
+}

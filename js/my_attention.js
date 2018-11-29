@@ -31,7 +31,7 @@ $(function(){
 //          		'<div class="list-newson">'+list.msg.labels+'</div>'+
 //          	'</div></a>'
                     html+='<div class="doctor-card-box">'+
-                    '<a href="even-doctor.html?id='+list.msg.id+'&d_id='+list.msg.d_id+'">'+
+                    '<a href="even-doctor.html?d_id='+list.msg.d_id+'">'+
      	 	'<img src='+imgurl666+list.msg.photo+'>'+
      	 	'<div class="doctor-card-auto">'+
      	 		'<p><span class="card-doctor-name">'+list.msg.name+'</span></p>'+

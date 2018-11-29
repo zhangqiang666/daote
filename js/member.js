@@ -146,10 +146,14 @@ $(function(){
 				 	dataType:"json",
 				 	success:function(data){
 			 		console.log(data)
+			 	
 				 		  $('#phone').attr("value",data.success.phone);
-		        $('#email').attr("value",data.success.email);
+		        $('#email').attr("value",localStorage.getItem("youxiang"));
 		        $('#name').attr("value",data.success.name);
-	            $('#sex').attr("value",data.success.sex);
+	            //$('#sex').attr("value",data.success.sex);
+	            $('#sex option[value='+data.success.sex+']').attr("selected", true);
+	            //console.log($('#sex option[value='+data.success.sex+']'))
+	            //console.log(data.success.sex)
 	            $('#age').attr("value",data.success.age);
 //	            $('.city').empty();
 //	            var html="";

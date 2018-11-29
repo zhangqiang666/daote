@@ -1,0 +1,77 @@
+body{
+	background: #F9F9F9;
+}
+.patient-info-box{
+	width:92%;
+	display: inline-block;
+	margin-left:4%;
+	background: white;
+	margin-top:15px;
+	
+}
+.patient-name{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	padding-left:2.5%;
+	font-size: 16px;
+	 
+}
+.patient-problem-title{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	padding-left:2.5%;
+	font-size: 16px;
+	 
+}
+.patient-problem-main{
+	width:95%;
+	display: inline-block;
+	line-height:20px;
+	font-size: 14px;
+	padding:0px 2.5% 10px 2.5%;
+	 
+}
+.patient-img{
+	width:100%;
+	display: inline-block;
+	margin-bottom: 15px;
+	
+}
+.patient-img img{
+	width:22%;
+	 
+	margin-left:2.5%;
+	float:left;
+	margin-top:5px;
+}
+.doctor-reply-info-box{
+	width:92%;
+	display: inline-block;
+	margin-left:4%;
+	margin-top:10px;
+	background: white;
+	margin-bottom: 20px;
+	
+}
+.reply-title{
+	 width:92%;
+	height:40px;
+	margin:0 auto;
+	line-height: 40px;
+	font-size: 16px;
+	 padding-left:2.5%;
+	border-bottom: 1px solid #efeff4;
+}
+.textarea-box{
+	width:100%;
+	display: inline-block;
+	padding:10px;
+	font-size: 16px;
+	color:#000000;
+	line-height: 25px;
+	
+}
+ 
+ 

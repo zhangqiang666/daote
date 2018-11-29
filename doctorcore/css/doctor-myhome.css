@@ -1,0 +1,375 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background: #F9F9F9;
+}
+.doctor-core-header{
+	width:100%;
+	height:60px;
+	line-height: 60px;
+	border-bottom: 1px solid #BBBBBB;
+	background: white;
+	position: fixed;
+	z-index: 999;
+	margin-top:70px;
+}
+.doctor-core-header-left{
+	width:50%;
+	height:60px;
+	text-align: right;
+	float:left;
+	 
+}
+.doctor-core-header-left a{
+	margin-right:5%;
+	font-size: 18px;
+	color:#101010;
+	text-decoration: none;
+}
+.doctor-core-header-right{
+	width:50%;
+	height:60px;
+	float:left;
+ 
+}
+.doctor-core-header-right a{
+	margin-left:5%;
+	font-size: 18px;
+	color:#C1C1C1;
+	text-decoration: none;
+}
+.line-bottom{
+	width:50px;
+	height:1px;
+	background: #000000;
+	margin-left:10%;
+	margin-top:-2px;
+	 margin-left:55%;
+	 	 
+}
+.doctor-xiu-box{
+	width:95%;
+	display: inline-block;
+	background: white;
+	margin-top:140px;
+	margin-left:2.5%;
+	margin-bottom: 90px;
+	
+}
+
+/*视频内容列表*/
+.video-content-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	
+}
+.video-content-list-box li{
+	width:45%;
+	float:left;
+	margin-left:1%;
+	margin-right:3%;
+	 display: inline-block;
+	 margin-bottom: 20px;
+	 
+}
+.valist-video-left{
+	width:65%;
+	float:left;
+	 
+}	
+.video-img{
+	width:30%;
+	height:100px;
+	float:left;
+	margin-top:10px;
+	margin-left:2%;
+	padding:5px;
+	/*background: #E1E1E1;*/
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.video-img img{
+	width:100%;
+	height:100%;
+}
+.video-title{
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	color:#333333;
+	font-size: 12px;
+	overflow: hidden;
+}
+.video-man-name{
+	width:100%;
+	height:25px;
+	line-height: 25px;
+	color:#636B75;
+	font-size:10px;
+}
+.video-no-money{
+	width:100%;
+	height:25px;
+	line-height:25px;
+	color:#70D445;
+	font-size: 12px;
+}
+.video-yes-money{
+	width:100%;
+	height:25px;
+	line-height:25px;
+	color:#EF0C0C;
+	font-size: 12px;
+}
+/*医学文章列表*/
+.doctor-article-list-box{
+	width:95%;
+	display: inline-block;
+	margin-left:2.5%;
+	list-style: none;
+     margin-top:20px;
+}
+.doctor-article-list-box li{
+	width:100%;
+	display: inline-block;
+	border-bottom: 1px solid #D8D8D8;
+	padding:0px 5px;
+	 
+}
+.article-list-title{
+	width:100%;
+	line-height: 20px;
+	height:80px;
+	color:#393939;
+	font-size: 16px;
+	display: inline-block;
+	margin-top:10px;
+	font-weight: 800;
+	padding-bottom: 0px;
+	/*margin-bottom: 20px;*/
+	overflow: hidden;
+	display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.col-red{
+	color:#05C8AA;
+}
+.article-foot{
+	width:100%;
+	height:40px;
+	line-height:25px;
+}
+.article-foot-i{
+	width:14px;
+	height:14px;
+	border-radius:50px;
+	background: #D8D8D8;
+	display: inline-block;
+	float:left;
+	margin-top:13px;
+}
+.col-blue{
+	color:#009BFF;
+	font-size: 12px;
+	margin-left:2%;
+}
+.col-gray{
+	color:#999999;
+	font-size: 14px;
+	margin-left:2%;
+	
+}
+.col-money{
+	color:#FF7F7F;
+	font-size: 10px;
+	margin-left:2%;
+	
+}
+.col-right-argument{
+	float:right;
+	color:#999999;
+	font-size: 14px;
+	
+	
+}
+.col-right-argument i{
+    position: relative;
+    top:2px;
+	color:#999999;
+	font-size: 16px;
+}
+.col-right-can{
+	float:right;
+	color:#999999;
+	font-size: 14px;
+	margin-right:2%;
+}
+.col-right-can i{
+	 position: relative;
+    top:2px;
+	color:#999999;
+	font-size:16px;
+	 
+}
+.search-box{
+	width:90%;
+	height:35px;
+	 padding-top:5px;
+	text-align: center;
+	background: #EDEDED;
+	border-radius: 50px;
+	margin:0 auto;
+	 margin-top:25px;
+	margin-bottom: 10px;
+	
+}
+.search-box input{
+	width:70%;
+	height:30px;
+	float:left;
+	margin-left:10%;
+	font-size: 14px;
+	border:0px;
+	background: #EDEDED;
+}
+input {outline:none;}
+.search-btn{
+	width:40px;
+	height:30px;
+	border:0px;
+	 float:right;
+	 margin-right:2%;
+	font-size: 12px;
+	background: #EDEDED;
+	border-radius: 50px;
+	
+}
+.video-zanwu{
+	width:100%;
+	height:200px;
+	text-align: center;
+	margin-bottom: 100px;
+	
+}
+.video-zanwu img{
+	width:50px;
+	height:50px;
+	margin-top:100px;
+	
+}
+.video-zanwu div{
+	 width:100%;
+	 line-height: 50px;
+	 font-size: 16px;
+	
+}
+.article-zanwu{
+	width:100%;
+	height:200px;
+	text-align: center;
+	margin-bottom: 100px;
+	
+}
+.article-zanwu img{
+	width:50px;
+	height:50px;
+	margin-top:100px;
+	
+}
+.article-zanwu div{
+	 width:100%;
+	 line-height: 50px;
+	 font-size: 16px;
+	
+}
+.zanwu-box{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+	margin-top:50px;
+	margin-bottom: 300px;
+}
+.zanwu-img{
+	width:50px;
+	height:50px;
+	 
+   margin:0 auto;
+}
+.zanwu-content{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.video-title-copy{
+	width:100%;
+	height:80px;
+	display: inline-block;
+	/*margin-bottom: 30px;*/
+	line-height: 20px;
+	padding-top:10px;
+	 overflow: hidden;
+	 overflow: hidden;
+	display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+	 
+}
+.video-title-copy span{
+	font-size: 16px;
+	color:RGBA(57, 57, 57, 1);
+	font-weight: 800;
+}
+.yellow-explain{
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	background:#CCCCCC;
+	font-size: 12px;
+	text-align: center;
+	clear: both;
+	position: fixed;
+	bottom: 0px;
+}
+a{
+	text-decoration: none;
+}
+.video-article-btn{
+	width:100%;
+	height:70px;
+	position:fixed;
+	bottom:0px;
+	z-index: 999;
+	background: white;
+}
+.video-btn{
+	width:40%;
+	height:40px;
+	border:1px solid #C0C0C0;
+	border-radius: 4px;
+	float:left;
+	background: white;
+	margin-top:20px;
+	margin-left:5%;
+}
+.article-btn{
+	width:40%;
+	height:40px;
+	border:1px solid #C0C0C0;
+	border-radius: 4px;
+	float:right;
+	background: white;
+	margin-top:20px;
+	margin-right:5%;
+}

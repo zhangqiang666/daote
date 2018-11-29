@@ -158,9 +158,10 @@ $(function(){
 	 	  		
 	 	  },
 	 	  error: function (data) {
-　　 
-//      console.log(data.responseJSON)
-//      console.log(data.responseJSON.error)
+　　         console.log(data.responseText)
+     console.log(data.responseJSON)
+      console.log(data.responseJSON.error.error)
+      $('<div>').appendTo('body').addClass('alert alert-success').html(data.responseJSON.error.error).show().delay(1500).fadeOut();
          if(data.responseJSON.status_code==500){
          	$('.code-red').css("display","block")
          	$('.code-red').empty();

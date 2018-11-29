@@ -49,6 +49,12 @@ body{
 	margin-left:2%;
 	padding:5px;
 	/*background: #E1E1E1;*/
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.video-img img{
+	width:100%;
+	height:100%;
 }
 .video-title{
 	width:100%;
@@ -97,12 +103,20 @@ body{
 .article-list-title{
 	width:100%;
 	line-height: 18px;
+	height:80px;
 	color:#393939;
 	font-size: 16px;
 	display: inline-block;
 	margin-top:15px;
 	font-weight: 800;
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
+	overflow: hidden;
+	display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 .col-red{
 	color:#05C8AA;
@@ -260,6 +274,13 @@ input {outline:none;}
 	height:80px;
 	line-height: 20px;
 	padding-top:10px;
+	overflow: hidden;
+	display: -webkit-box;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 	 
 	 
 }
