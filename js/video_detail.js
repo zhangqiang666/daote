@@ -39,6 +39,9 @@ var url = location.search;//获取url中"?"符后的字串
 	'<button class="video-detail-foot-auto">发表评论</button>'+
 	'</a>'
         $('.argument-href').html(argument);
+        //视频播放
+      function nameboss(name){
+      	
       
 	$.ajax({
 		headers:{
@@ -72,22 +75,22 @@ var url = location.search;//获取url中"?"符后的字串
             		'<span>'+data.title+'</span>'+
             	'</div>'+
             	'<div class="video-card-foot-02">'+
-            		'<span>最近在学2245人</span>'+
-            		'<span class="border-auto"></span>'+
-            		'<span>好评度99%</span>'+
+            		'<span class="name-boss">'+name+'</span>'+
+            		//'<span class="border-auto"></span>'+
+            		//'<span>好评度99%</span>'+
             	'</div>'
            }else{ 
             	 html+='<video width="100%" height="150"  poster='+imgurl+data.img+' controls autoplay="true">'+
                   '<source src='+data.video+'  type="video/mp4">'+
                 '</video>'+
             	 '<div class="video-card-foot-01">'+
-            		'<span class="col-green">【公开课】</span>'+
+            		//'<span class="col-green">【公开课】</span>'+
             		'<span>'+data.title+'</span>'+
             	'</div>'+
             	'<div class="video-card-foot-02">'+
-            		'<span>最近在学2245人</span>'+
-            		'<span class="border-auto"> </span>'+
-            		'<span>好评度99%</span>'+
+            		'<span class="name-boss">'+name+'</span>'+
+            		//'<span class="border-auto"> </span>'+
+            		//'<span>好评度99%</span>'+
             	'</div>'
             }
 				
@@ -101,6 +104,8 @@ var url = location.search;//获取url中"?"符后的字串
 		}
 		
 	});
+	};
+	nameboss('')
 	//医生简介
 	$.ajax({
 		headers:{
@@ -115,19 +120,21 @@ var url = location.search;//获取url中"?"符后的字串
 		dataType:"json",
 		success:function(data){
 			console.log(data);
-			$('.doctor-jiajie').empty();
-			var doctor="";
-			$.each(data.success,function(key,list){
-			//$.each(JSON.parse(data).data,function(key,list){
-				 doctor+='<div class="home-man-img">'+
-      	 '<img src='+imgurl+list.photo+'><br>'+
-      	 '<span>'+list.name+list.position+'</span>'+
-         '</div>'+
-         '<div class="home-content">'+list.intro+'</div>'
-     
-             
-			})
-			 $('.doctor-jiajie').html(doctor);
+			var nameboss01=data.success[0].name;
+			 nameboss(nameboss01);
+//			$('.doctor-jiajie').empty();
+//			var doctor="";
+//			$.each(data.success,function(key,list){
+//			 
+//				 doctor+='<div class="home-man-img">'+
+//    	 '<img src='+imgurl+list.photo+'><br>'+
+//    	 '<span>'+list.name+list.position+'</span>'+
+//       '</div>'+
+//       '<div class="home-content">'+list.intro+'</div>'
+//   
+//           
+//			})
+//			 $('.doctor-jiajie').html(doctor);
 		}
 	});
 //评论列表

@@ -159,8 +159,8 @@ $(function(){
             return false;
         }else if(name.length==0){ 
         	  $('<div>').appendTo('body').addClass('alert alert-success').html('姓名不能为空！').show().delay(1500).fadeOut();
-        }else if(from01.length==0){
-        	$('<div>').appendTo('body').addClass('alert alert-success').html('隶属医院不能为空！').show().delay(1500).fadeOut();
+        //}else if(from01.length==0){
+        //	$('<div>').appendTo('body').addClass('alert alert-success').html('隶属医院不能为空！').show().delay(1500).fadeOut();
         }else if(departmentId.length==0){
         	$('<div>').appendTo('body').addClass('alert alert-success').html('科室不能为空！').show().delay(1500).fadeOut();
         }else if(idcardPhoto1==undefined){

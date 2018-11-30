@@ -60,8 +60,8 @@ $(function(){
             	//'<span class="title-foot-i"></span>'+
             	'<span class="man">'+localStorage.getItem("manname")+'</span>'+
             	'<span class="time">'+data.created_at+'</span>'+
-            	'<span class="argument">0条评论</span>'+
-            	'<span class="read">'+data.view_count+'人查看</span>'+
+//          	'<span class="argument">0条评论</span>'+
+//          	'<span class="read">'+data.view_count+'人查看</span>'+
             '</div>'+
            // '<img src="images/bag/detail666.png" class="article-detail-img">'+
             '<div class="article-detail-content">'+data.article+'</div>'
@@ -121,7 +121,7 @@ $(function(){
 			 $('.user-title').empty()
 			 var yhnumber="";
 			     lenghthnumber=data.success.length;
-			    yhnumber+='<span>用户评论(<span>'+data.success.length+'</span>)</span>';
+			    yhnumber+='<span>评论(<span>'+data.success.length+'</span>)</span>';
 			    $('.user-title').html(yhnumber)
 			 //评论条数
 			$('.argument').empty();

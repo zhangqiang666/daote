@@ -4,6 +4,7 @@
 
 <title>点医台</title>
    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <script type="text/javascript" src="../js/api.js"></script>
      <script type="text/javascript" src="../lib/jquery-2.1.0.js"></script>
      <script type="text/javascript" src="../js/getopenid.js"></script>
 <style>
@@ -158,11 +159,12 @@ h1::after {
 
    // console.log(theRequest.author);
     var redirect=theRequest.redirect;
-    var windowhref = window.location.href;
+    //var windowhref = window.location.href;
+   // console.log(apiurl)
 		//var apiurl=localStorage.getItem("url")
 		$.ajax({
 			type:"post",
-			url:"http://www.dianyitai.cn/api/loginWithOpenId",
+			url:apiurl+"loginWithOpenId",
 			async:true,
 			data:{},
 			dataType:"json",
@@ -171,9 +173,11 @@ h1::after {
 				if(data.status=='success'){
 					localStorage.setItem("token",data.data.token)
 					localStorage.setItem("temp",data.data.phone)
-					window.location.href=''+windowhref+'?redirect='+redirect+''
+					var windowhref=localStorage.getItem("windowhref")
+					window.location.href=windowhref+'?redirect='+redirect+''
 				}
 				if(data.status=='error'){
+					
 					window.location.href='../mobile_login.html?redirect='+redirect+''
 				}
 			}

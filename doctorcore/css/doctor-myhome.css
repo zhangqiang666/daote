@@ -76,14 +76,14 @@ body{
 	 
 }
 .valist-video-left{
-	width:65%;
+	width:70%;
 	float:left;
 	 
 }	
 .video-img{
-	width:30%;
-	height:100px;
-	float:left;
+	width:25%;
+	height:90px;
+	float:right;
 	margin-top:10px;
 	margin-left:2%;
 	padding:5px;
@@ -142,7 +142,7 @@ body{
 .article-list-title{
 	width:100%;
 	line-height: 20px;
-	height:80px;
+	height:70px;
 	color:#393939;
 	font-size: 16px;
 	display: inline-block;

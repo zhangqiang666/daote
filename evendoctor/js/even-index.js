@@ -150,12 +150,12 @@ $(function(){
 			   //console.log(list[0].service[0].v)
 				 
 				result+='<div class="evne-doctor-list-card">'+
-     	  			'<a href="even-doctor.html?id='+list[j].id+'&&d_id='+list[j].d_id+'&&service='+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[0].v))+'&&shiping='+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[1].v))+'">'+
+     	  			'<a href="even-doctor.html?id='+list[j].id+'&&d_id='+list[j].d_id+'&&service='+(list[j].service[0] === void 0 ? '1000' : parseInt(list[j].service[0].v))+'&&shiping='+(list[j].service[0] === void 0 ? '1000' : parseInt(list[j].service[1].v))+'">'+
      	  			'<div class="list-card-head">'+
      	  				'<img src='+imgurl+list[j].photo+'>'+
      	  				'<div class="list-card-head-auto">'+
-     	  					'<p><span class="card-name">'+list[j].name+'</span><span class="card-education">'+list[j].edu+'</span>'+
-     	  					'<span class="card-number">/次</span><span class="card-money-red">'+(list[j].service[0] === void 0 ? '100' : parseInt(list[j].service[0].v))+'元</span>'+
+     	  					'<p><span class="card-name">'+list[j].name+'</span><span class="card-education">'+(list[j].edu==null?'':list[j].edu)+'</span>'+
+     	  					'<span class="card-number">/次</span><span class="card-money-red">'+(list[j].service[0] === void 0 ? '1000' : parseInt(list[j].service[0].v))+'元</span>'+
      	  					'</p>'+
      	  					'<p><span class="card-position">'+list[j].position+'</span>&nbsp;&nbsp;<span class="card-position">'+list[j].department.department+'</span></p>'+
      	  				'</div>'+
@@ -171,7 +171,9 @@ $(function(){
                         jQuery(result).insertBefore('#pullrefresh .mui-scroll .mui-table-view');
              		console.log(dataNum)
              		 
-             		 
+             		 $('img').on("error",function(){
+             		 	$(this).attr("src","images/bag/morentouxiang.png")
+             		 })
 		          return dataNum=(data.data.last_page)-1;
 		          
     

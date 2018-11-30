@@ -123,7 +123,9 @@ $(function(){
 			var hznumber=""
 			hznumber+='<span>患者评价(<span>'+data.success.length+'</span>)</span>';
 			$('.user-title').html(hznumber)
-			 
+			 $('img').on("error",function(){
+			 	$(this).attr("src","images//bag/morentouxiang.png")
+			 })
 			
 			
 		},

@@ -126,7 +126,7 @@ $(function(){
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
       			'<span class="col-money">付费'+parseFloat(list.price)+'元</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;0</span>'+
       		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
@@ -140,7 +140,7 @@ $(function(){
       			//'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at+'</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;0</span>'+
       		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
@@ -158,7 +158,7 @@ $(function(){
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
       			'<span class="col-money">付费'+parseFloat(list.price)+'元</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;0</span>'+
       		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+
@@ -175,7 +175,7 @@ $(function(){
       			//'<span class="article-foot-i">&nbsp;</span>'+
       			'<span class="col-blue">'+list.doctor_name+'</span>'+
       			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
-      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.id+'</span>'+
+      		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;0</span>'+
       		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.view_count+'</span>'+
       		'</div></div>'+
       		'<div class="video-img"><img src='+imgurl666+list.img+' style="width:100%;"></div>'+

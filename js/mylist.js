@@ -135,10 +135,12 @@ $(function(){
 				 		console.log(data)
 				 		//$('.doctor-home').click(function(){
 				 			if(data.status=='success'){
-				 			$('.doctor-home a').attr("href","doctor-core.html")
+				 			//$('.doctor-home a').attr("href","doctor-core.html")
+				 			window.location.href="doctor-core.html"
 				 			 
 				 		}else{
-				 			$('.doctor-home a').attr("href","doctor-info.html")
+				 			//$('.doctor-home a').attr("href","doctor-info.html")
+				 			window.location.href="doctor-info.html"
 				 		}
 				 		//})
 				 		 

@@ -1,10 +1,16 @@
  $(document).ready(function(){
  	
- 	//公共地址
-// 	var url="http://dyttest.pi.imjs.0cdn.cn/api/"
-// 	var imgurl="http://dyttest.pi.imjs.0cdn.cn/uploads/"
-   	var url="http://www.dianyitai.cn/api/"
-   	var imgurl="http://www.dianyitai.cn/uploads/"
+//地址判断，自动匹配
+var url='http://' + (location.host === "www.dianyitai.cn" ? "www.dianyitai.cn" : '1nau3jkekkbqsfxu.dianyitai.cn') + '/api/'
+var imgurl='http://' + (location.host === "www.dianyitai.cn" ? "www.dianyitai.cn" : '1nau3jkekkbqsfxu.dianyitai.cn') + '/uploads/'
+
+
+//测试地址
+// 	var url="http://1nau3jkekkbqsfxu.dianyitai.cn/api/"
+// 	var imgurl="http://1nau3jkekkbqsfxu.dianyitai.cn/uploads/"
+//线上地址
+// 	var url="http://www.dianyitai.cn/api/"
+// 	var imgurl="http://www.dianyitai.cn/uploads/"
  	localStorage.setItem("url",url)
  	localStorage.setItem("imgurl",imgurl)
  	console.log(localStorage.getItem("url"));

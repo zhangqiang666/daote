@@ -42,9 +42,9 @@ $(function(){
                  		'</a>'+
                  '</li>'
                 }
-      	  //else{
+//             else{
 //              	dingdan+='<li>'+
-//    	  	  '<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+ 
+//    	  	   '<a href="video_detail.html?author='+list.author+'&v_id='+list.v_id+'">'+ 
 //               		'<div class="order-video-img"><img src='+imgurl+list.img+' style="width:100%;height:100%;"></div>'+
 //               		'<div class="order-video-right">'+
 //               			'<div class="right-title">'+list.title+'</div>'+
@@ -85,7 +85,7 @@ $(function(){
       			'<span class="col-blue">王强</span>'+
       			'<span class="col-gray">'+list.created_at.split(" ")[0]+'</span>'+
       		    '<span class="col-right-argument"><i class="iconfont icon-xiaoxi-copy-copy"></i>&nbsp;'+list.details.num+'</span>'+
-      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;300</span>'+
+      		    '<span class="col-right-can"><i class="iconfont icon-chakan1"></i>&nbsp;'+list.details.product.view_count+'</span>'+
       		'</div>'+
       		'</a>'+
       	'</li>'
@@ -101,6 +101,7 @@ $(function(){
       	  number+=data.success.length;
       	  $('.number01').html(_length01)
       	  //无数据时候的判断
+      	  
 //    	  if(_length01==0){
 //    	  	wenzhang+='<div class="zanwu-box">'+ 
 //          	'<img src="images/bag/zanwushuju.png" class="zanwu-img">'+
